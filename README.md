@@ -1,80 +1,74 @@
-# StudyStreak — v0.2 (Vercel-deployable)
+# StudyStreak — v0.3 (AWS App Runner + RDS)
 
-A working v0 of the StudyStreak app: a consistency-first study planner for JEE droppers. Built per the v1 PRD and Implementation Plan in the parent folder.
+A working v0 of StudyStreak, deployable to AWS in `ap-south-1` (Mumbai). Production-grade architecture per §3 of the implementation plan: a long-running Fastify container on App Runner with RDS Postgres for state.
 
-This drop is the **daily core loop, end-to-end**, deployable to Vercel + Neon Postgres in 15 minutes. See **[DEPLOY.md](./DEPLOY.md)** for the step-by-step.
+See **[AWS_DEPLOY.md](./AWS_DEPLOY.md)** for the step-by-step deploy.
 
 ```
 studystreak/
-├── api/                            Vercel serverless functions
-│   ├── today.js                    GET  /api/today
-│   ├── lectures/
-│   │   ├── index.js                GET  /api/lectures?from=&to=
-│   │   └── [id]/status.js          PATCH /api/lectures/:id/status
-│   ├── streak.js                   GET  /api/streak
-│   ├── backlog.js                  GET  /api/backlog
-│   ├── reflections.js              GET + POST /api/reflections
-│   ├── dashboard.js                GET  /api/dashboard
-│   └── __reset.js                  POST /api/__reset (dev-only, gated by ALLOW_RESET=1)
-├── lib/                            Pure logic + DB + helpers
-│   ├── streak-engine.js            Streak rules, TZ-aware, freeze-aware
-│   ├── priority-engine.js          A/B/C banding ported from the Excel
-│   ├── reward-engine.js            Mystery-box probability + XP sampling
-│   ├── db.js                       Postgres adapter (Neon, HTTP transport)
-│   ├── seed.js                     Idempotent demo seed
-│   └── api.js                      Shared route helpers
-├── public/                         Static frontend (served by Vercel)
-│   ├── index.html
-│   ├── style.css
-│   └── app.js
-├── test/                           26 engine unit tests (no DB)
+├── server/
+│   └── server.js          Fastify app. All API routes + static frontend.
+├── lib/
+│   ├── streak-engine.js   Pure: streak rules, TZ-aware, freeze-aware
+│   ├── priority-engine.js Pure: A/B/C banding ported from the Excel
+│   ├── reward-engine.js   Pure: mystery-box probability + XP sampling
+│   ├── db.js              Postgres adapter (pg with connection pool)
+│   └── seed.js            Idempotent demo seed
+├── public/                Static frontend served by Fastify
+├── test/                  26 engine unit tests (no DB)
+├── Dockerfile             Optional — for ECS Fargate or local Docker
+├── apprunner.yaml         App Runner native Node build config
 ├── package.json
-├── vercel.json
-└── DEPLOY.md
+├── README.md
+└── AWS_DEPLOY.md          Deploy steps
 ```
 
 ## Architectural notes
 
-**Engines are pure.** `lib/streak-engine.js`, `lib/priority-engine.js`, `lib/reward-engine.js` have zero I/O. They run identically on Node, Vercel functions, and (when we get there) React Native. The 26 tests in `test/` exercise them in isolation, including a 20,000-trial statistical test of the mystery-box drop rate.
+- **Engines pure.** The same `lib/streak-engine.js`, `priority-engine.js`, `reward-engine.js` from v0.1 and v0.2. Zero changes through three deploy targets (SQLite local → Neon Vercel → RDS AWS). 26 tests still green.
+- **One Postgres pool per process.** Fastify's long-running model means we open the pool once, reuse it across requests. App Runner gets a small managed VM, not Lambda's cold starts.
+- **Schema migrates on first request.** `ensureSchema()` is idempotent; safe to run on every boot. No CLI step.
+- **Health endpoint at `/healthz`.** App Runner pings this to know the service is alive.
 
-**Each route is a separate function.** Vercel cold-starts ~600 ms once per 5-min idle window. We accept this for v0; sprint 11 of the impl plan introduces Edge functions and warming for hot paths.
-
-**Schema migrations run on first request.** `ensureSchema()` in `lib/db.js` is idempotent and cached per warm function instance. No CLI migration step.
-
-**Demo seed is idempotent.** First request to any API route triggers `init()` → `ensureSchema()` → `seedIfEmpty('demo')`. After the first hit, subsequent hits skip the seed.
-
-## Run locally
+## Local development
 
 ```bash
 npm install
-npx vercel link              # one-time, links this folder to your Vercel project
-npx vercel env pull          # pulls DATABASE_URL into .env.local
-npx vercel dev               # serves api/* + public/ on http://localhost:3000
+
+# Option A: run against a local Postgres (e.g., docker-compose pg)
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/studystreak \
+DATABASE_SSL=disable \
+ALLOW_RESET=1 \
+npm start
+
+# Option B: run against the same RDS that's deployed (be careful)
+DATABASE_URL='<paste-prod-url>' ALLOW_RESET=1 npm start
 ```
 
-## Run tests
+Then open http://localhost:8080.
 
-The engine tests don't touch the DB:
+## Run tests
 
 ```bash
 npm test
 ```
 
-26 tests should pass.
+26 tests should pass. They don't touch the DB, so they run anywhere.
 
 ## What's intentionally not here yet
 
 (Sprints 5–10 of the implementation plan)
 
 - Auth (single hardcoded `demo` user)
-- Mobile app (browser-only for v0; the React Native version reuses `lib/` verbatim)
+- Mobile app
 - Push notifications
 - Squad / duels / Sunday review
-- PM dashboard UI (the data is exposed via `/api/dashboard`; the HTML mockup in the parent folder shows the target)
+- PM dashboard UI (the data is exposed via `/api/dashboard`)
 - Voice reflections (text-only for v0)
 
 ## Decisions worth flagging
 
-- The score formula in `priority-engine.js` differs from PRD §8.3 — original weights cap at 200, making A-band unreachable. Rebalanced to `100 + 80×status + 60×days/10 + 30×subjectGap + 30×relatedRecency` (max 300). Update PRD in next revision.
-- Mystery-box first-3-sessions block is enforced server-side. Demo user has 14 sessions seeded so the block doesn't bite.
-- All thresholds (mystery-box `p`, band cutoffs, freeze count) are intentionally constants right now — sprint 7 moves them to GrowthBook for live tuning.
+- **Score formula in `priority-engine.js`** differs from PRD §8.3. The original cap was 200, making A-band unreachable. Rebalanced to `100 + 80×status + 60×days/10 + 30×subjectGap + 30×relatedRecency` (max 300). Update PRD next revision.
+- **Mystery-box first-3-sessions block** is enforced server-side. Demo seed gives Arjun 14 sessions so the block doesn't bite during testing.
+- **All thresholds hardcoded for now**. Sprint 7 moves them to a feature-flag service for live tuning.
+- **`ALLOW_RESET=1` exposes a destructive endpoint.** Set it during testing, remove it before any real users.

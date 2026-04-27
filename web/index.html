@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>StudyStreak</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+<div class="device">
+  <div class="screen" id="screen-today">
+    <header class="hd">
+      <div>
+        <div class="greet" id="dateLabel">Today</div>
+        <h1 class="hi">Hey <span id="userName">Arjun</span> 👋</h1>
+      </div>
+      <div class="streak-pill" id="streakPill">🔥 <span id="streakNum">—</span></div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-lbl">Today's mission</div>
+      <div class="hero-t" id="missionText">Loading…</div>
+      <div class="prog"><i id="progBar"></i></div>
+      <div class="prog-meta"><span id="progDone">0 of 0</span><span id="progXp">+250 XP if you close it</span></div>
+    </section>
+
+    <section class="stats3">
+      <div class="stat"><div class="n" id="statXp">0</div><div class="l">Total XP</div></div>
+      <div class="stat"><div class="n" id="statStreak">—</div><div class="l">Streak</div></div>
+      <div class="stat"><div class="n" id="statLongest">—</div><div class="l">Best</div></div>
+    </section>
+
+    <section class="lectures" id="lectureList"></section>
+
+    <section class="catchup" id="catchupBox" style="display:none">
+      <div class="catchup-h">
+        <span class="ta">⚡ Catch-up</span>
+        <span class="cnt" id="catchupCount">—</span>
+      </div>
+      <div id="catchupList"></div>
+    </section>
+  </div>
+
+  <!-- Live session screen -->
+  <div class="screen" id="screen-session" style="display:none">
+    <header class="hd">
+      <div>
+        <div class="greet" id="sessSubject">—</div>
+        <h2 class="hi" id="sessTopic">—</h2>
+        <div class="sub" id="sessSubtopic">—</div>
+      </div>
+      <button class="x-btn" id="sessBack">×</button>
+    </header>
+
+    <div class="ringwrap">
+      <svg class="ring" viewBox="0 0 220 220">
+        <defs>
+          <linearGradient id="ringG" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#7c5cff"/>
+            <stop offset="100%" stop-color="#22d3ee"/>
+          </linearGradient>
+        </defs>
+        <circle cx="110" cy="110" r="92" stroke="rgba(255,255,255,.08)" stroke-width="14" fill="none"/>
+        <circle id="ringFg" cx="110" cy="110" r="92" stroke="url(#ringG)" stroke-width="14" fill="none" stroke-linecap="round" stroke-dasharray="578" stroke-dashoffset="0" transform="rotate(-90 110 110)"/>
+      </svg>
+      <div class="timer-overlay">
+        <div class="timer" id="timer">25:00</div>
+        <div class="timer-l">FOCUS MODE</div>
+      </div>
+    </div>
+
+    <div class="hint">📵 Notifications muted · 🎧 Lo-fi recommended</div>
+
+    <div class="actions">
+      <button class="act act-done" data-status="Done">✓ Done</button>
+      <button class="act act-revised" data-status="Revised">↻ Revised</button>
+      <button class="act act-partial" data-status="Partial">◐ Partial</button>
+      <button class="act act-backlog" data-status="Backlog">⤴ Backlog</button>
+    </div>
+  </div>
+
+  <!-- Reward screen -->
+  <div class="screen" id="screen-reward" style="display:none">
+    <header class="hd">
+      <div class="greet">Mission updated ✨</div>
+      <button class="x-btn" id="rewardBack">×</button>
+    </header>
+
+    <div class="reward-body">
+      <div class="flame" id="rewardFlame">🔥</div>
+      <div class="streak-msg" id="rewardStreakMsg">—</div>
+      <div class="streak-sub" id="rewardStreakSub">—</div>
+
+      <div class="mystery" id="mysteryBox" style="display:none">
+        <div class="mystery-l">🎁 Mystery box dropped</div>
+        <div class="mystery-xp" id="mysteryXp">+ 0 XP</div>
+        <div class="mystery-meta" id="mysteryMeta">rare drop</div>
+      </div>
+
+      <div class="reflect-prompt" id="reflectPrompt">
+        <div class="reflect-h">30-second reflection</div>
+        <div class="reflect-q" id="reflectQ">What was hardest?</div>
+        <textarea id="reflectText" placeholder="Type a sentence (or skip)…" maxlength="500"></textarea>
+        <button class="primary" id="reflectSave">Save +20 XP</button>
+        <button class="ghost" id="reflectSkip">Skip</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="dbg">
+  <button id="resetBtn" class="ghost">Reset demo</button>
+  <a href="/api/dashboard" target="_blank">PM dashboard JSON</a>
+  <span id="apiStatus" class="status">●</span>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>

@@ -10,9 +10,6 @@ data/
 /dist
 /.next
 
-# Vestigial folders from the local-only v0.1 (Fastify + SQLite). Safe to delete
-# from your working copy. Not deployed by Vercel either way (api/ + public/ are
-# the only directories Vercel uses).
-server/
-web/
-scripts/
+# Old Vercel-specific files — safe to delete from working copy.
+api/
+vercel.json
