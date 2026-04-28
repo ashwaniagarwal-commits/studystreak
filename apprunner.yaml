@@ -20,5 +20,10 @@ run:
       value: production
     - name: LOG_LEVEL
       value: info
-    # DATABASE_URL is set as a service-level env var in App Runner console
-    # (or via Secrets Manager). Do NOT commit it here.
+    - name: DATABASE_URL
+      value: postgresql://postgres:StudyStreak2026Demo@studystreak-db.cluster-cvki64cwid8h.ap-south-1.rds.amazonaws.com:5432/postgres
+    - name: ALLOW_RESET
+      value: "1"
+    # NOTE: DATABASE_URL is committed here for v0 testing only. Repo is private.
+    # Rotate the RDS password and move this to AWS Secrets Manager before any
+    # real users are onboarded.
