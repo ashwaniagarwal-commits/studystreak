@@ -4,13 +4,12 @@
 #
 # Reference: https://docs.aws.amazon.com/apprunner/latest/dg/config-file-ref.html
 version: 1.0
-runtime: nodejs18
+runtime: nodejs16
 build:
   commands:
     build:
       - npm ci --omit=dev --no-audit --no-fund
 run:
-  runtime-version: 18
   command: node server/server.js
   network:
     port: 8080
