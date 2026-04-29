@@ -1,21 +1,21 @@
 {
   "name": "studystreak",
-  "version": "0.3.0",
-  "description": "StudyStreak — consistency-first study planner for JEE droppers. AWS App Runner + RDS Postgres.",
+  "version": "0.4.0",
+  "description": "StudyStreak — consistency-first study planner for JEE droppers. Vercel-deployable.",
   "type": "module",
   "private": true,
   "scripts": {
-    "start": "node server/server.js",
-    "dev": "node --watch server/server.js",
-    "test": "node --test test/streak.test.js test/priority.test.js test/reward.test.js"
+    "dev": "vercel dev",
+    "test": "node --test test/streak.test.js test/priority.test.js test/reward.test.js",
+    "build": "echo 'static-only build; api/* deployed as serverless functions'"
   },
   "dependencies": {
-    "fastify": "^4.27.0",
-    "@fastify/static": "^7.0.4",
-    "@fastify/cors": "^9.0.1",
-    "pg": "^8.13.1"
+    "@neondatabase/serverless": "^0.10.1"
+  },
+  "devDependencies": {
+    "vercel": "^39.1.0"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=20"
   }
 }

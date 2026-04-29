@@ -10,6 +10,9 @@ data/
 /dist
 /.next
 
-# Old Vercel-specific files — safe to delete from working copy.
-api/
-vercel.json
+# Vestigial AWS files (kept in repo for future Path C migration). Vercel ignores them.
+# server/
+# Dockerfile
+# .dockerignore
+# apprunner.yaml
+# AWS_DEPLOY.md
