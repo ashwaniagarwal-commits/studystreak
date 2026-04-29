@@ -124,10 +124,26 @@
         <h2 class="hi" style="font-size:18px">Invite a friend</h2>
         <button class="x-btn" id="inviteClose">×</button>
       </header>
-      <p class="muted" style="font-size:12px">Share this link. When your friend signs up, they auto-join your squad.</p>
-      <div class="invite-link" id="inviteLink">—</div>
-      <button class="primary" id="inviteCopy">Copy link</button>
-      <button class="ghost" id="inviteShare">Share via WhatsApp</button>
+
+      <div class="modal-section">
+        <div class="modal-section-h">Already on StudyStreak?</div>
+        <p class="muted" style="font-size:12px;margin:0 0 8px">Add by their student ID — you'll both be squadmates immediately.</p>
+        <div class="add-row">
+          <input type="text" id="addId" placeholder="e.g., riya123" autocomplete="off" />
+          <button class="primary add-btn" id="addBtn">Add</button>
+        </div>
+        <div class="add-msg" id="addMsg"></div>
+      </div>
+
+      <div class="modal-divider"><span>OR</span></div>
+
+      <div class="modal-section">
+        <div class="modal-section-h">Invite someone new</div>
+        <p class="muted" style="font-size:12px;margin:0 0 8px">Share this link. They auto-join your squad on signup.</p>
+        <div class="invite-link" id="inviteLink">—</div>
+        <button class="primary" id="inviteCopy">Copy link</button>
+        <button class="ghost" id="inviteShare">Share via WhatsApp</button>
+      </div>
     </div>
   </div>
 

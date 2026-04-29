@@ -466,6 +466,40 @@ $('inviteShare').addEventListener('click', () => {
   window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, '_blank');
 });
 
+// Add by Student ID
+$('addBtn').addEventListener('click', async () => {
+  const id = $('addId').value.trim().toLowerCase();
+  $('addMsg').textContent = '';
+  $('addMsg').className = 'add-msg';
+  if (!id) { $('addMsg').textContent = 'Enter a student ID.'; return; }
+  try {
+    const res = await api('POST', '/api/squad/add', { studentId: id });
+    if (res.alreadyLinked) {
+      $('addMsg').className = 'add-msg ok';
+      $('addMsg').textContent = `${id} is already in your squad.`;
+    } else {
+      $('addMsg').className = 'add-msg ok';
+      $('addMsg').textContent = `✓ Added ${res.addedName}. Refreshing…`;
+      $('addId').value = '';
+      setTimeout(async () => {
+        $('inviteModal').style.display = 'none';
+        $('addMsg').textContent = '';
+        await loadSquad();
+      }, 900);
+    }
+  } catch (e) {
+    $('addMsg').className = 'add-msg err';
+    const map = {
+      not_found: 'No student with that ID.',
+      cannot_add_self: 'You can\'t add yourself.',
+      squad_full: 'Your squad is full (8/8).',
+      their_squad_full: 'Their squad is full (8/8).',
+    };
+    $('addMsg').textContent = map[e.message] || e.detail || e.message;
+  }
+});
+$('addId').addEventListener('keydown', e => { if (e.key === 'Enter') $('addBtn').click(); });
+
 // Cheer modal
 let cheerTarget = null;
 function openCheerModal(toId, toName) {
