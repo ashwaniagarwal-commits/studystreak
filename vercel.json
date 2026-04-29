@@ -3,5 +3,8 @@
   "framework": null,
   "buildCommand": null,
   "installCommand": "npm install",
-  "outputDirectory": "public"
+  "outputDirectory": "public",
+  "rewrites": [
+    { "source": "/admin", "destination": "/admin.html" }
+  ]
 }
