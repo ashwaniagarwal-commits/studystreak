@@ -1,6 +1,6 @@
 import { init, readJsonBody, send, methodNotAllowed } from '../../lib/api.js';
 import { hashPassword, issueSessionToken, buildSetCookieHeader } from '../../lib/auth.js';
-import { getUser, createUserWithPassword } from '../../lib/db.js';
+import { getUser, createUserWithPassword, linkSquadMembers } from '../../lib/db.js';
 import { seedIfEmpty } from '../../lib/seed.js';
 
 const ID_RE = /^[a-zA-Z0-9_.-]{3,32}$/;
@@ -14,6 +14,7 @@ export default async function handler(req, res) {
   const displayName = (body?.displayName || '').trim();
   const batch = (body?.batch || '').trim() || null;
   const password = body?.password || '';
+  const invitedByRaw = (body?.invitedBy || '').trim().toLowerCase();
 
   if (!ID_RE.test(studentId)) {
     return send(res, 400, { error: 'invalid_student_id', detail: 'Use 3-32 chars: letters, digits, _, ., -' });
@@ -32,12 +33,25 @@ export default async function handler(req, res) {
   try { passwordHash = hashPassword(password); }
   catch (e) { return send(res, 400, { error: 'password_invalid', detail: e.message }); }
 
-  await createUserWithPassword({ id: studentId, displayName, batch, passwordHash });
+  // Validate the invitedBy refers to a real user (silently drop if not)
+  let inviter = null;
+  if (invitedByRaw && invitedByRaw !== studentId) {
+    inviter = await getUser(invitedByRaw);
+  }
 
-  // Seed lectures so the new user has a working daily loop on first login.
+  await createUserWithPassword({
+    id: studentId, displayName, batch, passwordHash,
+    invitedBy: inviter ? inviter.id : null,
+  });
+
   await seedIfEmpty(studentId);
+
+  // Auto-link squad with the inviter
+  if (inviter) {
+    await linkSquadMembers(studentId, inviter.id);
+  }
 
   const token = issueSessionToken(studentId);
   res.setHeader('Set-Cookie', buildSetCookieHeader(token));
-  return send(res, 200, { ok: true, userId: studentId, displayName });
+  return send(res, 200, { ok: true, userId: studentId, displayName, squadLinked: !!inviter });
 }

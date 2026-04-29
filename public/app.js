@@ -5,18 +5,21 @@ const screens = {
   auth:     $('screen-auth'),
   today:    $('screen-today'),
   chapters: $('screen-chapters'),
+  squad:    $('screen-squad'),
   session:  $('screen-session'),
   reward:   $('screen-reward'),
 };
 
 let state = {
-  me: null,                // { userId, displayName }
+  me: null,
   today: null,
   catchup: null,
+  squad: null,
   activeLecture: null,
   timerHandle: null,
   timerSeconds: 25 * 60,
   pendingLectureForReflect: null,
+  inviteFromUrl: null,           // pre-filled inviter id from ?invite=
 };
 
 function show(name) {
@@ -82,6 +85,7 @@ $('signupForm').addEventListener('submit', async (e) => {
       studentId:   $('signupId').value.trim(),
       batch:       $('signupBatch').value.trim(),
       password:    $('signupPass').value,
+      invitedBy:   state.inviteFromUrl || undefined,
     });
     state.me = { userId: r.userId, displayName: r.displayName };
     await loadToday();
@@ -110,6 +114,7 @@ document.querySelectorAll('.nav-btn[data-screen]').forEach(b => {
     const target = b.dataset.screen;
     if (target === 'today') { await loadToday(); show('today'); }
     if (target === 'chapters') { await loadChapters(); show('chapters'); }
+    if (target === 'squad') { await loadSquad(); show('squad'); }
   });
 });
 
@@ -352,14 +357,165 @@ $('reflectSave').addEventListener('click', async () => {
 
 $('reflectSkip').addEventListener('click', async () => { await loadToday(); show('today'); });
 
+// ---------- SQUAD ----------
+
+const CHEER_TEMPLATES = [
+  "You got this 💪",
+  "Don't break it 🔥",
+  "25-min sprint? ⏱️",
+  "Study together? 🤝",
+  "Way to go 🎯",
+];
+
+async function loadSquad() {
+  const data = await api('GET', '/api/squad');
+  state.squad = data;
+
+  // Update badge
+  if (data.unreadCheers > 0) {
+    $('cheerBadge').textContent = data.unreadCheers;
+    $('cheerBadge').style.display = 'inline-flex';
+  } else {
+    $('cheerBadge').style.display = 'none';
+  }
+
+  $('squadHi').textContent = data.squadSize === 0 ? 'Build your crew' : `Your squad (${data.squadSize}/${data.cap})`;
+  $('squadSub').textContent = data.squadSize > 0 ? `You're rank #${data.myRank}` : 'Better with friends.';
+
+  // Cheers panel — load and render
+  await loadCheersPanel();
+
+  // Leaderboard
+  const lb = $('leaderboard');
+  const empty = $('emptySquad');
+  if (data.squad.length === 1) {
+    // Just self — show empty state
+    lb.innerHTML = '';
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+
+  lb.innerHTML = '';
+  data.squad.forEach((m, i) => {
+    const rank = i + 1;
+    const div = document.createElement('div');
+    div.className = `lb-row ${m.isSelf ? 'is-self' : ''}`;
+    const initial = (m.displayName || m.studentId).charAt(0).toUpperCase();
+    div.innerHTML = `
+      <div class="lb-rank">${rank}</div>
+      <div class="lb-av">${initial}</div>
+      <div class="lb-info">
+        <div class="lb-name">${m.displayName || m.studentId}${m.isSelf ? ' <span class="muted">(you)</span>' : ''}</div>
+        <div class="lb-meta">${m.currentStreak}🔥 · ${m.totalXp} XP · ${m.chaptersCompleted}/${data.totalChapters} ch · ${m.sessionsCompleted} sessions</div>
+      </div>
+      ${m.isSelf ? '' : `<button class="cheer-btn" data-id="${m.studentId}" data-name="${m.displayName || m.studentId}">👋</button>`}
+    `;
+    lb.appendChild(div);
+  });
+  // Wire cheer buttons
+  document.querySelectorAll('.cheer-btn').forEach(btn => {
+    btn.addEventListener('click', () => openCheerModal(btn.dataset.id, btn.dataset.name));
+  });
+}
+
+async function loadCheersPanel() {
+  try {
+    const data = await api('GET', '/api/squad/cheers');
+    if (!data.cheers || data.cheers.length === 0) {
+      $('cheersCard').style.display = 'none';
+      return;
+    }
+    $('cheersCard').style.display = 'block';
+    const box = $('cheersList');
+    box.innerHTML = '';
+    data.cheers.slice(0, 5).forEach(c => {
+      const row = document.createElement('div');
+      row.className = 'cheer-row';
+      row.innerHTML = `
+        <div class="cheer-msg">${c.message}</div>
+        <div class="cheer-from">— ${c.fromName} · ${new Date(c.createdAt).toLocaleDateString('en-IN')}</div>
+      `;
+      box.appendChild(row);
+    });
+    // Reset badge after viewing
+    $('cheerBadge').style.display = 'none';
+  } catch (e) { /* swallow */ }
+}
+
+// Invite modal
+
+function openInviteModal() {
+  const url = `${window.location.origin}/?invite=${encodeURIComponent(state.me.userId)}`;
+  $('inviteLink').textContent = url;
+  $('inviteModal').style.display = 'flex';
+}
+$('inviteBtn')?.addEventListener('click', openInviteModal);
+$('inviteClose').addEventListener('click', () => $('inviteModal').style.display = 'none');
+$('inviteCopy').addEventListener('click', async () => {
+  const url = $('inviteLink').textContent;
+  try {
+    await navigator.clipboard.writeText(url);
+    $('inviteCopy').textContent = 'Copied ✓';
+    setTimeout(() => $('inviteCopy').textContent = 'Copy link', 1500);
+  } catch { alert(url); }
+});
+$('inviteShare').addEventListener('click', () => {
+  const url = $('inviteLink').textContent;
+  const msg = `Hey! Join me on StudyStreak — we'll keep each other consistent. ${url}`;
+  window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, '_blank');
+});
+
+// Cheer modal
+let cheerTarget = null;
+function openCheerModal(toId, toName) {
+  cheerTarget = toId;
+  $('cheerToName').textContent = toName;
+  const opts = $('cheerOptions');
+  opts.innerHTML = '';
+  CHEER_TEMPLATES.forEach(t => {
+    const b = document.createElement('button');
+    b.className = 'cheer-opt';
+    b.textContent = t;
+    b.addEventListener('click', async () => {
+      try {
+        await api('POST', '/api/squad/cheer', { toUser: cheerTarget, message: t });
+        $('cheerModal').style.display = 'none';
+        // Tiny success animation could go here
+      } catch (e) { alert('Failed: ' + e.message); }
+    });
+    opts.appendChild(b);
+  });
+  $('cheerModal').style.display = 'flex';
+}
+$('cheerClose').addEventListener('click', () => $('cheerModal').style.display = 'none');
+
 // ---------- BOOT ----------
 
 (async () => {
+  // Detect ?invite=<userid> in URL and prep the auth screen
+  const params = new URLSearchParams(window.location.search);
+  const invite = params.get('invite');
+  if (invite && /^[a-zA-Z0-9_.\-]{3,32}$/.test(invite)) {
+    state.inviteFromUrl = invite.toLowerCase();
+    $('inviteText').textContent = `${invite} invited you to StudyStreak.`;
+    $('inviteBanner').style.display = 'block';
+    // Pre-flip to Sign up tab
+    document.querySelector('[data-auth-tab="signup"]').click();
+  }
+
   try {
     const me = await api('GET', '/api/auth/me');
     if (me.authenticated) {
       state.me = { userId: me.userId, displayName: me.displayName };
       await loadToday();
+      // Pull cheer count badge in background
+      api('GET', '/api/squad').then(d => {
+        if (d.unreadCheers > 0) {
+          $('cheerBadge').textContent = d.unreadCheers;
+          $('cheerBadge').style.display = 'inline-flex';
+        }
+      }).catch(() => {});
       show('today');
     } else {
       show('auth');

@@ -1,7 +1,7 @@
 // GET /api/admin/students/[id]?admin=<password> → full drill-in for one student
 import { init, send, methodNotAllowed } from '../../../lib/api.js';
 import { withAdmin } from '../../../lib/auth.js';
-import { getStudentSummary } from '../../../lib/db.js';
+import { getStudentSummary, getSquad, cheersBetween } from '../../../lib/db.js';
 import { flatChapterList } from '../../../lib/chapters.js';
 
 async function handler(req, res) {
@@ -29,6 +29,10 @@ async function handler(req, res) {
     };
   });
 
+  // v0.6 additions: squad + cheers
+  const squad = await getSquad(id);
+  const cheers = await cheersBetween(id);
+
   return send(res, 200, {
     user: {
       ...summary.user,
@@ -38,6 +42,13 @@ async function handler(req, res) {
     chapters: fullChapters,
     lectureCounts: summary.lectureCounts,
     reflections: summary.reflections.map(r => ({ ...r, created_at: r.created_at instanceof Date ? r.created_at.toISOString() : r.created_at })),
+    squad: squad.map(m => ({
+      studentId: m.id,
+      displayName: m.display_name,
+      currentStreak: m.current_streak || 0,
+      totalXp: m.total_xp || 0,
+    })),
+    cheers,
   });
 }
 

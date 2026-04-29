@@ -139,6 +139,21 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-sys
       <tbody id="chapTbl"></tbody>
     </table>
 
+    <div class="section-h"><h2>Squad &amp; social</h2></div>
+    <div class="detail" style="margin-bottom:14px">
+      <div class="card">
+        <h3>Squad members</h3>
+        <table class="tbl" id="squadTbl"><thead><tr><th>Student ID</th><th>Name</th><th>Streak</th><th>XP</th></tr></thead><tbody></tbody></table>
+      </div>
+      <div class="card">
+        <h3>Cheer activity</h3>
+        <dl class="kv">
+          <dt>Cheers sent</dt><dd id="cheerSent">0</dd>
+          <dt>Cheers received</dt><dd id="cheerRecv">0</dd>
+        </dl>
+      </div>
+    </div>
+
     <div class="section-h"><h2>Recent reflections</h2></div>
     <div id="refl"></div>
   </div>
@@ -245,6 +260,14 @@ async function showDetail(id) {
   lecBody.innerHTML = data.lectureCounts.length === 0
     ? '<tr><td colspan="3" style="color:var(--muted)">No lectures yet</td></tr>'
     : data.lectureCounts.map(l => `<tr><td>${l.subject}</td><td>${l.status || '—'}</td><td>${l.c}</td></tr>`).join('');
+
+  // Squad table
+  const sqBody = $('squadTbl').querySelector('tbody');
+  sqBody.innerHTML = (data.squad && data.squad.length)
+    ? data.squad.map(s => `<tr><td><b>${s.studentId}</b></td><td>${s.displayName || '—'}</td><td>${s.currentStreak} 🔥</td><td>${s.totalXp}</td></tr>`).join('')
+    : '<tr><td colspan="4" style="color:var(--muted)">No squad members yet</td></tr>';
+  $('cheerSent').textContent = (data.cheers && data.cheers.sent) || 0;
+  $('cheerRecv').textContent = (data.cheers && data.cheers.received) || 0;
 
   $('chapTbl').innerHTML = data.chapters.map(c => {
     const klass = c.status === 'Completed' ? 'completed' : c.status === 'In Progress' ? 'inprogress' : 'notstarted';

@@ -20,6 +20,10 @@
       </div>
     </header>
 
+    <div class="invite-banner" id="inviteBanner" style="display:none">
+      🤝 <span id="inviteText">A friend invited you to StudyStreak.</span> Sign up to join their squad.
+    </div>
+
     <div class="tabs auth-tabs">
       <button class="tab active" data-auth-tab="login">Log in</button>
       <button class="tab" data-auth-tab="signup">Sign up</button>
@@ -86,6 +90,57 @@
       </div>
       <div id="catchupList"></div>
     </section>
+  </div>
+
+  <!-- SQUAD -->
+  <div class="screen" id="screen-squad" style="display:none">
+    <header class="hd">
+      <div>
+        <div class="greet">Squad</div>
+        <h1 class="hi" id="squadHi">Your crew</h1>
+        <div class="sub" id="squadSub">—</div>
+      </div>
+      <button class="x-btn" id="inviteBtn" title="Invite a friend">+</button>
+    </header>
+
+    <section class="cheers-card" id="cheersCard" style="display:none">
+      <div class="cheers-h">📨 <b>Cheers received</b></div>
+      <div id="cheersList"></div>
+    </section>
+
+    <section class="leaderboard" id="leaderboard"></section>
+
+    <section class="empty-squad" id="emptySquad" style="display:none">
+      <div class="es-emoji">👥</div>
+      <h3>You haven't joined a squad yet</h3>
+      <p class="muted">Invite a friend with the + button. When they sign up, you both join each other's squad — up to 8 friends.</p>
+    </section>
+  </div>
+
+  <!-- INVITE MODAL -->
+  <div class="modal" id="inviteModal" style="display:none">
+    <div class="modal-card">
+      <header class="hd" style="margin-bottom:6px">
+        <h2 class="hi" style="font-size:18px">Invite a friend</h2>
+        <button class="x-btn" id="inviteClose">×</button>
+      </header>
+      <p class="muted" style="font-size:12px">Share this link. When your friend signs up, they auto-join your squad.</p>
+      <div class="invite-link" id="inviteLink">—</div>
+      <button class="primary" id="inviteCopy">Copy link</button>
+      <button class="ghost" id="inviteShare">Share via WhatsApp</button>
+    </div>
+  </div>
+
+  <!-- CHEER MODAL -->
+  <div class="modal" id="cheerModal" style="display:none">
+    <div class="modal-card">
+      <header class="hd" style="margin-bottom:6px">
+        <h2 class="hi" style="font-size:18px">Cheer <span id="cheerToName">—</span></h2>
+        <button class="x-btn" id="cheerClose">×</button>
+      </header>
+      <p class="muted" style="font-size:12px">Pick a quick boost. They'll see it next time they open the app.</p>
+      <div class="cheer-options" id="cheerOptions"></div>
+    </div>
   </div>
 
   <!-- CHAPTERS -->
@@ -174,6 +229,10 @@
     </button>
     <button class="nav-btn" data-screen="chapters">
       <div class="nav-ic">📚</div>Chapters
+    </button>
+    <button class="nav-btn" data-screen="squad">
+      <div class="nav-ic">👥</div>Squad
+      <span class="nav-badge" id="cheerBadge" style="display:none">0</span>
     </button>
     <button class="nav-btn" id="logoutBtn">
       <div class="nav-ic">⏻</div>Log out
