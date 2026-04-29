@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>StudyStreak · Admin</title>
+<style>
+:root{
+  --bg:#fafbfc; --panel:#ffffff; --line:#e5e7eb; --line2:#f0f1f4;
+  --text:#111827; --muted:#6b7280; --accent:#5a3fff; --accent-l:#eeeaff;
+  --green:#10b981; --green-l:#dcfce7; --red:#ef4444; --red-l:#fee2e2;
+  --orange:#f59e0b; --orange-l:#fef3c7;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Inter','Helvetica Neue',Arial,sans-serif;font-size:13.5px}
+.topbar{background:#fff;border-bottom:1px solid var(--line);padding:14px 28px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:10}
+.crumb{font-size:12px;color:var(--muted)}
+.crumb b{color:var(--text)}
+.spacer{flex:1}
+.btn{padding:7px 13px;border-radius:7px;background:var(--accent);color:#fff;border:0;font-weight:600;font-size:12.5px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;text-decoration:none}
+.btn.gh{background:#fff;color:var(--text);border:1px solid var(--line)}
+.content{padding:24px 28px 60px;max-width:1280px;margin:0 auto}
+.gate{max-width:380px;margin:80px auto;padding:24px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 28px rgba(0,0,0,.06)}
+.gate h1{font-size:22px;margin:0 0 4px}
+.gate p{margin:0 0 14px;color:var(--muted);font-size:13px}
+.gate input{width:100%;padding:11px 12px;border-radius:9px;border:1px solid var(--line);font-size:14px;font-family:inherit}
+.gate .btn{width:100%;justify-content:center;padding:11px;margin-top:10px;font-size:14px}
+.gate .err{color:var(--red);font-size:12.5px;margin-top:8px}
+
+.kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.kpi .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px}
+.kpi .lbl{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.02em;text-transform:uppercase}
+.kpi .val{font-size:24px;font-weight:800;letter-spacing:-.02em;margin-top:6px}
+
+.section-h{display:flex;align-items:flex-end;gap:14px;margin:18px 0 8px}
+.section-h h2{margin:0;font-size:18px;font-weight:700;letter-spacing:-.01em}
+.section-h .meta{color:var(--muted);font-size:12px}
+.section-h .right{margin-left:auto;display:flex;gap:8px}
+
+.tbl{width:100%;border-collapse:collapse;font-size:13px;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.tbl th{text-align:left;font-weight:600;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em;padding:10px 14px;border-bottom:1px solid var(--line);background:#f9fafb}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--line2);font-variant-numeric:tabular-nums}
+.tbl tr:last-child td{border-bottom:0}
+.tbl tr.clickable{cursor:pointer}
+.tbl tr.clickable:hover{background:var(--accent-l)}
+.bar{display:inline-block;height:6px;width:80px;background:#f3f4f6;border-radius:99px;vertical-align:middle;margin-left:8px}
+.bar > i{display:block;height:100%;background:linear-gradient(90deg,#5a3fff,#22d3ee);border-radius:99px}
+.pill{display:inline-flex;align-items:center;padding:2px 8px;border-radius:99px;font-size:10.5px;font-weight:700}
+.pill.completed{background:var(--green-l);color:#065f46}
+.pill.inprogress{background:var(--orange-l);color:#92400e}
+.pill.notstarted{background:#f3f4f6;color:#6b7280}
+
+.detail{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:880px){.detail{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px}
+.card h3{margin:0 0 12px;font-size:14px;font-weight:700}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:13px}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0;font-weight:600}
+
+.empty{text-align:center;color:var(--muted);padding:40px;font-size:13px}
+.back{color:var(--accent);font-size:12px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-bottom:8px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="crumb">StudyStreak / <b id="crumb">Admin</b></div>
+  <div class="spacer"></div>
+  <a href="/" class="btn gh">Student app →</a>
+  <button class="btn gh" id="logoutBtn" style="display:none">Sign out</button>
+</div>
+
+<div class="content">
+
+  <!-- Gate -->
+  <div id="gate" class="gate">
+    <h1>Admin · sign in</h1>
+    <p>Enter the admin password configured on this deployment.</p>
+    <input id="pwd" type="password" placeholder="Admin password" autocomplete="off" />
+    <button class="btn" id="gateBtn">Sign in</button>
+    <div class="err" id="gateErr"></div>
+  </div>
+
+  <!-- List view -->
+  <div id="listView" style="display:none">
+    <div class="kpi">
+      <div class="card"><div class="lbl">Students</div><div class="val" id="kpiStudents">—</div></div>
+      <div class="card"><div class="lbl">Avg streak</div><div class="val" id="kpiStreak">—</div></div>
+      <div class="card"><div class="lbl">Avg chapter completion</div><div class="val" id="kpiChapters">—</div></div>
+      <div class="card"><div class="lbl">Sessions logged</div><div class="val" id="kpiSessions">—</div></div>
+    </div>
+
+    <div class="section-h">
+      <h2>Students</h2>
+      <span class="meta">click any row to drill in</span>
+      <div class="right">
+        <a class="btn gh" id="exportBtn" download>Download CSV</a>
+        <button class="btn" onclick="loadList()">↻ Refresh</button>
+      </div>
+    </div>
+
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>Batch</th>
+          <th>Streak</th>
+          <th>XP</th>
+          <th>Sessions</th>
+          <th>Chapters done</th>
+          <th>Joined</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <!-- Detail view -->
+  <div id="detailView" style="display:none">
+    <a class="back" href="#" id="backLink">← All students</a>
+    <h2 style="margin:0 0 12px" id="detailName">—</h2>
+
+    <div class="detail">
+      <div class="card">
+        <h3>Profile</h3>
+        <dl class="kv" id="detailKv"></dl>
+      </div>
+      <div class="card">
+        <h3>Lectures by status</h3>
+        <table class="tbl" id="lecTbl"><thead><tr><th>Subject</th><th>Status</th><th>Count</th></tr></thead><tbody></tbody></table>
+      </div>
+    </div>
+
+    <div class="section-h"><h2>Chapter progress</h2></div>
+    <table class="tbl">
+      <thead><tr><th>Subject</th><th>Chapter</th><th>Status</th><th>Updated</th></tr></thead>
+      <tbody id="chapTbl"></tbody>
+    </table>
+
+    <div class="section-h"><h2>Recent reflections</h2></div>
+    <div id="refl"></div>
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+let pwd = sessionStorage.getItem('ss_admin_pwd') || '';
+
+async function api(path) {
+  const url = path + (path.includes('?') ? '&' : '?') + 'admin=' + encodeURIComponent(pwd);
+  const res = await fetch(url, { credentials: 'include' });
+  if (res.status === 401) { sessionStorage.removeItem('ss_admin_pwd'); pwd = ''; throw new Error('unauthorized'); }
+  if (!res.ok) throw new Error('http_' + res.status);
+  return res.json();
+}
+
+$('gateBtn').addEventListener('click', async () => {
+  pwd = $('pwd').value.trim();
+  $('gateErr').textContent = '';
+  if (!pwd) return;
+  try {
+    await api('/api/admin/students');
+    sessionStorage.setItem('ss_admin_pwd', pwd);
+    $('gate').style.display = 'none';
+    $('logoutBtn').style.display = 'inline-flex';
+    showList();
+  } catch (e) {
+    $('gateErr').textContent = e.message === 'unauthorized' ? 'Wrong password.' : e.message;
+  }
+});
+
+$('pwd').addEventListener('keydown', e => { if (e.key === 'Enter') $('gateBtn').click(); });
+
+$('logoutBtn').addEventListener('click', () => {
+  sessionStorage.removeItem('ss_admin_pwd'); pwd = '';
+  $('listView').style.display = 'none';
+  $('detailView').style.display = 'none';
+  $('gate').style.display = 'block';
+  $('logoutBtn').style.display = 'none';
+  $('pwd').value = '';
+  $('crumb').textContent = 'Admin';
+});
+
+async function showList() {
+  $('detailView').style.display = 'none';
+  $('listView').style.display = 'block';
+  $('crumb').textContent = 'Admin';
+  $('exportBtn').href = '/api/admin/export?admin=' + encodeURIComponent(pwd);
+  await loadList();
+}
+
+async function loadList() {
+  const data = await api('/api/admin/students');
+  $('kpiStudents').textContent = data.students.length;
+  if (data.students.length === 0) {
+    $('kpiStreak').textContent = '0'; $('kpiChapters').textContent = '0%'; $('kpiSessions').textContent = '0';
+    $('rows').innerHTML = '<tr><td colspan="8" style="text-align:center;color:var(--muted);padding:30px">No students yet — share the signup URL with your testers.</td></tr>';
+    return;
+  }
+  const totalChap = data.totalChapters;
+  const avgStreak = (data.students.reduce((s, u) => s + (u.currentStreak || 0), 0) / data.students.length).toFixed(1);
+  const avgChap = (data.students.reduce((s, u) => s + (totalChap ? u.chapters.completed / totalChap : 0), 0) / data.students.length * 100).toFixed(0);
+  const totalSess = data.students.reduce((s, u) => s + (u.sessionsCompleted || 0), 0);
+  $('kpiStreak').textContent = avgStreak + ' 🔥';
+  $('kpiChapters').textContent = avgChap + '%';
+  $('kpiSessions').textContent = totalSess;
+
+  const rows = data.students.map(u => {
+    const pct = totalChap ? Math.round(u.chapters.completed / totalChap * 100) : 0;
+    return `<tr class="clickable" data-id="${u.studentId}">
+      <td><b>${u.studentId}</b></td>
+      <td>${u.displayName || '—'}</td>
+      <td>${u.batch || '—'}</td>
+      <td>${u.currentStreak || 0} 🔥</td>
+      <td>${u.totalXp || 0}</td>
+      <td>${u.sessionsCompleted || 0}</td>
+      <td>${u.chapters.completed} / ${totalChap} <span class="bar"><i style="width:${pct}%"></i></span></td>
+      <td>${u.createdAt ? new Date(u.createdAt).toLocaleDateString('en-IN') : '—'}</td>
+    </tr>`;
+  }).join('');
+  $('rows').innerHTML = rows;
+  document.querySelectorAll('#rows tr.clickable').forEach(r => r.addEventListener('click', () => showDetail(r.dataset.id)));
+}
+
+async function showDetail(id) {
+  $('listView').style.display = 'none';
+  $('detailView').style.display = 'block';
+  $('crumb').textContent = 'Admin / ' + id;
+  const data = await api('/api/admin/students/' + encodeURIComponent(id));
+  const u = data.user;
+  $('detailName').textContent = u.display_name + ' · ' + u.id;
+  $('detailKv').innerHTML = `
+    <dt>Student ID</dt><dd>${u.id}</dd>
+    <dt>Batch</dt><dd>${u.batch || '—'}</dd>
+    <dt>Joined</dt><dd>${u.created_at ? new Date(u.created_at).toLocaleString('en-IN') : '—'}</dd>
+    <dt>Current streak</dt><dd>${u.current_streak || 0} 🔥</dd>
+    <dt>Best streak</dt><dd>${u.longest || 0}</dd>
+    <dt>Total XP</dt><dd>${u.total_xp || 0}</dd>
+    <dt>Sessions</dt><dd>${u.sessions_completed || 0}</dd>
+    <dt>Last streak day</dt><dd>${u.last_streak_day || '—'}</dd>
+  `;
+  const lecBody = $('lecTbl').querySelector('tbody');
+  lecBody.innerHTML = data.lectureCounts.length === 0
+    ? '<tr><td colspan="3" style="color:var(--muted)">No lectures yet</td></tr>'
+    : data.lectureCounts.map(l => `<tr><td>${l.subject}</td><td>${l.status || '—'}</td><td>${l.c}</td></tr>`).join('');
+
+  $('chapTbl').innerHTML = data.chapters.map(c => {
+    const klass = c.status === 'Completed' ? 'completed' : c.status === 'In Progress' ? 'inprogress' : 'notstarted';
+    return `<tr><td>${c.subject}</td><td>${c.chapter}</td><td><span class="pill ${klass}">${c.status}</span></td><td>${c.updatedAt ? new Date(c.updatedAt).toLocaleDateString('en-IN') : '—'}</td></tr>`;
+  }).join('');
+
+  $('refl').innerHTML = data.reflections.length === 0
+    ? '<div class="empty">No reflections yet.</div>'
+    : data.reflections.map(r => `<div class="card" style="margin-bottom:8px"><div style="font-size:12px;color:var(--muted)">${new Date(r.created_at).toLocaleString('en-IN')}</div><div style="font-size:13.5px;margin-top:4px">${escapeHtml(r.text)}</div></div>`).join('');
+}
+
+function escapeHtml(s) {
+  return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+$('backLink').addEventListener('click', e => { e.preventDefault(); showList(); });
+
+// Boot
+if (pwd) {
+  $('gate').style.display = 'none';
+  $('logoutBtn').style.display = 'inline-flex';
+  showList().catch(() => {
+    sessionStorage.removeItem('ss_admin_pwd'); pwd = '';
+    $('gate').style.display = 'block';
+    $('logoutBtn').style.display = 'none';
+  });
+}
+</script>
+</body>
+</html>

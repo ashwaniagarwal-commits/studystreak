@@ -9,11 +9,57 @@
 <body>
 
 <div class="device">
-  <div class="screen" id="screen-today">
+
+  <!-- AUTH (shown when not logged in) -->
+  <div class="screen" id="screen-auth" style="display:none">
+    <header class="hd auth-hd">
+      <div>
+        <div class="greet">StudyStreak</div>
+        <h1 class="hi">Welcome 🔥</h1>
+        <div class="sub" id="authSubtitle">Log in or create an account</div>
+      </div>
+    </header>
+
+    <div class="tabs auth-tabs">
+      <button class="tab active" data-auth-tab="login">Log in</button>
+      <button class="tab" data-auth-tab="signup">Sign up</button>
+    </div>
+
+    <form id="loginForm" class="auth-form">
+      <label>Student ID
+        <input type="text" id="loginId" autocomplete="username" placeholder="e.g., arjun123" required />
+      </label>
+      <label>Password
+        <input type="password" id="loginPass" autocomplete="current-password" placeholder="At least 6 characters" required />
+      </label>
+      <div class="auth-err" id="loginErr"></div>
+      <button class="primary" type="submit">Log in</button>
+    </form>
+
+    <form id="signupForm" class="auth-form" style="display:none">
+      <label>Full name
+        <input type="text" id="signupName" placeholder="e.g., Arjun Sharma" required maxlength="64" />
+      </label>
+      <label>Student ID (your unique handle)
+        <input type="text" id="signupId" autocomplete="username" placeholder="e.g., arjun123" required pattern="[a-zA-Z0-9_.\-]{3,32}" />
+      </label>
+      <label>Batch <span class="muted">(optional)</span>
+        <input type="text" id="signupBatch" placeholder="e.g., Eklavya 2027" maxlength="32" />
+      </label>
+      <label>Password
+        <input type="password" id="signupPass" autocomplete="new-password" placeholder="At least 6 characters" required minlength="6" />
+      </label>
+      <div class="auth-err" id="signupErr"></div>
+      <button class="primary" type="submit">Create account</button>
+    </form>
+  </div>
+
+  <!-- TODAY (existing daily-loop screen) -->
+  <div class="screen" id="screen-today" style="display:none">
     <header class="hd">
       <div>
         <div class="greet" id="dateLabel">Today</div>
-        <h1 class="hi">Hey <span id="userName">Arjun</span> 👋</h1>
+        <h1 class="hi">Hey <span id="userName">there</span> 👋</h1>
       </div>
       <div class="streak-pill" id="streakPill">🔥 <span id="streakNum">—</span></div>
     </header>
@@ -40,6 +86,19 @@
       </div>
       <div id="catchupList"></div>
     </section>
+  </div>
+
+  <!-- CHAPTERS -->
+  <div class="screen" id="screen-chapters" style="display:none">
+    <header class="hd">
+      <div>
+        <div class="greet">Chapters</div>
+        <h1 class="hi">Mark what you've covered</h1>
+      </div>
+    </header>
+
+    <div class="chapter-totals" id="chapterTotals"></div>
+    <div class="chapter-list" id="chapterList"></div>
   </div>
 
   <!-- Live session screen -->
@@ -107,13 +166,21 @@
       </div>
     </div>
   </div>
-</div>
 
-<footer class="dbg">
-  <button id="resetBtn" class="ghost">Reset demo</button>
-  <a href="/api/dashboard" target="_blank">PM dashboard JSON</a>
-  <span id="apiStatus" class="status">●</span>
-</footer>
+  <!-- Bottom nav (visible only when logged in) -->
+  <nav class="bottom-nav" id="bottomNav" style="display:none">
+    <button class="nav-btn active" data-screen="today">
+      <div class="nav-ic">🏠</div>Today
+    </button>
+    <button class="nav-btn" data-screen="chapters">
+      <div class="nav-ic">📚</div>Chapters
+    </button>
+    <button class="nav-btn" id="logoutBtn">
+      <div class="nav-ic">⏻</div>Log out
+    </button>
+  </nav>
+
+</div>
 
 <script src="/app.js"></script>
 </body>

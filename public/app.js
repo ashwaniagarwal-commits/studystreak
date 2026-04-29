@@ -1,14 +1,16 @@
-// StudyStreak v0 frontend — vanilla JS hitting the real API.
-// Three screens (Today, Live session, Reward) with full Hooked-loop transitions.
+// StudyStreak v0.5 frontend — login, today's loop, chapters tracking.
 
 const $ = id => document.getElementById(id);
 const screens = {
-  today:   $('screen-today'),
-  session: $('screen-session'),
-  reward:  $('screen-reward'),
+  auth:     $('screen-auth'),
+  today:    $('screen-today'),
+  chapters: $('screen-chapters'),
+  session:  $('screen-session'),
+  reward:   $('screen-reward'),
 };
 
 let state = {
+  me: null,                // { userId, displayName }
   today: null,
   catchup: null,
   activeLecture: null,
@@ -19,16 +21,99 @@ let state = {
 
 function show(name) {
   for (const [k, el] of Object.entries(screens)) el.style.display = (k === name) ? 'flex' : 'none';
+  const mainScreens = ['today', 'chapters', 'session', 'reward'];
+  $('bottomNav').style.display = (state.me && mainScreens.includes(name)) ? 'flex' : 'none';
+  document.querySelectorAll('.nav-btn[data-screen]').forEach(b => {
+    b.classList.toggle('active', b.dataset.screen === name);
+  });
   window.scrollTo({ top: 0 });
 }
 
 async function api(method, path, body) {
-  const opts = { method, headers: { 'content-type': 'application/json' } };
+  const opts = { method, headers: { 'content-type': 'application/json' }, credentials: 'include' };
   if (body) opts.body = JSON.stringify(body);
   const res = await fetch(path, opts);
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
+  const text = await res.text();
+  let data; try { data = JSON.parse(text); } catch { data = text; }
+  if (!res.ok) {
+    const err = new Error(data?.error || `http_${res.status}`);
+    err.detail = data?.detail; err.status = res.status;
+    throw err;
+  }
+  return data;
 }
+
+// ---------- Auth ----------
+
+document.querySelectorAll('[data-auth-tab]').forEach(t => {
+  t.addEventListener('click', () => {
+    document.querySelectorAll('[data-auth-tab]').forEach(b => b.classList.remove('active'));
+    t.classList.add('active');
+    const which = t.dataset.authTab;
+    $('loginForm').style.display  = which === 'login'  ? 'flex' : 'none';
+    $('signupForm').style.display = which === 'signup' ? 'flex' : 'none';
+  });
+});
+
+$('loginForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  $('loginErr').textContent = '';
+  try {
+    const r = await api('POST', '/api/auth/login', {
+      studentId: $('loginId').value.trim(),
+      password: $('loginPass').value,
+    });
+    state.me = { userId: r.userId, displayName: r.displayName };
+    await loadToday();
+    show('today');
+  } catch (e) {
+    $('loginErr').textContent = e.message === 'invalid_credentials'
+      ? 'Wrong student ID or password.'
+      : (e.detail || e.message);
+  }
+});
+
+$('signupForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  $('signupErr').textContent = '';
+  try {
+    const r = await api('POST', '/api/auth/signup', {
+      displayName: $('signupName').value.trim(),
+      studentId:   $('signupId').value.trim(),
+      batch:       $('signupBatch').value.trim(),
+      password:    $('signupPass').value,
+    });
+    state.me = { userId: r.userId, displayName: r.displayName };
+    await loadToday();
+    show('today');
+  } catch (e) {
+    const errMap = {
+      student_id_taken: 'That student ID is taken — pick another.',
+      password_too_short: 'Password must be at least 6 characters.',
+      invalid_student_id: 'Use 3-32 chars: letters, digits, _, ., -',
+      invalid_display_name: 'Enter your full name.',
+    };
+    $('signupErr').textContent = errMap[e.message] || (e.detail || e.message);
+  }
+});
+
+$('logoutBtn').addEventListener('click', async () => {
+  await api('POST', '/api/auth/logout').catch(() => {});
+  state.me = null;
+  show('auth');
+});
+
+// ---------- Bottom nav ----------
+
+document.querySelectorAll('.nav-btn[data-screen]').forEach(b => {
+  b.addEventListener('click', async () => {
+    const target = b.dataset.screen;
+    if (target === 'today') { await loadToday(); show('today'); }
+    if (target === 'chapters') { await loadChapters(); show('chapters'); }
+  });
+});
+
+// ---------- TODAY ----------
 
 function fmtTime(iso) {
   const d = new Date(iso);
@@ -70,16 +155,16 @@ async function loadToday() {
   const done = data.summary.done;
   $('progDone').textContent = `${done} of ${total} done`;
   $('progBar').style.width = `${total ? Math.round(done / total * 100) : 0}%`;
-  if (done === total && total > 0) {
+  if (total === 0) {
+    $('missionText').textContent = 'No lectures today — use Chapters to track your progress.';
+  } else if (done === total) {
     $('missionText').textContent = 'Mission complete · streak protected ✨';
-    $('progXp').textContent = '🔥 Day cleared';
   } else if (done > 0) {
     $('missionText').textContent = `${total - done} ${total - done === 1 ? 'lecture' : 'lectures'} left to seal today's streak`;
   } else {
     $('missionText').textContent = `Finish ${total} ${total === 1 ? 'lecture' : 'lectures'} to keep the streak alive`;
   }
 
-  // Render lecture list
   const list = $('lectureList');
   list.innerHTML = '';
   for (const l of data.lectures) {
@@ -98,7 +183,6 @@ async function loadToday() {
     list.appendChild(div);
   }
 
-  // Catch-up
   await loadCatchup();
 }
 
@@ -125,12 +209,61 @@ async function loadCatchup() {
       div.addEventListener('click', () => openSession(it));
       list.appendChild(div);
     }
-  } catch (e) {
-    console.warn('catchup load failed', e);
+  } catch (e) { /* swallow */ }
+}
+
+// ---------- CHAPTERS ----------
+
+const STATUS_OPTIONS = ['Not Started', 'In Progress', 'Completed'];
+
+async function loadChapters() {
+  const data = await api('GET', '/api/chapters');
+  const totalsEl = $('chapterTotals');
+  totalsEl.innerHTML = '';
+  for (const [subject, t] of Object.entries(data.totals)) {
+    const div = document.createElement('div');
+    div.className = `chap-total ${subject}`;
+    div.innerHTML = `
+      <div class="ct-h">${subject}</div>
+      <div class="ct-n">${t.completed}<span class="muted">/${t.total}</span></div>
+      <div class="ct-bar"><i style="width:${t.total ? (t.completed / t.total * 100) : 0}%"></i></div>
+      <div class="ct-meta">${t.inProgress} in progress</div>
+    `;
+    totalsEl.appendChild(div);
+  }
+
+  const list = $('chapterList');
+  list.innerHTML = '';
+  for (const [subject, chapters] of Object.entries(data.grouped)) {
+    const sub = document.createElement('section');
+    sub.className = 'chap-sub';
+    sub.innerHTML = `<h3 class="chap-sub-h">${subject}</h3>`;
+    for (const c of chapters) {
+      const row = document.createElement('div');
+      row.className = `chap-row status-${c.status.replace(/\s+/g, '')}`;
+      row.innerHTML = `
+        <div class="chap-name">
+          <div class="chap-title">${c.chapter}</div>
+          <div class="chap-meta">${c.updatedAt ? 'Updated ' + new Date(c.updatedAt).toLocaleDateString('en-IN') : '—'}</div>
+        </div>
+        <select class="chap-status">
+          ${STATUS_OPTIONS.map(s => `<option value="${s}" ${s === c.status ? 'selected' : ''}>${s}</option>`).join('')}
+        </select>
+      `;
+      const sel = row.querySelector('select');
+      sel.addEventListener('change', async () => {
+        try {
+          await api('PATCH', '/api/chapters', { subject, chapter: c.chapter, status: sel.value });
+          await loadChapters();
+        } catch (e) { alert('Failed: ' + e.message); }
+      });
+      sub.appendChild(row);
+    }
+    list.appendChild(sub);
   }
 }
 
-// ---------- Session ----------
+// ---------- SESSION ----------
 
 function openSession(lec) {
   state.activeLecture = lec;
@@ -138,7 +271,6 @@ function openSession(lec) {
   $('sessTopic').textContent = lec.topic;
   $('sessSubtopic').textContent = lec.sub_topic || '';
   state.timerSeconds = (lec.scheduled_duration_min || 25) * 60;
-  // Cap demo timer at 25 min so it's playable
   if (state.timerSeconds > 25 * 60) state.timerSeconds = 25 * 60;
   updateTimer();
   startTimer();
@@ -149,14 +281,11 @@ function updateTimer() {
   const m = Math.floor(state.timerSeconds / 60);
   const s = state.timerSeconds % 60;
   $('timer').textContent = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
-  // Ring animation
   const total = (state.activeLecture?.scheduled_duration_min || 25) * 60;
   const cap = Math.min(total, 25 * 60);
   const pct = state.timerSeconds / cap;
-  const dash = 578;
-  $('ringFg').setAttribute('stroke-dashoffset', dash * (1 - pct));
+  $('ringFg').setAttribute('stroke-dashoffset', 578 * (1 - pct));
 }
-
 function startTimer() {
   if (state.timerHandle) clearInterval(state.timerHandle);
   state.timerHandle = setInterval(() => {
@@ -166,8 +295,6 @@ function startTimer() {
   }, 1000);
 }
 
-// ---------- Action handlers ----------
-
 document.querySelectorAll('.act').forEach(btn => {
   btn.addEventListener('click', async () => {
     if (!state.activeLecture) return;
@@ -176,22 +303,14 @@ document.querySelectorAll('.act').forEach(btn => {
     try {
       const res = await api('PATCH', `/api/lectures/${lec.id}/status`, { status });
       clearInterval(state.timerHandle);
-      if (status === 'Done') {
-        showReward(res, lec);
-      } else {
-        await loadToday();
-        show('today');
-      }
-    } catch (e) {
-      alert('Failed: ' + e.message);
-    }
+      if (status === 'Done') showReward(res, lec);
+      else { await loadToday(); show('today'); }
+    } catch (e) { alert('Failed: ' + e.message); }
   });
 });
 
 $('sessBack').addEventListener('click', () => { clearInterval(state.timerHandle); show('today'); });
 $('rewardBack').addEventListener('click', async () => { await loadToday(); show('today'); });
-
-// ---------- Reward ----------
 
 function showReward(res, lec) {
   state.pendingLectureForReflect = lec;
@@ -205,7 +324,6 @@ function showReward(res, lec) {
     ? (newStreak >= 7 ? 'Top 9% of droppers in your batch.' : `Best so far: ${res.longestStreak} days.`)
     : 'XP banked. Keep stacking.';
 
-  // Mystery box
   const mb = $('mysteryBox');
   if (res.reward && res.reward.type === 'mystery_box') {
     mb.style.display = 'block';
@@ -218,10 +336,8 @@ function showReward(res, lec) {
     mb.style.display = 'none';
   }
 
-  // Reflection prompt
   $('reflectQ').textContent = `What was hardest about ${lec.topic}?`;
   $('reflectText').value = '';
-
   show('reward');
 }
 
@@ -229,29 +345,26 @@ $('reflectSave').addEventListener('click', async () => {
   const text = $('reflectText').value.trim();
   if (!text) return;
   try {
-    const res = await api('POST', '/api/reflections', { lectureId: state.pendingLectureForReflect.id, text });
-    await loadToday();
-    show('today');
+    await api('POST', '/api/reflections', { lectureId: state.pendingLectureForReflect.id, text });
+    await loadToday(); show('today');
   } catch (e) { alert(e.message); }
 });
 
 $('reflectSkip').addEventListener('click', async () => { await loadToday(); show('today'); });
 
-// ---------- Reset (demo) ----------
-
-$('resetBtn').addEventListener('click', async () => {
-  if (!confirm('Reset demo data? This will re-seed the database.')) return;
-  await fetch('/api/__reset', { method: 'POST' }).catch(() => {});
-  location.reload();
-});
-
-// ---------- Boot ----------
+// ---------- BOOT ----------
 
 (async () => {
   try {
-    await loadToday();
-    show('today');
+    const me = await api('GET', '/api/auth/me');
+    if (me.authenticated) {
+      state.me = { userId: me.userId, displayName: me.displayName };
+      await loadToday();
+      show('today');
+    } else {
+      show('auth');
+    }
   } catch (e) {
-    document.body.innerHTML = '<div style="padding:40px;text-align:center;color:#fff">API not reachable: ' + e.message + '</div>';
+    document.body.innerHTML = '<div style="padding:40px;text-align:center;color:#fff">App failed to load: ' + e.message + '</div>';
   }
 })();
