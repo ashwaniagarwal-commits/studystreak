@@ -24,7 +24,7 @@ let state = {
 
 function show(name) {
   for (const [k, el] of Object.entries(screens)) el.style.display = (k === name) ? 'flex' : 'none';
-  const mainScreens = ['today', 'chapters', 'session', 'reward'];
+  const mainScreens = ['today', 'chapters', 'squad', 'session', 'reward'];
   $('bottomNav').style.display = (state.me && mainScreens.includes(name)) ? 'flex' : 'none';
   document.querySelectorAll('.nav-btn[data-screen]').forEach(b => {
     b.classList.toggle('active', b.dataset.screen === name);
