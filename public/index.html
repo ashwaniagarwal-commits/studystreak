@@ -65,7 +65,7 @@
         <div class="greet" id="dateLabel">Today</div>
         <h1 class="hi">Hey <span id="userName">there</span> 👋</h1>
       </div>
-      <button class="cov-pill" id="covPill" title="Total chapters completed">📚 <span id="covTotal">0/36</span></button>
+      <button class="cov-pill" id="covPill" title="Total topics completed">📚 <span id="covTotal">0/0</span></button>
     </header>
 
     <section class="sub-cards" id="subCards"></section>
@@ -106,7 +106,7 @@
     <section class="empty-squad" id="emptySquad" style="display:none">
       <div class="es-emoji">👥</div>
       <h3>You haven't joined a squad yet</h3>
-      <p class="muted">Invite a friend with the + button. When they sign up, you both join each other's squad — up to 8 friends.</p>
+      <p class="muted">Add a friend with the + button. They can already be on StudyStreak — just enter their student ID. Up to 8 friends.</p>
     </section>
   </div>
 
@@ -152,12 +152,13 @@
     </div>
   </div>
 
-  <!-- CHAPTERS -->
+  <!-- TOPICS (data table is still chapter_progress; UI calls them Topics) -->
   <div class="screen" id="screen-chapters" style="display:none">
     <header class="hd">
       <div>
-        <div class="greet">Chapters</div>
+        <div class="greet">Topics</div>
         <h1 class="hi">Mark what you've covered</h1>
+        <div class="sub">Eklavya 2027 syllabus</div>
       </div>
     </header>
 
@@ -237,7 +238,7 @@
       <div class="nav-ic">🏠</div>Today
     </button>
     <button class="nav-btn" data-screen="chapters">
-      <div class="nav-ic">📚</div>Chapters
+      <div class="nav-ic">📚</div>Topics
     </button>
     <button class="nav-btn" data-screen="squad">
       <div class="nav-ic">👥</div>Squad

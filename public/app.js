@@ -193,7 +193,7 @@ async function loadToday() {
   const total = data.summary.total;
   const done = data.summary.done;
   if (total === 0) {
-    $('lecMeta').textContent = 'No lectures today';
+    $('lecMeta').textContent = 'No sessions today';
   } else if (done === total) {
     $('lecMeta').textContent = `${total}/${total} done ✓`;
   } else {
@@ -437,7 +437,7 @@ async function loadSquad() {
       <div class="lb-av">${initial}</div>
       <div class="lb-info">
         <div class="lb-name">${m.displayName || m.studentId}${m.isSelf ? ' <span class="muted">(you)</span>' : ''}</div>
-        <div class="lb-meta">📚 ${m.chaptersCompleted}/${data.totalChapters} chapters · ${m.sessionsCompleted} sessions${m.batch ? ' · ' + m.batch : ''}</div>
+        <div class="lb-meta">📚 ${m.chaptersCompleted}/${data.totalChapters} topics · ${m.sessionsCompleted} sessions${m.batch ? ' · ' + m.batch : ''}</div>
       </div>
       ${m.isSelf ? '' : `<button class="cheer-btn" data-id="${m.studentId}" data-name="${m.displayName || m.studentId}">👋</button>`}
     `;
