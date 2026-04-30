@@ -3,25 +3,25 @@ import { init, send, methodNotAllowed } from '../../lib/api.js';
 import { withAuth } from '../../lib/auth.js';
 import {
   getSquad, getStreakState, rowToStreakState, getUser,
-  chapterCompletionFor, unreadCheerCount,
+  sessionsCompletedFor, unreadCheerCount,
 } from '../../lib/db.js';
-import { flatChapterList } from '../../lib/chapters.js';
+import { totalSessionCount } from '../../lib/chapters.js';
 
 async function handler(req, res) {
   if (req.method !== 'GET') return methodNotAllowed(res, ['GET']);
   await init();
 
   const userId = req.userId;
-  const totalChapters = flatChapterList().length;
+  const totalChapters = totalSessionCount();
 
   // Self stats
   const me = await getUser(userId);
   const myState = rowToStreakState(await getStreakState(userId));
-  const myChapters = await chapterCompletionFor(userId);
+  const myChapters = await sessionsCompletedFor(userId);
 
   const squad = await getSquad(userId);
   const enriched = await Promise.all(squad.map(async (m) => {
-    const chap = await chapterCompletionFor(m.id);
+    const chap = await sessionsCompletedFor(m.id);
     return {
       studentId: m.id,
       displayName: m.display_name,

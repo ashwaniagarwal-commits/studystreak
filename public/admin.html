@@ -133,9 +133,9 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-sys
       </div>
     </div>
 
-    <div class="section-h"><h2>Chapter progress</h2></div>
+    <div class="section-h"><h2>Topic progress</h2><span class="meta">rolled up from 477 sessions</span></div>
     <table class="tbl">
-      <thead><tr><th>Subject</th><th>Chapter</th><th>Status</th><th>Updated</th></tr></thead>
+      <thead><tr><th>Subject</th><th>Topic</th><th>Sessions</th><th>Status</th><th>Updated</th></tr></thead>
       <tbody id="chapTbl"></tbody>
     </table>
 
@@ -271,7 +271,7 @@ async function showDetail(id) {
 
   $('chapTbl').innerHTML = data.chapters.map(c => {
     const klass = c.status === 'Completed' ? 'completed' : c.status === 'In Progress' ? 'inprogress' : 'notstarted';
-    return `<tr><td>${c.subject}</td><td>${c.chapter}</td><td><span class="pill ${klass}">${c.status}</span></td><td>${c.updatedAt ? new Date(c.updatedAt).toLocaleDateString('en-IN') : '—'}</td></tr>`;
+    return `<tr><td>${c.subject}</td><td>${c.chapter}</td><td>${c.progress || '—'}</td><td><span class="pill ${klass}">${c.status}</span></td><td>${c.updatedAt ? new Date(c.updatedAt).toLocaleDateString('en-IN') : '—'}</td></tr>`;
   }).join('');
 
   $('refl').innerHTML = data.reflections.length === 0

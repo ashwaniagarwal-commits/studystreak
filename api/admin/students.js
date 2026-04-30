@@ -1,18 +1,18 @@
 // GET /api/admin/students?admin=<password> → list of all students with summary stats
 import { init, send, methodNotAllowed } from '../../lib/api.js';
 import { withAdmin } from '../../lib/auth.js';
-import { listAllUsers, getChapterProgress } from '../../lib/db.js';
-import { flatChapterList } from '../../lib/chapters.js';
+import { listAllUsers, getSessionProgress } from '../../lib/db.js';
+import { totalSessionCount } from '../../lib/chapters.js';
 
 async function handler(req, res) {
   if (req.method !== 'GET') return methodNotAllowed(res, ['GET']);
   await init();
 
   const users = await listAllUsers();
-  const totalChapters = flatChapterList().length;
+  const totalChapters = totalSessionCount();
 
   const enriched = await Promise.all(users.map(async (u) => {
-    const progress = await getChapterProgress(u.id);
+    const progress = await getSessionProgress(u.id);
     const completed = progress.filter(p => p.status === 'Completed').length;
     const inProgress = progress.filter(p => p.status === 'In Progress').length;
     return {

@@ -269,32 +269,51 @@ async function loadChapters() {
 
   const list = $('chapterList');
   list.innerHTML = '';
-  for (const [subject, chapters] of Object.entries(data.grouped)) {
-    const sub = document.createElement('section');
-    sub.className = 'chap-sub';
-    sub.innerHTML = `<h3 class="chap-sub-h">${subject}</h3>`;
-    for (const c of chapters) {
-      const row = document.createElement('div');
-      row.className = `chap-row status-${c.status.replace(/\s+/g, '')}`;
-      row.innerHTML = `
-        <div class="chap-name">
-          <div class="chap-title">${c.chapter}</div>
-          <div class="chap-meta">${c.updatedAt ? 'Updated ' + new Date(c.updatedAt).toLocaleDateString('en-IN') : '—'}</div>
+  for (const [subject, topics] of Object.entries(data.grouped)) {
+    const subEl = document.createElement('section');
+    subEl.className = 'chap-sub';
+    subEl.innerHTML = `<h3 class="chap-sub-h">${subject}</h3>`;
+    for (const tp of topics) {
+      const det = document.createElement('details');
+      det.className = `topic-group ${tp.completed === tp.totalSessions ? 'all-done' : ''}`;
+      const summary = document.createElement('summary');
+      summary.className = 'topic-h';
+      summary.innerHTML = `
+        <div class="topic-name">${tp.topic}</div>
+        <div class="topic-meta">
+          <span class="topic-count">${tp.completed}/${tp.totalSessions}</span>
+          <div class="topic-bar"><i style="width:${tp.totalSessions ? tp.completed / tp.totalSessions * 100 : 0}%"></i></div>
         </div>
-        <select class="chap-status">
-          ${STATUS_OPTIONS.map(s => `<option value="${s}" ${s === c.status ? 'selected' : ''}>${s}</option>`).join('')}
-        </select>
       `;
-      const sel = row.querySelector('select');
-      sel.addEventListener('change', async () => {
-        try {
-          await api('PATCH', '/api/chapters', { subject, chapter: c.chapter, status: sel.value });
-          await loadChapters();
-        } catch (e) { alert('Failed: ' + e.message); }
-      });
-      sub.appendChild(row);
+      det.appendChild(summary);
+
+      for (const s of tp.sessions) {
+        const row = document.createElement('div');
+        row.className = `sess-row status-${s.status.replace(/\s+/g, '')}`;
+        const subTopicHtml = (s.subTopic || '').replace(/</g, '&lt;');
+        row.innerHTML = `
+          <div class="sess-name">
+            <div class="sess-title">Session ${s.sessionNum}</div>
+            <div class="sess-meta">${subTopicHtml || '—'}</div>
+          </div>
+          <select class="sess-status">
+            ${STATUS_OPTIONS.map(opt => `<option value="${opt}" ${opt === s.status ? 'selected' : ''}>${opt}</option>`).join('')}
+          </select>
+        `;
+        const sel = row.querySelector('select');
+        sel.addEventListener('change', async () => {
+          try {
+            await api('PATCH', '/api/chapters', {
+              subject, topic: tp.topic, sessionNum: s.sessionNum, status: sel.value,
+            });
+            await loadChapters();
+          } catch (e) { alert('Failed: ' + e.message); }
+        });
+        det.appendChild(row);
+      }
+      subEl.appendChild(det);
     }
-    list.appendChild(sub);
+    list.appendChild(subEl);
   }
 }
 

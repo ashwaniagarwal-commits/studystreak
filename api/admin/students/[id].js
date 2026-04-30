@@ -2,7 +2,7 @@
 import { init, send, methodNotAllowed } from '../../../lib/api.js';
 import { withAdmin } from '../../../lib/auth.js';
 import { getStudentSummary, getSquad, cheersBetween } from '../../../lib/db.js';
-import { flatChapterList } from '../../../lib/chapters.js';
+import { TOPIC_PLAN } from '../../../lib/chapters.js';
 
 async function handler(req, res) {
   if (req.method !== 'GET') return methodNotAllowed(res, ['GET']);
@@ -14,20 +14,41 @@ async function handler(req, res) {
   const summary = await getStudentSummary(id);
   if (!summary) return send(res, 404, { error: 'not_found' });
 
-  // Merge chapter progress with master list so we always show all chapters.
-  const byKey = new Map();
-  for (const p of summary.chapters) {
-    byKey.set(`${p.subject}::${p.chapter}`, p);
+  // Roll up 477-session view into topic-level rows for the admin display:
+  // status = 'Completed' if all sessions in topic are Completed,
+  //          'In Progress' if any session is In Progress or Completed (partial),
+  //          else 'Not Started'.
+  const sessByKey = new Map();
+  for (const s of summary.sessions || []) {
+    sessByKey.set(`${s.subject}::${s.topic}::${s.session_num}`, s);
   }
-  const fullChapters = flatChapterList().map(c => {
-    const cur = byKey.get(`${c.subject}::${c.chapter}`);
-    return {
-      subject: c.subject,
-      chapter: c.chapter,
-      status: cur?.status || 'Not Started',
-      updatedAt: cur?.updated_at instanceof Date ? cur.updated_at.toISOString() : cur?.updated_at || null,
-    };
-  });
+  const fullChapters = [];
+  for (const [subject, topics] of Object.entries(TOPIC_PLAN)) {
+    for (const tp of topics) {
+      let completed = 0, started = 0, lastUpdate = null;
+      for (const s of tp.sessions) {
+        const cur = sessByKey.get(`${subject}::${tp.topic}::${s.sessionNum}`);
+        if (cur) {
+          if (cur.status === 'Completed') completed++;
+          if (cur.status === 'Completed' || cur.status === 'In Progress') started++;
+          if (cur.updated_at) {
+            const t = cur.updated_at instanceof Date ? cur.updated_at.toISOString() : cur.updated_at;
+            if (!lastUpdate || t > lastUpdate) lastUpdate = t;
+          }
+        }
+      }
+      let status = 'Not Started';
+      if (completed === tp.sessions.length) status = 'Completed';
+      else if (started > 0) status = 'In Progress';
+      fullChapters.push({
+        subject,
+        chapter: tp.topic,
+        status,
+        progress: `${completed}/${tp.sessions.length}`,
+        updatedAt: lastUpdate,
+      });
+    }
+  }
 
   // v0.6 additions: squad + cheers
   const squad = await getSquad(id);

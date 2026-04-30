@@ -167,6 +167,29 @@ button.ghost{width:100%;padding:11px;border-radius:11px;background:rgba(255,255,
 .chap-status{padding:7px 9px;border-radius:9px;background:#0c0e22;color:var(--text);border:1px solid var(--line);font-size:12px;font-weight:600;font-family:inherit}
 .chap-status:focus{outline:none;border-color:var(--accent)}
 
+/* v0.7.2: collapsible topic groups + session rows */
+.topic-group{background:var(--card);border:1px solid var(--line);border-radius:13px;margin-bottom:8px;overflow:hidden}
+.topic-group.all-done{border-color:rgba(62,224,143,.35);background:linear-gradient(135deg,rgba(62,224,143,.06),transparent),var(--card)}
+.topic-group summary{list-style:none;cursor:pointer;padding:11px 13px;display:flex;align-items:center;gap:10px;user-select:none}
+.topic-group summary::-webkit-details-marker{display:none}
+.topic-group summary::before{content:"▸";color:var(--muted);font-size:11px;transition:transform .15s;flex-shrink:0;width:10px}
+.topic-group[open] summary::before{transform:rotate(90deg)}
+.topic-name{flex:1;font-size:13.5px;font-weight:700;line-height:1.3;min-width:0}
+.topic-meta{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.topic-count{font-size:11.5px;color:var(--muted);font-weight:600;font-variant-numeric:tabular-nums}
+.topic-bar{width:50px;height:5px;background:rgba(255,255,255,.07);border-radius:99px;overflow:hidden}
+.topic-bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:99px}
+.topic-group.all-done .topic-bar > i{background:linear-gradient(90deg,var(--green),#10b981)}
+
+.sess-row{display:flex;align-items:flex-start;gap:10px;padding:9px 13px 9px 30px;border-top:1px solid var(--line2,rgba(255,255,255,.04));background:rgba(0,0,0,.15)}
+.sess-row.status-Completed{background:rgba(62,224,143,.06)}
+.sess-row.status-InProgress{background:rgba(255,181,71,.05)}
+.sess-name{flex:1;min-width:0}
+.sess-title{font-size:11.5px;font-weight:700;color:var(--muted);letter-spacing:.04em}
+.sess-meta{font-size:11.5px;color:var(--text);margin-top:2px;line-height:1.4;word-break:break-word}
+.sess-status{padding:6px 8px;border-radius:8px;background:#0c0e22;color:var(--text);border:1px solid var(--line);font-size:11px;font-weight:600;font-family:inherit;flex-shrink:0}
+.sess-status:focus{outline:none;border-color:var(--accent)}
+
 /* Make room for bottom nav */
 .device{padding-bottom:80px}
 
