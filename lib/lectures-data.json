@@ -1,0 +1,4295 @@
+[
+  {
+    "scheduledDate": "2026-05-04",
+    "scheduledStart": "2026-05-04T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Motion in a straight line",
+    "subTopic": "Introduction to kinematics Distance and displacement Average and Instantaneous Velocity Average and Instantaneous Speed",
+    "sessionNum": 1
+  },
+  {
+    "scheduledDate": "2026-05-04",
+    "scheduledStart": "2026-05-04T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Sets",
+    "subTopic": "Definition and description of sets Types of sets Subset & power set Operation on sets Cardinality based problems",
+    "sessionNum": 1
+  },
+  {
+    "scheduledDate": "2026-05-04",
+    "scheduledStart": "2026-05-04T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Mole & Eqt. Concept",
+    "subTopic": "Matter and Its Nature Physical Quantities and Their Measurement Dalton's Atomic Theory Laws of Chemical Combinations Concepts of Atoms, Molecules, Elements and Compounds Atomic and Molecular Masses Mole Concept",
+    "sessionNum": 1
+  },
+  {
+    "scheduledDate": "2026-05-05",
+    "scheduledStart": "2026-05-05T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Motion in a straight line",
+    "subTopic": "Average and Instantaneous Acceleration Three standard equation of motion Displacement in nth second",
+    "sessionNum": 2
+  },
+  {
+    "scheduledDate": "2026-05-05",
+    "scheduledStart": "2026-05-05T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Relations",
+    "subTopic": "Cartesian product of sets Relation Inverse relation Relation and its types",
+    "sessionNum": 2
+  },
+  {
+    "scheduledDate": "2026-05-05",
+    "scheduledStart": "2026-05-05T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Mole & Eqt. Concept",
+    "subTopic": "Percentage Composition Empirical and Molecular Formulae Chemical Equations and Stoichiometry",
+    "sessionNum": 2
+  },
+  {
+    "scheduledDate": "2026-05-06",
+    "scheduledStart": "2026-05-06T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Motion in a straight line",
+    "subTopic": "Vertical motion under gravity",
+    "sessionNum": 3
+  },
+  {
+    "scheduledDate": "2026-05-06",
+    "scheduledStart": "2026-05-06T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Functions",
+    "subTopic": "Definition & associated terms of a function Domain of a function Modulus functions",
+    "sessionNum": 3
+  },
+  {
+    "scheduledDate": "2026-05-06",
+    "scheduledStart": "2026-05-06T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Mole & Eqt. Concept",
+    "subTopic": "Chemical Equations and Stoichiometry Limiting Reagent and Excess Reactant Percent Yield and Purity",
+    "sessionNum": 3
+  },
+  {
+    "scheduledDate": "2026-05-07",
+    "scheduledStart": "2026-05-07T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Motion in a straight line",
+    "subTopic": "Graphs of motion in a straight line Non-uniform motion",
+    "sessionNum": 4
+  },
+  {
+    "scheduledDate": "2026-05-07",
+    "scheduledStart": "2026-05-07T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Functions",
+    "subTopic": "Exponential functions Logarithmic functions",
+    "sessionNum": 4
+  },
+  {
+    "scheduledDate": "2026-05-07",
+    "scheduledStart": "2026-05-07T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Mole & Eqt. Concept",
+    "subTopic": "POAC Reactions in Aqueous Media and Strength of Solution Applications of Strength of Solutions",
+    "sessionNum": 4
+  },
+  {
+    "scheduledDate": "2026-05-08",
+    "scheduledStart": "2026-05-08T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Motion in a plane",
+    "subTopic": "Introduction to motion in a plane Introduction to Projectile Motion Ground to ground projectile motion",
+    "sessionNum": 5
+  },
+  {
+    "scheduledDate": "2026-05-08",
+    "scheduledStart": "2026-05-08T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Functions",
+    "subTopic": "Graphical transformation",
+    "sessionNum": 5
+  },
+  {
+    "scheduledDate": "2026-05-08",
+    "scheduledStart": "2026-05-08T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Mole & Eqt. Concept",
+    "subTopic": "Origin of Equivalent Concept Equivalent Weight Equivalent Concept Law of Chemical Equivalence",
+    "sessionNum": 5
+  },
+  {
+    "scheduledDate": "2026-05-09",
+    "scheduledStart": "2026-05-09T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Motion in a plane",
+    "subTopic": "Projectile motion from a height Projectile on an incline",
+    "sessionNum": 6
+  },
+  {
+    "scheduledDate": "2026-05-09",
+    "scheduledStart": "2026-05-09T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Functions",
+    "subTopic": "Domain of a function",
+    "sessionNum": 6
+  },
+  {
+    "scheduledDate": "2026-05-09",
+    "scheduledStart": "2026-05-09T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Redox Reactions",
+    "subTopic": "Introduction to Redox Reactions Concept of Oxidation and Reduction Oxidation Number Types of Redox Reactions",
+    "sessionNum": 6
+  },
+  {
+    "scheduledDate": "2026-05-11",
+    "scheduledStart": "2026-05-11T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Motion in a plane",
+    "subTopic": "Miscellaneous examples",
+    "sessionNum": 7
+  },
+  {
+    "scheduledDate": "2026-05-11",
+    "scheduledStart": "2026-05-11T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Functions",
+    "subTopic": "Range of a function",
+    "sessionNum": 7
+  },
+  {
+    "scheduledDate": "2026-05-11",
+    "scheduledStart": "2026-05-11T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Redox Reactions",
+    "subTopic": "Balancing Redox Reactions Redox Reactions and Electrode Processes",
+    "sessionNum": 7
+  },
+  {
+    "scheduledDate": "2026-05-12",
+    "scheduledStart": "2026-05-12T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Relative Motion",
+    "subTopic": "Frame of reference Relative motion in one dimension Equations of relative velocity and acceleration Relative velocity in two dimensions Graph for Relative Motion in one dimension",
+    "sessionNum": 8
+  },
+  {
+    "scheduledDate": "2026-05-12",
+    "scheduledStart": "2026-05-12T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Functions",
+    "subTopic": "Functions & its classification",
+    "sessionNum": 8
+  },
+  {
+    "scheduledDate": "2026-05-12",
+    "scheduledStart": "2026-05-12T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Redox Reactions",
+    "subTopic": "Equivalent Concept Redox Titrations",
+    "sessionNum": 8
+  },
+  {
+    "scheduledDate": "2026-05-13",
+    "scheduledStart": "2026-05-13T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Relative Motion",
+    "subTopic": "River-boat problems Rain-man problems Relative separation and approach Collision of projectiles",
+    "sessionNum": 9
+  },
+  {
+    "scheduledDate": "2026-05-13",
+    "scheduledStart": "2026-05-13T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Functions",
+    "subTopic": "Composition of a function Inverse of a function",
+    "sessionNum": 9
+  },
+  {
+    "scheduledDate": "2026-05-13",
+    "scheduledStart": "2026-05-13T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Redox Reactions",
+    "subTopic": "Back Titration Double Titration Iodimetry and Iodometry Volume Strength of Hydrogen Peroxide Degree of Hardness of Water Percentage of Free Chlorine in Bleaching Powder Percentage of Free SO3 in Oleum",
+    "sessionNum": 9
+  },
+  {
+    "scheduledDate": "2026-05-14",
+    "scheduledStart": "2026-05-14T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Laws Of Motion",
+    "subTopic": "Newton's laws of motion Contact Forces Non Contact Forces Free-body diagram",
+    "sessionNum": 10
+  },
+  {
+    "scheduledDate": "2026-05-14",
+    "scheduledStart": "2026-05-14T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Functions",
+    "subTopic": "Even/odd functions Periodic functions",
+    "sessionNum": 10
+  },
+  {
+    "scheduledDate": "2026-05-14",
+    "scheduledStart": "2026-05-14T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Structure of an Atom",
+    "subTopic": "Special Terms Thomson's Model of Atom Rutherford's Nuclear Model of Atom",
+    "sessionNum": 10
+  },
+  {
+    "scheduledDate": "2026-05-15",
+    "scheduledStart": "2026-05-15T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Laws Of Motion",
+    "subTopic": "Translational equilibrium Spring balance Weighing Machine",
+    "sessionNum": 11
+  },
+  {
+    "scheduledDate": "2026-05-15",
+    "scheduledStart": "2026-05-15T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Functions",
+    "subTopic": "Graphical transformation",
+    "sessionNum": 11
+  },
+  {
+    "scheduledDate": "2026-05-15",
+    "scheduledStart": "2026-05-15T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Structure of an Atom",
+    "subTopic": "Electromagnetic Spectrum Characteristics of Wave Planck's Quantum Theory",
+    "sessionNum": 11
+  },
+  {
+    "scheduledDate": "2026-05-16",
+    "scheduledStart": "2026-05-16T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Laws Of Motion",
+    "subTopic": "Motion of a body on a smooth inclined plane Pulley block system String and spring cutting problems",
+    "sessionNum": 12
+  },
+  {
+    "scheduledDate": "2026-05-16",
+    "scheduledStart": "2026-05-16T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Functions",
+    "subTopic": "Greatest integer functions Fractional part functions",
+    "sessionNum": 12
+  },
+  {
+    "scheduledDate": "2026-05-16",
+    "scheduledStart": "2026-05-16T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Structure of an Atom",
+    "subTopic": "Bohr's Model of Atom",
+    "sessionNum": 12
+  },
+  {
+    "scheduledDate": "2026-05-18",
+    "scheduledStart": "2026-05-18T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Laws Of Motion",
+    "subTopic": "Concept of Constraint motion Pseudo Force Miscellaneous examples",
+    "sessionNum": 13
+  },
+  {
+    "scheduledDate": "2026-05-18",
+    "scheduledStart": "2026-05-18T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Trigonometry",
+    "subTopic": "System of measuring an angle Regular polygon",
+    "sessionNum": 13
+  },
+  {
+    "scheduledDate": "2026-05-18",
+    "scheduledStart": "2026-05-18T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Structure of an Atom",
+    "subTopic": "Bohr's Model of Atom Spectra of Hydrogenic Atoms",
+    "sessionNum": 13
+  },
+  {
+    "scheduledDate": "2026-05-19",
+    "scheduledStart": "2026-05-19T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Friction",
+    "subTopic": "Frictional force and its properties Types of Friction Graph based problems on friction Angle of repose Angle of friction",
+    "sessionNum": 14
+  },
+  {
+    "scheduledDate": "2026-05-19",
+    "scheduledStart": "2026-05-19T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Trigonometry",
+    "subTopic": "Trigonometric Ratios and Identities",
+    "sessionNum": 14
+  },
+  {
+    "scheduledDate": "2026-05-19",
+    "scheduledStart": "2026-05-19T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Structure of an Atom",
+    "subTopic": "Wave Nature of Electromagnetic Radiation Particle Nature of Electromagnetic Radiation Dual Nature of Particle",
+    "sessionNum": 14
+  },
+  {
+    "scheduledDate": "2026-05-20",
+    "scheduledStart": "2026-05-20T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Friction",
+    "subTopic": "Block on block systems Miscellaneous examples",
+    "sessionNum": 15
+  },
+  {
+    "scheduledDate": "2026-05-20",
+    "scheduledStart": "2026-05-20T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Trigonometry",
+    "subTopic": "Trigonometric Ratios and Identities",
+    "sessionNum": 15
+  },
+  {
+    "scheduledDate": "2026-05-20",
+    "scheduledStart": "2026-05-20T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Structure of an Atom",
+    "subTopic": "Dual Nature of Particle Heisenberg's Uncertainty Principle Schrodinger's Wave Equation",
+    "sessionNum": 15
+  },
+  {
+    "scheduledDate": "2026-05-21",
+    "scheduledStart": "2026-05-21T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Work, energy and power",
+    "subTopic": "Concept of work done by a force Work done by a constant force Work done by a variable force Work done using Force-displacement curve",
+    "sessionNum": 16
+  },
+  {
+    "scheduledDate": "2026-05-21",
+    "scheduledStart": "2026-05-21T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Trigonometry",
+    "subTopic": "Max-min values of trigonometric expression",
+    "sessionNum": 16
+  },
+  {
+    "scheduledDate": "2026-05-21",
+    "scheduledStart": "2026-05-21T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Structure of an Atom",
+    "subTopic": "Quantum Numbers Electronic Configuration",
+    "sessionNum": 16
+  },
+  {
+    "scheduledDate": "2026-05-22",
+    "scheduledStart": "2026-05-22T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Work, energy and power",
+    "subTopic": "Kinetic energy Problems based on Linear Momentum and Kinetic energy Work energy theorem Conservative and non conservative forces",
+    "sessionNum": 17
+  },
+  {
+    "scheduledDate": "2026-05-22",
+    "scheduledStart": "2026-05-22T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Trigonometry",
+    "subTopic": "Trigonometric Ratios and Identities",
+    "sessionNum": 17
+  },
+  {
+    "scheduledDate": "2026-05-22",
+    "scheduledStart": "2026-05-22T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Periodic Properties",
+    "subTopic": "Modern Periodic Table Structure of Modern Periodic Table Merits of Modern Periodic Table Demerits of Modern Periodic Table Screening Effect",
+    "sessionNum": 17
+  },
+  {
+    "scheduledDate": "2026-05-23",
+    "scheduledStart": "2026-05-23T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Work, energy and power",
+    "subTopic": "Potential energy Gravitational Potential energy Spring Potential energy",
+    "sessionNum": 18
+  },
+  {
+    "scheduledDate": "2026-05-23",
+    "scheduledStart": "2026-05-23T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Trigonometry",
+    "subTopic": "Trigonometric series Conditional identities",
+    "sessionNum": 18
+  },
+  {
+    "scheduledDate": "2026-05-23",
+    "scheduledStart": "2026-05-23T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Periodic Properties",
+    "subTopic": "Atomic and Ionic Radii Ionization Enthalpy Electron Gain Enthalpy or Electron Affinity Electronegativity and Its Applications",
+    "sessionNum": 18
+  },
+  {
+    "scheduledDate": "2026-05-25",
+    "scheduledStart": "2026-05-25T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Work, energy and power",
+    "subTopic": "Modified Work energy theorem Conservation of mechanical energy",
+    "sessionNum": 19
+  },
+  {
+    "scheduledDate": "2026-05-25",
+    "scheduledStart": "2026-05-25T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Trigonometry",
+    "subTopic": "Trigonometric equations and inequations",
+    "sessionNum": 19
+  },
+  {
+    "scheduledDate": "2026-05-25",
+    "scheduledStart": "2026-05-25T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Periodic Properties",
+    "subTopic": "Electronegativity and Its Applications Oxidizing and Reducing Behaviour Valency and Oxidation State Diagonal Relationship Anomalous Behaviour",
+    "sessionNum": 19
+  },
+  {
+    "scheduledDate": "2026-05-26",
+    "scheduledStart": "2026-05-26T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Work, energy and power",
+    "subTopic": "Potential energy graphs Types of Equilibrium Power",
+    "sessionNum": 20
+  },
+  {
+    "scheduledDate": "2026-05-26",
+    "scheduledStart": "2026-05-26T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Trigonometry",
+    "subTopic": "Trigonometric equations and inequations Solution of triangles",
+    "sessionNum": 20
+  },
+  {
+    "scheduledDate": "2026-05-26",
+    "scheduledStart": "2026-05-26T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Chemical Bonding",
+    "subTopic": "Introduction to Chemical Bond Kossel and Lewis Approach Valency Covalent Bond Lewis Dot Structures Covalent & Ionic Compounds",
+    "sessionNum": 20
+  },
+  {
+    "scheduledDate": "2026-05-28",
+    "scheduledStart": "2026-05-28T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Circular motion",
+    "subTopic": "Introduction to circular motion Various parameters in circular motion Equations of circular motion Uniform and non-uniform circular motion Centripetal Acceleration Tangential Acceleration",
+    "sessionNum": 21
+  },
+  {
+    "scheduledDate": "2026-05-28",
+    "scheduledStart": "2026-05-28T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Trigonometry",
+    "subTopic": "Trigonometric Ratios and Identities",
+    "sessionNum": 21
+  },
+  {
+    "scheduledDate": "2026-05-28",
+    "scheduledStart": "2026-05-28T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Chemical Bonding",
+    "subTopic": "Valence Bond Theory",
+    "sessionNum": 21
+  },
+  {
+    "scheduledDate": "2026-05-29",
+    "scheduledStart": "2026-05-29T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Circular motion",
+    "subTopic": "Centripetal force Centrifugal force Problems based on circular turn without banking of roads Problems based on circular turn with banking of roads",
+    "sessionNum": 22
+  },
+  {
+    "scheduledDate": "2026-05-29",
+    "scheduledStart": "2026-05-29T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Inverse Trigonometry Functions",
+    "subTopic": "Introduction and definition of ITF",
+    "sessionNum": 22
+  },
+  {
+    "scheduledDate": "2026-05-29",
+    "scheduledStart": "2026-05-29T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Chemical Bonding",
+    "subTopic": "VSEPR Theory",
+    "sessionNum": 22
+  },
+  {
+    "scheduledDate": "2026-05-30",
+    "scheduledStart": "2026-05-30T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Circular motion",
+    "subTopic": "Problems based on conical Pendulum Vertical circular motion involving strings and similar cases Vertical circular motion involving strings and similar cases",
+    "sessionNum": 23
+  },
+  {
+    "scheduledDate": "2026-05-30",
+    "scheduledStart": "2026-05-30T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Inverse Trigonometry Functions",
+    "subTopic": "Composition of trignometric and ITF",
+    "sessionNum": 23
+  },
+  {
+    "scheduledDate": "2026-05-30",
+    "scheduledStart": "2026-05-30T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Chemical Bonding",
+    "subTopic": "Hybridisation",
+    "sessionNum": 23
+  },
+  {
+    "scheduledDate": "2026-06-01",
+    "scheduledStart": "2026-06-01T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Physics",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 24
+  },
+  {
+    "scheduledDate": "2026-06-02",
+    "scheduledStart": "2026-06-02T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Math",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 24
+  },
+  {
+    "scheduledDate": "2026-06-03",
+    "scheduledStart": "2026-06-03T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Chemistry",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 24
+  },
+  {
+    "scheduledDate": "2026-06-04",
+    "scheduledStart": "2026-06-04T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Centre of mass, momentum and collision",
+    "subTopic": "Introduction to Centre of mass COM of discrete system",
+    "sessionNum": 25
+  },
+  {
+    "scheduledDate": "2026-06-04",
+    "scheduledStart": "2026-06-04T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Inverse Trigonometry Functions",
+    "subTopic": "Results in ITF Sum and difference of ITF",
+    "sessionNum": 25
+  },
+  {
+    "scheduledDate": "2026-06-04",
+    "scheduledStart": "2026-06-04T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Chemical Bonding",
+    "subTopic": "Dipole Moment Molecular Orbital Theory",
+    "sessionNum": 25
+  },
+  {
+    "scheduledDate": "2026-06-05",
+    "scheduledStart": "2026-06-05T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Centre of mass, momentum and collision",
+    "subTopic": "Centre of Mass of Continuous Mass System Motion of centre of mass",
+    "sessionNum": 26
+  },
+  {
+    "scheduledDate": "2026-06-05",
+    "scheduledStart": "2026-06-05T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Inverse Trigonometry Functions",
+    "subTopic": "Sum and difference of ITF Summation of Series Simplification problems of ITF",
+    "sessionNum": 26
+  },
+  {
+    "scheduledDate": "2026-06-05",
+    "scheduledStart": "2026-06-05T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Chemical Bonding",
+    "subTopic": "Molecular Orbital Theory",
+    "sessionNum": 26
+  },
+  {
+    "scheduledDate": "2026-06-06",
+    "scheduledStart": "2026-06-06T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Centre of mass, momentum and collision",
+    "subTopic": "Linear momentum Conservation of linear momentum",
+    "sessionNum": 27
+  },
+  {
+    "scheduledDate": "2026-06-06",
+    "scheduledStart": "2026-06-06T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Inverse Trigonometry Functions",
+    "subTopic": "Simplification problems of ITF Miscellaneous examples",
+    "sessionNum": 27
+  },
+  {
+    "scheduledDate": "2026-06-06",
+    "scheduledStart": "2026-06-06T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Chemical Bonding",
+    "subTopic": "Resonance Electrovalent or Ionic Bond Hydration Enthalpy",
+    "sessionNum": 27
+  },
+  {
+    "scheduledDate": "2026-06-08",
+    "scheduledStart": "2026-06-08T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Centre of mass, momentum and collision",
+    "subTopic": "Introduction to Impulse Impulse momentum equation Other problems on impulse",
+    "sessionNum": 28
+  },
+  {
+    "scheduledDate": "2026-06-08",
+    "scheduledStart": "2026-06-08T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Complex Numbers",
+    "subTopic": "Describing Complex number and its Algebra Conjugate of complex number Square root of a complex number",
+    "sessionNum": 28
+  },
+  {
+    "scheduledDate": "2026-06-08",
+    "scheduledStart": "2026-06-08T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Chemical Bonding",
+    "subTopic": "Lattice Enthalpy Fajans' Rules Metallic Bond",
+    "sessionNum": 28
+  },
+  {
+    "scheduledDate": "2026-06-09",
+    "scheduledStart": "2026-06-09T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Centre of mass, momentum and collision",
+    "subTopic": "Introduction to collisions Head on and Oblique collision Elastic collision Partially and completely Inelastic collision",
+    "sessionNum": 29
+  },
+  {
+    "scheduledDate": "2026-06-09",
+    "scheduledStart": "2026-06-09T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Complex Numbers",
+    "subTopic": "Argand Plane Modulus of complex number & its properties Argument of complex number & its properties",
+    "sessionNum": 29
+  },
+  {
+    "scheduledDate": "2026-06-09",
+    "scheduledStart": "2026-06-09T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Chemical Bonding",
+    "subTopic": "Intermolecular Forces Hydrogen Bonding",
+    "sessionNum": 29
+  },
+  {
+    "scheduledDate": "2026-06-10",
+    "scheduledStart": "2026-06-10T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Centre of mass, momentum and collision",
+    "subTopic": "Problems on oblique collision Miscellaneous problems in collisions",
+    "sessionNum": 30
+  },
+  {
+    "scheduledDate": "2026-06-10",
+    "scheduledStart": "2026-06-10T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Complex Numbers",
+    "subTopic": "Representation of C.N. in different forms Properties of modulus",
+    "sessionNum": 30
+  },
+  {
+    "scheduledDate": "2026-06-10",
+    "scheduledStart": "2026-06-10T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Gaseous State",
+    "subTopic": "Introduction to Gaseous State Measurable Properties of Gases The Gas Laws",
+    "sessionNum": 30
+  },
+  {
+    "scheduledDate": "2026-06-11",
+    "scheduledStart": "2026-06-11T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Rotational Motion",
+    "subTopic": "Introduction to rotational motion Moment of inertia Moment of inertia of standard bodies Moment of inertia of truncated bodies/combined bodies Parallel axis theorem Perpendicular axis theorem Radius of gyration",
+    "sessionNum": 31
+  },
+  {
+    "scheduledDate": "2026-06-11",
+    "scheduledStart": "2026-06-11T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Complex Numbers",
+    "subTopic": "Cube roots of unity Nth roots of unity",
+    "sessionNum": 31
+  },
+  {
+    "scheduledDate": "2026-06-11",
+    "scheduledStart": "2026-06-11T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Gaseous State",
+    "subTopic": "The Gas Laws Ideal Gas Equation and Its Applications Dalton's Law of Partial Pressures",
+    "sessionNum": 31
+  },
+  {
+    "scheduledDate": "2026-06-12",
+    "scheduledStart": "2026-06-12T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Rotational Motion",
+    "subTopic": "Introduction to Torque Equilibrium problems",
+    "sessionNum": 32
+  },
+  {
+    "scheduledDate": "2026-06-12",
+    "scheduledStart": "2026-06-12T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Complex Numbers",
+    "subTopic": "Vector representation of complex numbers Geometrical interpretation of modulus",
+    "sessionNum": 32
+  },
+  {
+    "scheduledDate": "2026-06-12",
+    "scheduledStart": "2026-06-12T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Gaseous State",
+    "subTopic": "Graham's Law of Diffusion and Effusion Kinetic Theory of Gases Maxwell's Distribution of Molecular Speeds",
+    "sessionNum": 32
+  },
+  {
+    "scheduledDate": "2026-06-13",
+    "scheduledStart": "2026-06-13T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Rotational Motion",
+    "subTopic": "Toppling Newton’s law of rotation",
+    "sessionNum": 33
+  },
+  {
+    "scheduledDate": "2026-06-13",
+    "scheduledStart": "2026-06-13T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Complex Numbers",
+    "subTopic": "Geometrical interpretation of modulus Rotation of complex number",
+    "sessionNum": 33
+  },
+  {
+    "scheduledDate": "2026-06-13",
+    "scheduledStart": "2026-06-13T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Gaseous State",
+    "subTopic": "Real Gases The van der Waals Equation Compressibility Factor",
+    "sessionNum": 33
+  },
+  {
+    "scheduledDate": "2026-06-15",
+    "scheduledStart": "2026-06-15T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Rotational Motion",
+    "subTopic": "Rotational kinetic energy in fixed axis rotation Introduction to angular momentum Torque and angular momentum Conservation of Angular Momentum",
+    "sessionNum": 34
+  },
+  {
+    "scheduledDate": "2026-06-15",
+    "scheduledStart": "2026-06-15T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Complex Numbers",
+    "subTopic": "Geometrical interpretation of modulus Rotation of complex number",
+    "sessionNum": 34
+  },
+  {
+    "scheduledDate": "2026-06-15",
+    "scheduledStart": "2026-06-15T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Gaseous State",
+    "subTopic": "Liquefaction of Gases Eudiometry Joule-Thomson Effect",
+    "sessionNum": 34
+  },
+  {
+    "scheduledDate": "2026-06-16",
+    "scheduledStart": "2026-06-16T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Rotational Motion",
+    "subTopic": "Combined translational and rotational motion Concept of IAOR",
+    "sessionNum": 35
+  },
+  {
+    "scheduledDate": "2026-06-16",
+    "scheduledStart": "2026-06-16T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Quadratic Equation",
+    "subTopic": "Polynomials Relations between roots and coefficient Formation of quadratic equations with given roots",
+    "sessionNum": 35
+  },
+  {
+    "scheduledDate": "2026-06-16",
+    "scheduledStart": "2026-06-16T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Thermodynamics and Thermochemistry",
+    "subTopic": "Introduction to Thermodynamics Types of Processes Thermal Equilibrium Zeroth Law of Thermodynamics Internal Energy Concept of Heat and Work First Law of Thermodynamics",
+    "sessionNum": 35
+  },
+  {
+    "scheduledDate": "2026-06-17",
+    "scheduledStart": "2026-06-17T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Rotational Motion",
+    "subTopic": "Condition of pure rolling Rolling with forward slipping Rolling with backward slipping",
+    "sessionNum": 36
+  },
+  {
+    "scheduledDate": "2026-06-17",
+    "scheduledStart": "2026-06-17T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Quadratic Equation",
+    "subTopic": "Relations between roots and coefficient Nature of roots",
+    "sessionNum": 36
+  },
+  {
+    "scheduledDate": "2026-06-17",
+    "scheduledStart": "2026-06-17T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Thermodynamics and Thermochemistry",
+    "subTopic": "First Law of Thermodynamics Reversible and Irreversible Work Heat Capacity Adiabatic Processes and Poisson’s Ratio",
+    "sessionNum": 36
+  },
+  {
+    "scheduledDate": "2026-06-18",
+    "scheduledStart": "2026-06-18T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Rotational Motion",
+    "subTopic": "Collision based problems in translation + rotation Rolling on horizontal surface Rolling on an inclined surface Miscellaneous examples",
+    "sessionNum": 37
+  },
+  {
+    "scheduledDate": "2026-06-18",
+    "scheduledStart": "2026-06-18T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Quadratic Equation",
+    "subTopic": "Transformation of equations Common roots",
+    "sessionNum": 37
+  },
+  {
+    "scheduledDate": "2026-06-18",
+    "scheduledStart": "2026-06-18T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Thermodynamics and Thermochemistry",
+    "subTopic": "Polytropic Processes Graph Transformation Enthalpy of a System",
+    "sessionNum": 37
+  },
+  {
+    "scheduledDate": "2026-06-19",
+    "scheduledStart": "2026-06-19T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Fluid mechanics",
+    "subTopic": "Introduction to fluids Hydrostatic Pressure Barometer Force exerted by fluids on the walls of the container Problems based on force due to fluids",
+    "sessionNum": 38
+  },
+  {
+    "scheduledDate": "2026-06-19",
+    "scheduledStart": "2026-06-19T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Quadratic Equation",
+    "subTopic": "Analysis of graph of Quadratic Equations Location of roots",
+    "sessionNum": 38
+  },
+  {
+    "scheduledDate": "2026-06-19",
+    "scheduledStart": "2026-06-19T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Thermodynamics and Thermochemistry",
+    "subTopic": "Second Law of Thermodynamics Carnot Heat Engine Entropy and Spontaneity Gibbs Energy and Spontaneity Third Law of Thermodynamics",
+    "sessionNum": 38
+  },
+  {
+    "scheduledDate": "2026-06-20",
+    "scheduledStart": "2026-06-20T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Fluid mechanics",
+    "subTopic": "Pascal's law Archimedes' principle Buoyant Force Center of Buoyancy",
+    "sessionNum": 39
+  },
+  {
+    "scheduledDate": "2026-06-20",
+    "scheduledStart": "2026-06-20T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Sequence and Series",
+    "subTopic": "Nth term of a sequence Arithmetic progression",
+    "sessionNum": 39
+  },
+  {
+    "scheduledDate": "2026-06-20",
+    "scheduledStart": "2026-06-20T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Thermodynamics and Thermochemistry",
+    "subTopic": "Thermochemical Equations Relationship Between ΔH and ΔU Standard Enthalpy Change ΔH° Enthalpy of Reactions/processes",
+    "sessionNum": 39
+  },
+  {
+    "scheduledDate": "2026-06-22",
+    "scheduledStart": "2026-06-22T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Fluid mechanics",
+    "subTopic": "Accelerated fluids Rotating tubes/containers",
+    "sessionNum": 40
+  },
+  {
+    "scheduledDate": "2026-06-22",
+    "scheduledStart": "2026-06-22T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Sequence and Series",
+    "subTopic": "Sum of terms in A.P.",
+    "sessionNum": 40
+  },
+  {
+    "scheduledDate": "2026-06-22",
+    "scheduledStart": "2026-06-22T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Thermodynamics and Thermochemistry",
+    "subTopic": "Enthalpies for Different Types of Reactions Bond Dissociation Enthalpy Resonance Energy Hess's Law of Constant Heat Summation",
+    "sessionNum": 40
+  },
+  {
+    "scheduledDate": "2026-06-23",
+    "scheduledStart": "2026-06-23T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Fluid mechanics",
+    "subTopic": "Properties of ideal fluids Turbulent flow and Reynold's number Properties of streamline flow Equation of continuity Bernoulli's equation Torricelli's equation and velocity of efflux",
+    "sessionNum": 41
+  },
+  {
+    "scheduledDate": "2026-06-23",
+    "scheduledStart": "2026-06-23T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Sequence and Series",
+    "subTopic": "Arithmetic mean Geometric progression Sum of terms in G.P.",
+    "sessionNum": 41
+  },
+  {
+    "scheduledDate": "2026-06-23",
+    "scheduledStart": "2026-06-23T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Thermodynamics and Thermochemistry",
+    "subTopic": "Born Haber Cycle Dependence of Enthalpy on Temperature Gibbs Free Energy Change in Reaction",
+    "sessionNum": 41
+  },
+  {
+    "scheduledDate": "2026-06-24",
+    "scheduledStart": "2026-06-24T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Fluid mechanics",
+    "subTopic": "Applications of fluid dynamics",
+    "sessionNum": 42
+  },
+  {
+    "scheduledDate": "2026-06-24",
+    "scheduledStart": "2026-06-24T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Sequence and Series",
+    "subTopic": "Sum of terms in G.P. Geometric mean",
+    "sessionNum": 42
+  },
+  {
+    "scheduledDate": "2026-06-24",
+    "scheduledStart": "2026-06-24T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Chemical Equilibrium",
+    "subTopic": "Introduction to Equilibrium Graphical Representation and Characteristics of Chemical Equilibrium Law of Mass Action Equilibrium Constants (Kp and Kc) and their Properties",
+    "sessionNum": 42
+  },
+  {
+    "scheduledDate": "2026-06-25",
+    "scheduledStart": "2026-06-25T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Fluid mechanics",
+    "subTopic": "Viscosity Force between layers of fluid Stoke's Law Terminal Velocity Adhesive and cohesive forces Force due to surface tension",
+    "sessionNum": 43
+  },
+  {
+    "scheduledDate": "2026-06-25",
+    "scheduledStart": "2026-06-25T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Sequence and Series",
+    "subTopic": "Arithmetic-geometric progression Harmonic progression",
+    "sessionNum": 43
+  },
+  {
+    "scheduledDate": "2026-06-25",
+    "scheduledStart": "2026-06-25T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Chemical Equilibrium",
+    "subTopic": "Applications of Equilibrium Constant Homogeneous Equilibria Heterogeneous Equilibria Degree of Dissociation",
+    "sessionNum": 43
+  },
+  {
+    "scheduledDate": "2026-06-26",
+    "scheduledStart": "2026-06-26T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Fluid mechanics",
+    "subTopic": "Surface Energy Excess pressure in a droplet and a bubble Angle of contact Capillarity Jurin's law/ insufficient height of capillary",
+    "sessionNum": 44
+  },
+  {
+    "scheduledDate": "2026-06-26",
+    "scheduledStart": "2026-06-26T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Sequence and Series",
+    "subTopic": "Harmonic mean Relation between A.M, G.M & H.M.",
+    "sessionNum": 44
+  },
+  {
+    "scheduledDate": "2026-06-26",
+    "scheduledStart": "2026-06-26T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Chemical Equilibrium",
+    "subTopic": "Simultaneous Equilibria Le Chatelier’s Principle Thermodynamics of Equilibrium Phase Equilibria",
+    "sessionNum": 44
+  },
+  {
+    "scheduledDate": "2026-06-27",
+    "scheduledStart": "2026-06-27T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Mechanical properties of solids",
+    "subTopic": "Elastic behaviour of solids Longitudinal stress Shearing stress Bulk/Volumetric stress Hooke's law Modulus of elasticity",
+    "sessionNum": 45
+  },
+  {
+    "scheduledDate": "2026-06-27",
+    "scheduledStart": "2026-06-27T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Sequence and Series",
+    "subTopic": "Sigma notation Sum of series by difference method",
+    "sessionNum": 45
+  },
+  {
+    "scheduledDate": "2026-06-27",
+    "scheduledStart": "2026-06-27T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Ionic Equilibrium",
+    "subTopic": "Theory of Electrolytes Theory of Acids and Bases Dissociation of Weak Acids and Bases Dissociation of Weak Acids and Bases Ostwald's Dilution Law Self-ionization of Water",
+    "sessionNum": 45
+  },
+  {
+    "scheduledDate": "2026-06-29",
+    "scheduledStart": "2026-06-29T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Mechanical properties of solids",
+    "subTopic": "Problems based on Young's modulus Problems based on shear modulus Problems based on Bulk Modulus Elastic potential energy Stress-strain graph Searle’s method",
+    "sessionNum": 46
+  },
+  {
+    "scheduledDate": "2026-06-29",
+    "scheduledStart": "2026-06-29T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Sequence and Series",
+    "subTopic": "Vn Method",
+    "sessionNum": 46
+  },
+  {
+    "scheduledDate": "2026-06-29",
+    "scheduledStart": "2026-06-29T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Ionic Equilibrium",
+    "subTopic": "pH Scale pH Calculation of Acids and Bases Common Ion Effect Buffer Solutions",
+    "sessionNum": 46
+  },
+  {
+    "scheduledDate": "2026-06-30",
+    "scheduledStart": "2026-06-30T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Simple harmonic motion",
+    "subTopic": "Periodic motion and oscillatory motion Simple harmonic motion/ Various parameters in SHM Graphs in SHM Energy in simple harmonic motion",
+    "sessionNum": 47
+  },
+  {
+    "scheduledDate": "2026-06-30",
+    "scheduledStart": "2026-06-30T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Permutation and combination",
+    "subTopic": "The fundamental principle of counting",
+    "sessionNum": 47
+  },
+  {
+    "scheduledDate": "2026-06-30",
+    "scheduledStart": "2026-06-30T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Ionic Equilibrium",
+    "subTopic": "Buffer Solutions Relationship Between Ka and Kb for a Conjugate Pair Salt Hydrolysis",
+    "sessionNum": 47
+  },
+  {
+    "scheduledDate": "2026-07-01",
+    "scheduledStart": "2026-07-01T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Physics",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 48
+  },
+  {
+    "scheduledDate": "2026-07-02",
+    "scheduledStart": "2026-07-02T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Math",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 48
+  },
+  {
+    "scheduledDate": "2026-07-03",
+    "scheduledStart": "2026-07-03T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Chemistry",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 48
+  },
+  {
+    "scheduledDate": "2026-07-04",
+    "scheduledStart": "2026-07-04T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Simple harmonic motion",
+    "subTopic": "Phasors in SHM Energy in simple harmonic motion",
+    "sessionNum": 49
+  },
+  {
+    "scheduledDate": "2026-07-04",
+    "scheduledStart": "2026-07-04T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Permutation and combination",
+    "subTopic": "Arrangement and selection",
+    "sessionNum": 49
+  },
+  {
+    "scheduledDate": "2026-07-04",
+    "scheduledStart": "2026-07-04T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Ionic Equilibrium",
+    "subTopic": "Solubility and Solubility Product Constant",
+    "sessionNum": 49
+  },
+  {
+    "scheduledDate": "2026-07-06",
+    "scheduledStart": "2026-07-06T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Simple harmonic motion",
+    "subTopic": "Simple pendulum Physical/Compound Pendulum Torsional Pendulum",
+    "sessionNum": 50
+  },
+  {
+    "scheduledDate": "2026-07-06",
+    "scheduledStart": "2026-07-06T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Permutation and combination",
+    "subTopic": "Geometrical problems Arrangement & selection",
+    "sessionNum": 50
+  },
+  {
+    "scheduledDate": "2026-07-06",
+    "scheduledStart": "2026-07-06T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Ionic Equilibrium",
+    "subTopic": "Preferential Precipitation of Salts",
+    "sessionNum": 50
+  },
+  {
+    "scheduledDate": "2026-07-07",
+    "scheduledStart": "2026-07-07T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Simple harmonic motion",
+    "subTopic": "Combination of SHM along same axis Combination of SHM along perpendicular axis Other complex problems in SHM",
+    "sessionNum": 51
+  },
+  {
+    "scheduledDate": "2026-07-07",
+    "scheduledStart": "2026-07-07T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Permutation and combination",
+    "subTopic": "Arrangement & selection Dearrangement, grid, divisor & exponent problems",
+    "sessionNum": 51
+  },
+  {
+    "scheduledDate": "2026-07-07",
+    "scheduledStart": "2026-07-07T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Ionic Equilibrium",
+    "subTopic": "Theory of Indicators Acid Base Titrations",
+    "sessionNum": 51
+  },
+  {
+    "scheduledDate": "2026-07-08",
+    "scheduledStart": "2026-07-08T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Simple harmonic motion",
+    "subTopic": "Damped Oscillations Forced oscillations",
+    "sessionNum": 52
+  },
+  {
+    "scheduledDate": "2026-07-08",
+    "scheduledStart": "2026-07-08T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Permutation and combination",
+    "subTopic": "Distribution of Objects",
+    "sessionNum": 52
+  },
+  {
+    "scheduledDate": "2026-07-08",
+    "scheduledStart": "2026-07-08T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Ionic Equilibrium",
+    "subTopic": "Theory of Indicators Acid Base Titrations",
+    "sessionNum": 52
+  },
+  {
+    "scheduledDate": "2026-07-09",
+    "scheduledStart": "2026-07-09T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Waves",
+    "subTopic": "Introduction and classification of waves Equation of a plane progressive wave Transverse waves on a string Problems based on speed of string waves (constant tension cases)",
+    "sessionNum": 53
+  },
+  {
+    "scheduledDate": "2026-07-09",
+    "scheduledStart": "2026-07-09T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Permutation and combination",
+    "subTopic": "Distribution of Objects Circular permutation",
+    "sessionNum": 53
+  },
+  {
+    "scheduledDate": "2026-07-09",
+    "scheduledStart": "2026-07-09T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Hydrogen",
+    "subTopic": "Introduction to Hydrogen Preparation of Dihydrogen Properties of Dihydrogen Hydrides Properties of Water Hardness of Water",
+    "sessionNum": 53
+  },
+  {
+    "scheduledDate": "2026-07-10",
+    "scheduledStart": "2026-07-10T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Waves",
+    "subTopic": "Problems based on speed of waves on string (variable tension case) Other types of problems based on travelling string waves",
+    "sessionNum": 54
+  },
+  {
+    "scheduledDate": "2026-07-10",
+    "scheduledStart": "2026-07-10T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Binomial Theorem",
+    "subTopic": "Notations Binomial theorem for positive integral index",
+    "sessionNum": 54
+  },
+  {
+    "scheduledDate": "2026-07-10",
+    "scheduledStart": "2026-07-10T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Hydrogen",
+    "subTopic": "Introduction to Heavy Water Introduction to Hydrogen Peroxide Preparation of Hydrogen Peroxide Properties of Hydrogen Peroxide Tests, Uses of Hydrogen and Its Compounds",
+    "sessionNum": 54
+  },
+  {
+    "scheduledDate": "2026-07-11",
+    "scheduledStart": "2026-07-11T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Waves",
+    "subTopic": "Energy transfer in a string wave Power and intensity of a string wave Longitudinal waves Displacement and pressure equation of Longitudinal waves",
+    "sessionNum": 55
+  },
+  {
+    "scheduledDate": "2026-07-11",
+    "scheduledStart": "2026-07-11T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Binomial Theorem",
+    "subTopic": "General term of binomial expansion Application of binomial theorem",
+    "sessionNum": 55
+  },
+  {
+    "scheduledDate": "2026-07-11",
+    "scheduledStart": "2026-07-11T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "s- Block",
+    "subTopic": "Introduction to s-block Elements Physical Properties of s-block Elements Chemical Properties of s-block Elements Anomalous behaviour and Diagonal Relationship",
+    "sessionNum": 55
+  },
+  {
+    "scheduledDate": "2026-07-13",
+    "scheduledStart": "2026-07-13T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Waves",
+    "subTopic": "Speed of sound in gases Intensity of sound wave Loudness of sound wave",
+    "sessionNum": 56
+  },
+  {
+    "scheduledDate": "2026-07-13",
+    "scheduledStart": "2026-07-13T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Binomial Theorem",
+    "subTopic": "Application of binomial theorem Numerically greatest term in binomial expansion Binomial theorem for any index",
+    "sessionNum": 56
+  },
+  {
+    "scheduledDate": "2026-07-13",
+    "scheduledStart": "2026-07-13T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "s- Block",
+    "subTopic": "General Characteristics of Compounds of s-block Elements Commercially Important Compounds of s-block Elements Uses of s-block Elements Biological Significance of Na, K, Mg and Ca Miscellaneous examples",
+    "sessionNum": 56
+  },
+  {
+    "scheduledDate": "2026-07-14",
+    "scheduledStart": "2026-07-14T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Waves",
+    "subTopic": "Superposition of waves Interference of waves Introduction to standing waves",
+    "sessionNum": 57
+  },
+  {
+    "scheduledDate": "2026-07-14",
+    "scheduledStart": "2026-07-14T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Binomial Theorem",
+    "subTopic": "Binomial coefficient problems",
+    "sessionNum": 57
+  },
+  {
+    "scheduledDate": "2026-07-14",
+    "scheduledStart": "2026-07-14T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "p-block (group 13 and 14)",
+    "subTopic": "Introduction to p-block Elements Physical Properties of Group 13 Elements Chemical Properties of Group 13 Elements Inert Pair Effect Boron and Its Compounds",
+    "sessionNum": 57
+  },
+  {
+    "scheduledDate": "2026-07-15",
+    "scheduledStart": "2026-07-15T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Waves",
+    "subTopic": "Standing waves on string fixed at both ends Standing waves on string fixed at one end",
+    "sessionNum": 58
+  },
+  {
+    "scheduledDate": "2026-07-15",
+    "scheduledStart": "2026-07-15T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Binomial Theorem",
+    "subTopic": "R-f factor problems Multinomial theorem",
+    "sessionNum": 58
+  },
+  {
+    "scheduledDate": "2026-07-15",
+    "scheduledStart": "2026-07-15T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "p-block (group 13 and 14)",
+    "subTopic": "Boron and Its Compounds Aluminium and Its Compounds Physical Properties of Group 14 Elements",
+    "sessionNum": 58
+  },
+  {
+    "scheduledDate": "2026-07-16",
+    "scheduledStart": "2026-07-16T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Waves",
+    "subTopic": "Standing waves in sound Resonance column method End correction in organ pipes Beats",
+    "sessionNum": 59
+  },
+  {
+    "scheduledDate": "2026-07-16",
+    "scheduledStart": "2026-07-16T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Binomial Theorem",
+    "subTopic": "R-f factor problems Multinomial theorem",
+    "sessionNum": 59
+  },
+  {
+    "scheduledDate": "2026-07-16",
+    "scheduledStart": "2026-07-16T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "p-block (group 13 and 14)",
+    "subTopic": "Physical Properties of Group 14 Elements Chemical Properties of Group 14 Elements Carbon and Its Compounds Silicon and Its Compounds",
+    "sessionNum": 59
+  },
+  {
+    "scheduledDate": "2026-07-17",
+    "scheduledStart": "2026-07-17T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Waves",
+    "subTopic": "Doppler's effect Miscellaneous examples",
+    "sessionNum": 60
+  },
+  {
+    "scheduledDate": "2026-07-17",
+    "scheduledStart": "2026-07-17T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Determinant And Matrices",
+    "subTopic": "Minors and cofactors Evaluation of determinants of order 2 and 3",
+    "sessionNum": 60
+  },
+  {
+    "scheduledDate": "2026-07-17",
+    "scheduledStart": "2026-07-17T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "General Organic Chemistry",
+    "subTopic": "Introduction to Carbon and Its Compounds Structural Representation of Organic Compounds Degree of Carbon Classification of Organic Compounds Degree of Unsaturation Reacting Species Common Names of Organic Compounds IUPAC System of Nomenclature",
+    "sessionNum": 60
+  },
+  {
+    "scheduledDate": "2026-07-18",
+    "scheduledStart": "2026-07-18T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Wave Optics",
+    "subTopic": "Huygen's principle Types of sources and respective wavefronts Application of Huygens Principle: Proof of Reflection and Refraction",
+    "sessionNum": 61
+  },
+  {
+    "scheduledDate": "2026-07-18",
+    "scheduledStart": "2026-07-18T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Determinant And Matrices",
+    "subTopic": "Properties of determinants",
+    "sessionNum": 61
+  },
+  {
+    "scheduledDate": "2026-07-18",
+    "scheduledStart": "2026-07-18T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "General Organic Chemistry",
+    "subTopic": "IUPAC System of Nomenclature",
+    "sessionNum": 61
+  },
+  {
+    "scheduledDate": "2026-07-20",
+    "scheduledStart": "2026-07-20T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Wave Optics",
+    "subTopic": "Interference of light Young's double slit experiment Variations in young's double slit experiment",
+    "sessionNum": 62
+  },
+  {
+    "scheduledDate": "2026-07-20",
+    "scheduledStart": "2026-07-20T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Determinant And Matrices",
+    "subTopic": "Properties of determinants",
+    "sessionNum": 62
+  },
+  {
+    "scheduledDate": "2026-07-20",
+    "scheduledStart": "2026-07-20T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "General Organic Chemistry",
+    "subTopic": "IUPAC System of Nomenclature",
+    "sessionNum": 62
+  },
+  {
+    "scheduledDate": "2026-07-21",
+    "scheduledStart": "2026-07-21T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Wave Optics",
+    "subTopic": "Diffraction",
+    "sessionNum": 63
+  },
+  {
+    "scheduledDate": "2026-07-21",
+    "scheduledStart": "2026-07-21T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Determinant And Matrices",
+    "subTopic": "Multiplication of determinants Some special determinants Differentiation of Determinants",
+    "sessionNum": 63
+  },
+  {
+    "scheduledDate": "2026-07-21",
+    "scheduledStart": "2026-07-21T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "General Organic Chemistry",
+    "subTopic": "IUPAC System of Nomenclature Covalent Bond Fission Introduction of Reaction Intermediates Electronic Displacement in a Covalent Bond Electronic Displacement in a Covalent Bond Inductive Effect Electromeric Effect",
+    "sessionNum": 63
+  },
+  {
+    "scheduledDate": "2026-07-22",
+    "scheduledStart": "2026-07-22T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Wave Optics",
+    "subTopic": "Polarization Law of Malus Brewster's law",
+    "sessionNum": 64
+  },
+  {
+    "scheduledDate": "2026-07-22",
+    "scheduledStart": "2026-07-22T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Determinant And Matrices",
+    "subTopic": "Solution of simultaneous linear equations using determinants Area of triangles using determinants",
+    "sessionNum": 64
+  },
+  {
+    "scheduledDate": "2026-07-22",
+    "scheduledStart": "2026-07-22T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "General Organic Chemistry",
+    "subTopic": "Resonance",
+    "sessionNum": 64
+  },
+  {
+    "scheduledDate": "2026-07-23",
+    "scheduledStart": "2026-07-23T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Heat, temperature and calorimetry",
+    "subTopic": "Temperature and heat Zeroth Law of Thermodynamics Measurement of Temperature Different scales of temperature Linear expansion Properties of coefficient of linear expansion Areal expansion Cubical Expansion",
+    "sessionNum": 65
+  },
+  {
+    "scheduledDate": "2026-07-23",
+    "scheduledStart": "2026-07-23T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Determinant And Matrices",
+    "subTopic": "Introduction to matrices Algebra of matrices",
+    "sessionNum": 65
+  },
+  {
+    "scheduledDate": "2026-07-23",
+    "scheduledStart": "2026-07-23T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "General Organic Chemistry",
+    "subTopic": "Resonance Resonance or Mesomeric Effect",
+    "sessionNum": 65
+  },
+  {
+    "scheduledDate": "2026-07-24",
+    "scheduledStart": "2026-07-24T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Heat, temperature and calorimetry",
+    "subTopic": "Applications of Thermal Expansion Expansion of liquids",
+    "sessionNum": 66
+  },
+  {
+    "scheduledDate": "2026-07-24",
+    "scheduledStart": "2026-07-24T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Determinant And Matrices",
+    "subTopic": "Some Special type of Matrices",
+    "sessionNum": 66
+  },
+  {
+    "scheduledDate": "2026-07-24",
+    "scheduledStart": "2026-07-24T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "General Organic Chemistry",
+    "subTopic": "Concept of Aromaticity Hyperconjugation Applications of Electronic Effects",
+    "sessionNum": 66
+  },
+  {
+    "scheduledDate": "2026-07-25",
+    "scheduledStart": "2026-07-25T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Heat, temperature and calorimetry",
+    "subTopic": "Introduction to calorimetry Specific heat capacity of solids and fluids Meaning of Heat capacity Meaning of water equivalent and it's application Principle of calorimetry Miscellaneous examples",
+    "sessionNum": 67
+  },
+  {
+    "scheduledDate": "2026-07-25",
+    "scheduledStart": "2026-07-25T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Determinant And Matrices",
+    "subTopic": "Adjoint of matrix and its properties",
+    "sessionNum": 67
+  },
+  {
+    "scheduledDate": "2026-07-25",
+    "scheduledStart": "2026-07-25T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "General Organic Chemistry",
+    "subTopic": "Concept of Aromaticity Hyperconjugation Applications of Electronic Effects",
+    "sessionNum": 67
+  },
+  {
+    "scheduledDate": "2026-07-27",
+    "scheduledStart": "2026-07-27T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Heat Transfer",
+    "subTopic": "Introduction to Heat transfer Introduction to heat conduction Steady state equation of conduction Electrical Analogy of thermal conduction",
+    "sessionNum": 68
+  },
+  {
+    "scheduledDate": "2026-07-27",
+    "scheduledStart": "2026-07-27T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Determinant And Matrices",
+    "subTopic": "Inverse of a matrix and its properties Inverse using elementary operations",
+    "sessionNum": 68
+  },
+  {
+    "scheduledDate": "2026-07-27",
+    "scheduledStart": "2026-07-27T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "General Organic Chemistry",
+    "subTopic": "Structural Isomerism Geometrical Isomerism",
+    "sessionNum": 68
+  },
+  {
+    "scheduledDate": "2026-07-28",
+    "scheduledStart": "2026-07-28T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Heat Transfer",
+    "subTopic": "Series and parallel combination of rods as resistors Growth of ice on lakes Other cases/problems on thermal conduction Thermal convection",
+    "sessionNum": 69
+  },
+  {
+    "scheduledDate": "2026-07-28",
+    "scheduledStart": "2026-07-28T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Determinant And Matrices",
+    "subTopic": "Solution of simultaneous linear equations using matrices Consistency of simultaneous equations",
+    "sessionNum": 69
+  },
+  {
+    "scheduledDate": "2026-07-28",
+    "scheduledStart": "2026-07-28T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "General Organic Chemistry",
+    "subTopic": "Geometrical Isomerism Introduction to Tautomerism",
+    "sessionNum": 69
+  },
+  {
+    "scheduledDate": "2026-07-29",
+    "scheduledStart": "2026-07-29T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Heat Transfer",
+    "subTopic": "Introduction to thermal radiations/Prevost theory Parameters involved in radiation Stefan's law Properties of Black body radiation",
+    "sessionNum": 70
+  },
+  {
+    "scheduledDate": "2026-07-29",
+    "scheduledStart": "2026-07-29T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Determinant And Matrices",
+    "subTopic": "Consistency of simultaneous equations Characteristic Equation & Cayley Hamilton Theorem Miscellaneous examples",
+    "sessionNum": 70
+  },
+  {
+    "scheduledDate": "2026-07-29",
+    "scheduledStart": "2026-07-29T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "General Organic Chemistry",
+    "subTopic": "Conformational Isomerism Stability of Conformers Conformers of Organic Compounds",
+    "sessionNum": 70
+  },
+  {
+    "scheduledDate": "2026-07-30",
+    "scheduledStart": "2026-07-30T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Heat Transfer",
+    "subTopic": "Wien's law Newton's law of cooling Miscellaneous examples",
+    "sessionNum": 71
+  },
+  {
+    "scheduledDate": "2026-07-30",
+    "scheduledStart": "2026-07-30T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Limits, Continuity & Differentiability",
+    "subTopic": "Introduction to limits Concept of LHL & RHL Evaluating algebraic limits",
+    "sessionNum": 71
+  },
+  {
+    "scheduledDate": "2026-07-30",
+    "scheduledStart": "2026-07-30T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Isomerism",
+    "subTopic": "Tautomerism Geometrical Isomerism of Cyclic Compounds",
+    "sessionNum": 71
+  },
+  {
+    "scheduledDate": "2026-07-31",
+    "scheduledStart": "2026-07-31T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Kinetic theory of gases",
+    "subTopic": "Postulates of KTG Pressure calculation Ideal Gas laws Real gases Different types of speeds of gases Maxwell speed distribution curve",
+    "sessionNum": 72
+  },
+  {
+    "scheduledDate": "2026-07-31",
+    "scheduledStart": "2026-07-31T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Limits, Continuity & Differentiability",
+    "subTopic": "Standard result based limits",
+    "sessionNum": 72
+  },
+  {
+    "scheduledDate": "2026-07-31",
+    "scheduledStart": "2026-07-31T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Isomerism",
+    "subTopic": "E and Z Isomerism Syn and Anti Isomerism Number of Geometrical Isomers Revision of Projections",
+    "sessionNum": 72
+  },
+  {
+    "scheduledDate": "2026-08-01",
+    "scheduledStart": "2026-08-01T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Physics",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 73
+  },
+  {
+    "scheduledDate": "2026-08-03",
+    "scheduledStart": "2026-08-03T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Math",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 73
+  },
+  {
+    "scheduledDate": "2026-08-04",
+    "scheduledStart": "2026-08-04T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Chemistry",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 73
+  },
+  {
+    "scheduledDate": "2026-08-05",
+    "scheduledStart": "2026-08-05T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Kinetic theory of gases",
+    "subTopic": "Degree of Freedom Law of Equipartition of energy Energy of gas molecules Mean free path and relaxation time Miscellaneous examples",
+    "sessionNum": 74
+  },
+  {
+    "scheduledDate": "2026-08-05",
+    "scheduledStart": "2026-08-05T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Limits, Continuity & Differentiability",
+    "subTopic": "Standard result based limits Series expansion based limits",
+    "sessionNum": 74
+  },
+  {
+    "scheduledDate": "2026-08-05",
+    "scheduledStart": "2026-08-05T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Isomerism",
+    "subTopic": "Absolute and Relative Nomenclature Optically Active Compounds",
+    "sessionNum": 74
+  },
+  {
+    "scheduledDate": "2026-08-06",
+    "scheduledStart": "2026-08-06T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Thermodynamics",
+    "subTopic": "Introduction to thermodynamics First law of thermodynamics Work done by a gas Heat supplied to the gas in a process Change in internal energy of a gas Molar heat capacity of a gas Cp and Cv of a gas/gaseous mixture",
+    "sessionNum": 75
+  },
+  {
+    "scheduledDate": "2026-08-06",
+    "scheduledStart": "2026-08-06T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Limits, Continuity & Differentiability",
+    "subTopic": "L-Hopital rule Limit of sequence Derivatives",
+    "sessionNum": 75
+  },
+  {
+    "scheduledDate": "2026-08-06",
+    "scheduledStart": "2026-08-06T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Isomerism",
+    "subTopic": "Chirality Relationship Between Optical Isomers Number of Optical Isomers",
+    "sessionNum": 75
+  },
+  {
+    "scheduledDate": "2026-08-07",
+    "scheduledStart": "2026-08-07T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Thermodynamics",
+    "subTopic": "Cyclic and non-cyclic processes",
+    "sessionNum": 76
+  },
+  {
+    "scheduledDate": "2026-08-07",
+    "scheduledStart": "2026-08-07T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Limits, Continuity & Differentiability",
+    "subTopic": "Continuity at a point continuity in an interval",
+    "sessionNum": 76
+  },
+  {
+    "scheduledDate": "2026-08-07",
+    "scheduledStart": "2026-08-07T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Hydrocarbons",
+    "subTopic": "Introduction and Classification of Hydrocarbons Nomenclature of Hydrocarbons Structure of Alkanes Isomerism in Alkanes Preparation of Alkanes Preparation of Alkanes Physical Properties of Alkanes Chemical Properties of Alkanes",
+    "sessionNum": 76
+  },
+  {
+    "scheduledDate": "2026-08-08",
+    "scheduledStart": "2026-08-08T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Thermodynamics",
+    "subTopic": "Standard thermodynamic processes Polytropic process Quasistatic processes Reversible and Irreversible processes",
+    "sessionNum": 77
+  },
+  {
+    "scheduledDate": "2026-08-08",
+    "scheduledStart": "2026-08-08T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Limits, Continuity & Differentiability",
+    "subTopic": "Continuity of composition of functions Types ofDiscontinuity LHD and RHD at x=a",
+    "sessionNum": 77
+  },
+  {
+    "scheduledDate": "2026-08-08",
+    "scheduledStart": "2026-08-08T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Hydrocarbons",
+    "subTopic": "Chemical Properties of Alkanes Structure of Alkenes Isomerism in Alkenes Preparation of Alkenes Physical Properties of Alkenes Chemical Properties of Alkenes",
+    "sessionNum": 77
+  },
+  {
+    "scheduledDate": "2026-08-10",
+    "scheduledStart": "2026-08-10T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Thermodynamics",
+    "subTopic": "Second law of Thermodynamics Heat engine Carnot Engine Refrigerator and its coefficient of performance Carnot refrigerator Miscellaneous examples",
+    "sessionNum": 78
+  },
+  {
+    "scheduledDate": "2026-08-10",
+    "scheduledStart": "2026-08-10T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Limits, Continuity & Differentiability",
+    "subTopic": "LHD and RHD at x=a Differentiability at a point Differentiability in an interval",
+    "sessionNum": 78
+  },
+  {
+    "scheduledDate": "2026-08-10",
+    "scheduledStart": "2026-08-10T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Hydrocarbons",
+    "subTopic": "Chemical Properties of Alkenes Tests of Alkenes Structure of Alkynes Isomerism in Alkynes Preparation of Alkynes Preparation of Alkynes Physical Properties of Alkynes Chemical Properties of Alkynes Tests of Alkynes Introduction to Aromatic Hydrocarbons Structure of Benzene Nomenclature of Aromatic Hydrocarbons Isomerism in Aromatic Compounds Preparation of Aromatic Hydrocarbons",
+    "sessionNum": 78
+  },
+  {
+    "scheduledDate": "2026-08-11",
+    "scheduledStart": "2026-08-11T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Electrostatics",
+    "subTopic": "Electric charge and its properties Conductors and Insulators and their Method of Charging Force between charges/Coulomb's law Force due to multiple charges and Vector form of Coulomb's law Electric field Electric field due to a point charge or combination of point charges",
+    "sessionNum": 79
+  },
+  {
+    "scheduledDate": "2026-08-11",
+    "scheduledStart": "2026-08-11T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Differentiation",
+    "subTopic": "product, quotient and chain rule Differentiation of implicit functions,",
+    "sessionNum": 79
+  },
+  {
+    "scheduledDate": "2026-08-11",
+    "scheduledStart": "2026-08-11T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Hydrocarbons",
+    "subTopic": "Tests of Alkynes Introduction to Aromatic Hydrocarbons Structure of Benzene Nomenclature of Aromatic Hydrocarbons Isomerism in Aromatic Compounds Preparation of Aromatic Hydrocarbons",
+    "sessionNum": 79
+  },
+  {
+    "scheduledDate": "2026-08-12",
+    "scheduledStart": "2026-08-12T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Electrostatics",
+    "subTopic": "Electric dipole in a non-uniform electric field Introduction to dielectrics Polarization of dielectrics Force between charges in a dielectric medium",
+    "sessionNum": 80
+  },
+  {
+    "scheduledDate": "2026-08-12",
+    "scheduledStart": "2026-08-12T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Differentiation",
+    "subTopic": "Parametric differentiation Log differentiation and infinite series",
+    "sessionNum": 80
+  },
+  {
+    "scheduledDate": "2026-08-12",
+    "scheduledStart": "2026-08-12T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Hydrocarbons",
+    "subTopic": "Preparation of Aromatic Hydrocarbons Physical Properties of Aromatic Hydrocarbons Chemical Properties of Aromatic Hydrocarbons",
+    "sessionNum": 80
+  },
+  {
+    "scheduledDate": "2026-08-13",
+    "scheduledStart": "2026-08-13T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Electrostatics",
+    "subTopic": "Conductors and its properties Charge distribution in conductors Conductor with cavities Electric field and potential problems involving conductor",
+    "sessionNum": 81
+  },
+  {
+    "scheduledDate": "2026-08-13",
+    "scheduledStart": "2026-08-13T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Differentiation",
+    "subTopic": "differentiation of a function wrt function derviatives of ITF Higher order derivative problems Newton Leibnitz formula",
+    "sessionNum": 81
+  },
+  {
+    "scheduledDate": "2026-08-13",
+    "scheduledStart": "2026-08-13T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Hydrocarbons",
+    "subTopic": "Chemical Properties of Aromatic Hydrocarbons Commercially Important Hydrocarbons and Their Properties",
+    "sessionNum": 81
+  },
+  {
+    "scheduledDate": "2026-08-14",
+    "scheduledStart": "2026-08-14T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Electrostatics",
+    "subTopic": "Electric field due to standard bodies Electric field due to truncated bodies or combined bodies",
+    "sessionNum": 82
+  },
+  {
+    "scheduledDate": "2026-08-14",
+    "scheduledStart": "2026-08-14T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Application of Derivatives",
+    "subTopic": "Derivative as rate measure Errors and approximations",
+    "sessionNum": 82
+  },
+  {
+    "scheduledDate": "2026-08-14",
+    "scheduledStart": "2026-08-14T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Environmental Chemistry",
+    "subTopic": "Environmental Pollution Atmospheric Pollution Pollutants Water Pollution Soil Pollution Industrial Waste Strategies to Control Environmental Pollution Green Chemistry",
+    "sessionNum": 82
+  },
+  {
+    "scheduledDate": "2026-08-17",
+    "scheduledStart": "2026-08-17T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Electrostatics",
+    "subTopic": "Electric potential energy of a system of charges Miscellaneous problems on electrostatic energy Introduction to Electric potential Potential due to a point charge or combination of charges Potential due to standard bodies",
+    "sessionNum": 83
+  },
+  {
+    "scheduledDate": "2026-08-17",
+    "scheduledStart": "2026-08-17T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Application of Derivatives",
+    "subTopic": "Tangents and normals",
+    "sessionNum": 83
+  },
+  {
+    "scheduledDate": "2026-08-17",
+    "scheduledStart": "2026-08-17T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Solid State",
+    "subTopic": "Introduction to Solid State Classification of Solids Crystal System, Bravais Lattice, Cubic Unit cells",
+    "sessionNum": 83
+  },
+  {
+    "scheduledDate": "2026-08-18",
+    "scheduledStart": "2026-08-18T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Electrostatics",
+    "subTopic": "Relation between electric field and electric potential Electric lines of forces and its properties Equipotential surfaces",
+    "sessionNum": 84
+  },
+  {
+    "scheduledDate": "2026-08-18",
+    "scheduledStart": "2026-08-18T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Application of Derivatives",
+    "subTopic": "Tangents and normals Angle of intersection b/w two curves Length of tangent and normal subtangent and subnormal",
+    "sessionNum": 84
+  },
+  {
+    "scheduledDate": "2026-08-18",
+    "scheduledStart": "2026-08-18T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Solid State",
+    "subTopic": "Types of Symmetry in Crystals Types of Cubic Unit Cells Analysis of Cubic System Packing in Solids",
+    "sessionNum": 84
+  },
+  {
+    "scheduledDate": "2026-08-19",
+    "scheduledStart": "2026-08-19T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Electrostatics",
+    "subTopic": "Electric dipole Electric field due to a dipole Electric potential due to a dipole Force on an electric dipole kept in a uniform field Torque on an electric dipole in external electric field Equilibrium of a dipole Potential energy of an electric dipole in an external electric field",
+    "sessionNum": 85
+  },
+  {
+    "scheduledDate": "2026-08-19",
+    "scheduledStart": "2026-08-19T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Application of Derivatives",
+    "subTopic": "Mean Value Theorem",
+    "sessionNum": 85
+  },
+  {
+    "scheduledDate": "2026-08-19",
+    "scheduledStart": "2026-08-19T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Solid State",
+    "subTopic": "Types of Voids Radius Ratio Some Important Ionic Crystals",
+    "sessionNum": 85
+  },
+  {
+    "scheduledDate": "2026-08-20",
+    "scheduledStart": "2026-08-20T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Electrostatics",
+    "subTopic": "Vector nature of Area Electric flux Calculation of electric flux due to uniform electric field Calculation of electric flux due to non-uniform electric field",
+    "sessionNum": 86
+  },
+  {
+    "scheduledDate": "2026-08-20",
+    "scheduledStart": "2026-08-20T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Application of Derivatives",
+    "subTopic": "Monotonocity of a function at a Point Increasing and Decreasing Functions Intervals of monotonocity",
+    "sessionNum": 86
+  },
+  {
+    "scheduledDate": "2026-08-20",
+    "scheduledStart": "2026-08-20T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Solid State",
+    "subTopic": "nan",
+    "sessionNum": 86
+  },
+  {
+    "scheduledDate": "2026-08-21",
+    "scheduledStart": "2026-08-21T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Electrostatics",
+    "subTopic": "Use of Gauss's law Flux based problems using Gauss law",
+    "sessionNum": 87
+  },
+  {
+    "scheduledDate": "2026-08-21",
+    "scheduledStart": "2026-08-21T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Application of Derivatives",
+    "subTopic": "Critical point Single Derivative Test",
+    "sessionNum": 87
+  },
+  {
+    "scheduledDate": "2026-08-21",
+    "scheduledStart": "2026-08-21T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Solutions",
+    "subTopic": "Introduction to Solutions Types of Solutions Concentration Terms Vapour Pressure Solubility of Gases and Solids Raoult's Law",
+    "sessionNum": 87
+  },
+  {
+    "scheduledDate": "2026-08-22",
+    "scheduledStart": "2026-08-22T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Electrostatics",
+    "subTopic": "Parallel plate problems Concentric shell problems",
+    "sessionNum": 88
+  },
+  {
+    "scheduledDate": "2026-08-22",
+    "scheduledStart": "2026-08-22T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Application of Derivatives",
+    "subTopic": "Concavity Double Derivative Test",
+    "sessionNum": 88
+  },
+  {
+    "scheduledDate": "2026-08-22",
+    "scheduledStart": "2026-08-22T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Solutions",
+    "subTopic": "Raoult's Law Ideal and Non Ideal Solutions Concept of Boiling & Azeotropes",
+    "sessionNum": 88
+  },
+  {
+    "scheduledDate": "2026-08-24",
+    "scheduledStart": "2026-08-24T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Gravitation",
+    "subTopic": "Introduction to Newton's law of gravitation Acceleration due to gravity \"g\" on the surface of Earth Variation of \"g\" on earth due to Height Variation of \"g\" on earth due to depth Variation of \"g\" on earth due to Rotation and Shape of earth",
+    "sessionNum": 89
+  },
+  {
+    "scheduledDate": "2026-08-24",
+    "scheduledStart": "2026-08-24T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Application of Derivatives",
+    "subTopic": "global extreme values in an interval Roots of Cubic Function inflection point",
+    "sessionNum": 89
+  },
+  {
+    "scheduledDate": "2026-08-24",
+    "scheduledStart": "2026-08-24T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Solutions",
+    "subTopic": "Thermodynamic Properties of Solution Colligative Properties of Dilute Solutions",
+    "sessionNum": 89
+  },
+  {
+    "scheduledDate": "2026-08-25",
+    "scheduledStart": "2026-08-25T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Gravitation",
+    "subTopic": "Gravitational potential energy Escape velocity Orbital speed in circular orbits Time period in circular orbits Energy in circular orbits Types of satellites",
+    "sessionNum": 90
+  },
+  {
+    "scheduledDate": "2026-08-25",
+    "scheduledStart": "2026-08-25T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Indefinite Integration",
+    "subTopic": "Integral as an antiderivative",
+    "sessionNum": 90
+  },
+  {
+    "scheduledDate": "2026-08-25",
+    "scheduledStart": "2026-08-25T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Solutions",
+    "subTopic": "Van’t Hoff Factor and Its Significance",
+    "sessionNum": 90
+  },
+  {
+    "scheduledDate": "2026-08-26",
+    "scheduledStart": "2026-08-26T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Gravitation",
+    "subTopic": "weightlessness in circular orbits Kepler's laws of planetary motion Properties of elliptical orbits Miscellaneous examples",
+    "sessionNum": 91
+  },
+  {
+    "scheduledDate": "2026-08-26",
+    "scheduledStart": "2026-08-26T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Indefinite Integration",
+    "subTopic": "Integration by substitution",
+    "sessionNum": 91
+  },
+  {
+    "scheduledDate": "2026-08-26",
+    "scheduledStart": "2026-08-26T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Electrochemistry",
+    "subTopic": "Introduction to Electrochemistry Electrochemical Cells Galvanic Cell and Its Construction Half - Cell, Cell Reactions and Representations Electrode Potentials Including Standard Electrode Potential",
+    "sessionNum": 91
+  },
+  {
+    "scheduledDate": "2026-08-27",
+    "scheduledStart": "2026-08-27T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Current Electricity",
+    "subTopic": "Real and ideal cell Terminal voltage across a cell series combination of a cell Parallel combination of a cell",
+    "sessionNum": 92
+  },
+  {
+    "scheduledDate": "2026-08-27",
+    "scheduledStart": "2026-08-27T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Indefinite Integration",
+    "subTopic": "Integration by substitution",
+    "sessionNum": 92
+  },
+  {
+    "scheduledDate": "2026-08-27",
+    "scheduledStart": "2026-08-27T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Electrochemistry",
+    "subTopic": "Electrochemical Series and Its Applications Emf of Galvanic Cells and Its Measurement Relationship Between Cell Potential and Gibbs Energy Change",
+    "sessionNum": 92
+  },
+  {
+    "scheduledDate": "2026-08-31",
+    "scheduledStart": "2026-08-31T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Current Electricity",
+    "subTopic": "Heating effects of current/joule's heating Maximum power transfer theorem",
+    "sessionNum": 93
+  },
+  {
+    "scheduledDate": "2026-08-31",
+    "scheduledStart": "2026-08-31T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Indefinite Integration",
+    "subTopic": "Standard Algebraic Forms",
+    "sessionNum": 93
+  },
+  {
+    "scheduledDate": "2026-08-31",
+    "scheduledStart": "2026-08-31T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Electrochemistry",
+    "subTopic": "Nernst Equation and Its Applications Different Types of Electrodes Concentration Cell",
+    "sessionNum": 93
+  },
+  {
+    "scheduledDate": "2026-09-01",
+    "scheduledStart": "2026-09-01T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Physics",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 94
+  },
+  {
+    "scheduledDate": "2026-09-02",
+    "scheduledStart": "2026-09-02T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Math",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 94
+  },
+  {
+    "scheduledDate": "2026-09-03",
+    "scheduledStart": "2026-09-03T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Chemistry",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 94
+  },
+  {
+    "scheduledDate": "2026-09-04",
+    "scheduledStart": "2026-09-04T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Current Electricity",
+    "subTopic": "Measuring instruments in current electricity",
+    "sessionNum": 95
+  },
+  {
+    "scheduledDate": "2026-09-04",
+    "scheduledStart": "2026-09-04T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Indefinite Integration",
+    "subTopic": "Partial Fraction Method Integration by parts",
+    "sessionNum": 95
+  },
+  {
+    "scheduledDate": "2026-09-04",
+    "scheduledStart": "2026-09-04T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Electrochemistry",
+    "subTopic": "Electrolytic Cell Electrolytic and Metallic Conduction Electrolysis and Its Applications Faraday's Laws of Electrolysis",
+    "sessionNum": 95
+  },
+  {
+    "scheduledDate": "2026-09-05",
+    "scheduledStart": "2026-09-05T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Current Electricity",
+    "subTopic": "Charging RC circuits Discharging RC circuits",
+    "sessionNum": 96
+  },
+  {
+    "scheduledDate": "2026-09-05",
+    "scheduledStart": "2026-09-05T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Indefinite Integration",
+    "subTopic": "Integration by parts",
+    "sessionNum": 96
+  },
+  {
+    "scheduledDate": "2026-09-05",
+    "scheduledStart": "2026-09-05T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Electrochemistry",
+    "subTopic": "Conductance and Conductivity Effect of Concentration on Conductance and Conductivity Kohlrausch’s Law and Its Applications Conductometric Titration Batteries Fuel Cells Corrosion",
+    "sessionNum": 96
+  },
+  {
+    "scheduledDate": "2026-09-07",
+    "scheduledStart": "2026-09-07T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Current Electricity",
+    "subTopic": "Introduction to electric current Microscopic analysis of electric current Current density",
+    "sessionNum": 97
+  },
+  {
+    "scheduledDate": "2026-09-07",
+    "scheduledStart": "2026-09-07T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Indefinite Integration",
+    "subTopic": "Standard trigonometric formats",
+    "sessionNum": 97
+  },
+  {
+    "scheduledDate": "2026-09-07",
+    "scheduledStart": "2026-09-07T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Chemical Kinetics",
+    "subTopic": "Introduction to Chemical Kinetics Rate of a Chemical Reaction Rate Law Rate Constant and Its Units",
+    "sessionNum": 97
+  },
+  {
+    "scheduledDate": "2026-09-08",
+    "scheduledStart": "2026-09-08T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Current Electricity",
+    "subTopic": "Ohm's law Resistivity and conductivity Resistance Temperature dependence of Resistivity and resistance Elements of a circuit",
+    "sessionNum": 98
+  },
+  {
+    "scheduledDate": "2026-09-08",
+    "scheduledStart": "2026-09-08T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Definite Integration",
+    "subTopic": "Definite integral as the Limit of a Sum Geometrical Interpretation of a Definite Integral Definite integration by method of indefinite integration",
+    "sessionNum": 98
+  },
+  {
+    "scheduledDate": "2026-09-08",
+    "scheduledStart": "2026-09-08T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Chemical Kinetics",
+    "subTopic": "Order and Molecularity of Reactions Elementary and Complex Reactions Differential and Integral Forms of Rate Law",
+    "sessionNum": 98
+  },
+  {
+    "scheduledDate": "2026-09-09",
+    "scheduledStart": "2026-09-09T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Current Electricity",
+    "subTopic": "Calculation of equivalent resistance of a circuit Wheatstone bridge",
+    "sessionNum": 99
+  },
+  {
+    "scheduledDate": "2026-09-09",
+    "scheduledStart": "2026-09-09T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Definite Integration",
+    "subTopic": "Properties of definite integrals",
+    "sessionNum": 99
+  },
+  {
+    "scheduledDate": "2026-09-09",
+    "scheduledStart": "2026-09-09T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Chemical Kinetics",
+    "subTopic": "Determination of Order of Reaction Some Important First Order Reactions",
+    "sessionNum": 99
+  },
+  {
+    "scheduledDate": "2026-09-10",
+    "scheduledStart": "2026-09-10T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Capacitance",
+    "subTopic": "Introduction to capacitance Charge on a capacitor Energy of a Capacitor Types of a Capacitor and its capacitance Force between the capacitor plates",
+    "sessionNum": 100
+  },
+  {
+    "scheduledDate": "2026-09-10",
+    "scheduledStart": "2026-09-10T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Definite Integration",
+    "subTopic": "Properties of definite integrals",
+    "sessionNum": 100
+  },
+  {
+    "scheduledDate": "2026-09-10",
+    "scheduledStart": "2026-09-10T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Chemical Kinetics",
+    "subTopic": "Some Important First Order Reactions Collision Theory Activated Complex Theory Arrhenius Equation Series and Parallel Kinetics Nuclear Chemistry",
+    "sessionNum": 100
+  },
+  {
+    "scheduledDate": "2026-09-11",
+    "scheduledStart": "2026-09-11T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Capacitance",
+    "subTopic": "Series and parallel combination of capacitors Circuit laws Nodal Analysis",
+    "sessionNum": 101
+  },
+  {
+    "scheduledDate": "2026-09-11",
+    "scheduledStart": "2026-09-11T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Definite Integration",
+    "subTopic": "Reduction formula Walli's formula Equation in definite integral",
+    "sessionNum": 101
+  },
+  {
+    "scheduledDate": "2026-09-11",
+    "scheduledStart": "2026-09-11T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Surface Chemistry",
+    "subTopic": "Adsorption Catalysis",
+    "sessionNum": 101
+  },
+  {
+    "scheduledDate": "2026-09-12",
+    "scheduledStart": "2026-09-12T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Capacitance",
+    "subTopic": "Dielectrics in capacitors Effect of Insertion and removal of dielectric on charge, electric field, potential, energy, force etc",
+    "sessionNum": 102
+  },
+  {
+    "scheduledDate": "2026-09-12",
+    "scheduledStart": "2026-09-12T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Definite Integration",
+    "subTopic": "Reduction formula Walli's formula Equation in definite integral",
+    "sessionNum": 102
+  },
+  {
+    "scheduledDate": "2026-09-12",
+    "scheduledStart": "2026-09-12T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Surface Chemistry",
+    "subTopic": "Colloidal Solutions Emulsions and Their Characteristics",
+    "sessionNum": 102
+  },
+  {
+    "scheduledDate": "2026-09-14",
+    "scheduledStart": "2026-09-14T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Capacitance",
+    "subTopic": "Charge transfer and switch toggling in circuits Energy loss problems in Capacitors Miscellaneous examples",
+    "sessionNum": 103
+  },
+  {
+    "scheduledDate": "2026-09-14",
+    "scheduledStart": "2026-09-14T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Area under the Curve",
+    "subTopic": "Plotting region and area under curves",
+    "sessionNum": 103
+  },
+  {
+    "scheduledDate": "2026-09-14",
+    "scheduledStart": "2026-09-14T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Surface Chemistry",
+    "subTopic": "Emulsions and Their Characteristics Miscellaneous examples",
+    "sessionNum": 103
+  },
+  {
+    "scheduledDate": "2026-09-15",
+    "scheduledStart": "2026-09-15T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Magnetic effects of current",
+    "subTopic": "Magnetic field Magnetic field lines and its properties Force on a moving charge in magnetic field Motion of charged particle in a uniform Magnetic field",
+    "sessionNum": 104
+  },
+  {
+    "scheduledDate": "2026-09-15",
+    "scheduledStart": "2026-09-15T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Area under the Curve",
+    "subTopic": "Plotting region and area under curves Standard results area of inverse of a function",
+    "sessionNum": 104
+  },
+  {
+    "scheduledDate": "2026-09-15",
+    "scheduledStart": "2026-09-15T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Metallurgy",
+    "subTopic": "Occurrence of Elements in Nature Concentration of Ore Extraction of Crude Metal from Concentrated Ore",
+    "sessionNum": 104
+  },
+  {
+    "scheduledDate": "2026-09-16",
+    "scheduledStart": "2026-09-16T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Magnetic effects of current",
+    "subTopic": "Lorentz Force charged particle in combined electric and magnetic field Magnetic force on a current carrying straight wire Magnetic force on a randomly shaped wire",
+    "sessionNum": 105
+  },
+  {
+    "scheduledDate": "2026-09-16",
+    "scheduledStart": "2026-09-16T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Differential Equations",
+    "subTopic": "Degree and Order of Differential Equation The formation of differential equations",
+    "sessionNum": 105
+  },
+  {
+    "scheduledDate": "2026-09-16",
+    "scheduledStart": "2026-09-16T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Metallurgy",
+    "subTopic": "Thermodynamic Principles of Metallurgy Refining Extraction of Iron and Copper Extraction of Gold and Silver",
+    "sessionNum": 105
+  },
+  {
+    "scheduledDate": "2026-09-17",
+    "scheduledStart": "2026-09-17T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Magnetic effects of current",
+    "subTopic": "Magnetic moment Magnetic moment of a current carrying loop Torque on a current carrying loop in external uniform magnetic field",
+    "sessionNum": 106
+  },
+  {
+    "scheduledDate": "2026-09-17",
+    "scheduledStart": "2026-09-17T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Differential Equations",
+    "subTopic": "Solution of D.E. - variable separable method Reducible to variable separable method",
+    "sessionNum": 106
+  },
+  {
+    "scheduledDate": "2026-09-17",
+    "scheduledStart": "2026-09-17T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Metallurgy",
+    "subTopic": "Extraction of Aluminium Extraction of other metals Uses of Metals",
+    "sessionNum": 106
+  },
+  {
+    "scheduledDate": "2026-09-18",
+    "scheduledStart": "2026-09-18T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Magnetic effects of current",
+    "subTopic": "Potential energy of a magnetic dipole Force on a magnetic dipole in non uniform field Biot - Savart Law",
+    "sessionNum": 107
+  },
+  {
+    "scheduledDate": "2026-09-18",
+    "scheduledStart": "2026-09-18T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Differential Equations",
+    "subTopic": "Homogeneous differential equation Reducible to homogeneous differential equation",
+    "sessionNum": 107
+  },
+  {
+    "scheduledDate": "2026-09-18",
+    "scheduledStart": "2026-09-18T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "p-Block Elements (group 15-18)",
+    "subTopic": "Introduction of Group 15 Elements Physical Properties of Group 15 Elements Chemical Properties of Group 15 Elements General Properties and Compounds of Nitrogen",
+    "sessionNum": 107
+  },
+  {
+    "scheduledDate": "2026-09-19",
+    "scheduledStart": "2026-09-19T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Magnetic effects of current",
+    "subTopic": "Magnetic field due to standard shaped objects Force between two parallel wires Ampere’s law",
+    "sessionNum": 108
+  },
+  {
+    "scheduledDate": "2026-09-19",
+    "scheduledStart": "2026-09-19T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Differential Equations",
+    "subTopic": "Linear Differential Equation Reducible to Linear Differential Equation Exact form Orthogonal curves",
+    "sessionNum": 108
+  },
+  {
+    "scheduledDate": "2026-09-19",
+    "scheduledStart": "2026-09-19T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "p-Block Elements (group 15-18)",
+    "subTopic": "General Properties and Compounds of Phosphorus Uses of Group 15 Elements Introduction of Group 16 Elements Physical Properties of Group 16 Elements Chemical Properties of Group 16 Elements General Properties and Compounds of Oxygen",
+    "sessionNum": 108
+  },
+  {
+    "scheduledDate": "2026-09-21",
+    "scheduledStart": "2026-09-21T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Magnetic effects of current",
+    "subTopic": "Use of ampere's law to calculate the field of symmetric objects Moving coil galvanometer",
+    "sessionNum": 109
+  },
+  {
+    "scheduledDate": "2026-09-21",
+    "scheduledStart": "2026-09-21T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Straight Lines",
+    "subTopic": "System of Coordinates",
+    "sessionNum": 109
+  },
+  {
+    "scheduledDate": "2026-09-21",
+    "scheduledStart": "2026-09-21T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "p-Block Elements (group 15-18)",
+    "subTopic": "General Properties and Compounds of Oxygen General Properties and Compounds of Sulphur Introduction of Group 17 Elements Physical Properties of Group 17 Elements Chemical Properties of Group 17 Elements",
+    "sessionNum": 109
+  },
+  {
+    "scheduledDate": "2026-09-22",
+    "scheduledStart": "2026-09-22T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Magnetism and matter",
+    "subTopic": "Introduction of Bar Magnet Cutting of bar magnet Bar Magnet in Magnetic Field Magnetic field and potential due to a dipole Magnetism and Gauss’s law",
+    "sessionNum": 110
+  },
+  {
+    "scheduledDate": "2026-09-22",
+    "scheduledStart": "2026-09-22T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Straight Lines",
+    "subTopic": "System of Coordinates",
+    "sessionNum": 110
+  },
+  {
+    "scheduledDate": "2026-09-22",
+    "scheduledStart": "2026-09-22T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "p-Block Elements (group 15-18)",
+    "subTopic": "Chemical Properties of Group 17 Elements General Properties and Compounds of Halogens Interhalogen Compounds Interhalogen Compounds Introduction of Group 18 Elements Physical Properties of Group 18 Elements Compounds of Xenon",
+    "sessionNum": 110
+  },
+  {
+    "scheduledDate": "2026-09-23",
+    "scheduledStart": "2026-09-23T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Magnetism and matter",
+    "subTopic": "Various parameters involved in magnetic properties Diamagnetism Paramagnetism Ferromagnetism Curie's Law",
+    "sessionNum": 111
+  },
+  {
+    "scheduledDate": "2026-09-23",
+    "scheduledStart": "2026-09-23T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Straight Lines",
+    "subTopic": "System of Coordinates Slope of a Straight Line",
+    "sessionNum": 111
+  },
+  {
+    "scheduledDate": "2026-09-23",
+    "scheduledStart": "2026-09-23T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "d and f Block Elements",
+    "subTopic": "General Introduction of d Block Elements Classification of d Block Elements Physical Properties of d Block Elements Chemical Properties of d Block Elements",
+    "sessionNum": 111
+  },
+  {
+    "scheduledDate": "2026-09-24",
+    "scheduledStart": "2026-09-24T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Electromagnetic induction",
+    "subTopic": "Magnetic flux Faraday's laws of electromagnetic induction",
+    "sessionNum": 112
+  },
+  {
+    "scheduledDate": "2026-09-24",
+    "scheduledStart": "2026-09-24T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Straight Lines",
+    "subTopic": "Forms of equation of line Angle between two lines",
+    "sessionNum": 112
+  },
+  {
+    "scheduledDate": "2026-09-24",
+    "scheduledStart": "2026-09-24T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "d and f Block Elements",
+    "subTopic": "Potassium Permanganate Potassium Dichromate",
+    "sessionNum": 112
+  },
+  {
+    "scheduledDate": "2026-09-25",
+    "scheduledStart": "2026-09-25T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Electromagnetic induction",
+    "subTopic": "Lenz's law Motional EMF",
+    "sessionNum": 113
+  },
+  {
+    "scheduledDate": "2026-09-25",
+    "scheduledStart": "2026-09-25T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Straight Lines",
+    "subTopic": "Angle between two lines Some formulae of a point and line",
+    "sessionNum": 113
+  },
+  {
+    "scheduledDate": "2026-09-25",
+    "scheduledStart": "2026-09-25T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "d and f Block Elements",
+    "subTopic": "Compounds of other d block elements Uses of d Block Elements f-block Elements General Characteristics of f-block Elements Uses of f Block Elements",
+    "sessionNum": 113
+  },
+  {
+    "scheduledDate": "2026-09-26",
+    "scheduledStart": "2026-09-26T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Electromagnetic induction",
+    "subTopic": "Motional EMF Time varying magnetic fields Eddy Currents",
+    "sessionNum": 114
+  },
+  {
+    "scheduledDate": "2026-09-26",
+    "scheduledStart": "2026-09-26T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Straight Lines",
+    "subTopic": "Some formulae of a point and line Family of lines",
+    "sessionNum": 114
+  },
+  {
+    "scheduledDate": "2026-09-26",
+    "scheduledStart": "2026-09-26T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Coordination Compounds",
+    "subTopic": "Introduction to Coordination Compounds Components of Coordination Compounds Ligands",
+    "sessionNum": 114
+  },
+  {
+    "scheduledDate": "2026-09-28",
+    "scheduledStart": "2026-09-28T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Electromagnetic induction",
+    "subTopic": "Inductors Self Inductance Induced EMF in a coil and Inductor Combination of inductors",
+    "sessionNum": 115
+  },
+  {
+    "scheduledDate": "2026-09-28",
+    "scheduledStart": "2026-09-28T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Straight Lines",
+    "subTopic": "Family of lines Conditions for concurrence of three lines Equation of angle bisectors between two lines",
+    "sessionNum": 115
+  },
+  {
+    "scheduledDate": "2026-09-28",
+    "scheduledStart": "2026-09-28T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Coordination Compounds",
+    "subTopic": "Nomenclature of Coordination Compounds Werner's Theory",
+    "sessionNum": 115
+  },
+  {
+    "scheduledDate": "2026-09-29",
+    "scheduledStart": "2026-09-29T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Electromagnetic induction",
+    "subTopic": "Energy stored in inductors Growing LR Circuits Decaying R-L circuit",
+    "sessionNum": 116
+  },
+  {
+    "scheduledDate": "2026-09-29",
+    "scheduledStart": "2026-09-29T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Straight Lines",
+    "subTopic": "Homogeneous Second Degree Equations in two Variables",
+    "sessionNum": 116
+  },
+  {
+    "scheduledDate": "2026-09-29",
+    "scheduledStart": "2026-09-29T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Coordination Compounds",
+    "subTopic": "Werner's Theory Sidgwick EAN Rule VBT in Coordination Compounds",
+    "sessionNum": 116
+  },
+  {
+    "scheduledDate": "2026-09-30",
+    "scheduledStart": "2026-09-30T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Electromagnetic induction",
+    "subTopic": "Mutual induction LC oscillations",
+    "sessionNum": 117
+  },
+  {
+    "scheduledDate": "2026-09-30",
+    "scheduledStart": "2026-09-30T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Straight Lines",
+    "subTopic": "General two degree equation Homogenisation of curve",
+    "sessionNum": 117
+  },
+  {
+    "scheduledDate": "2026-09-30",
+    "scheduledStart": "2026-09-30T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Coordination Compounds",
+    "subTopic": "VBT in Coordination Compounds Crystal Field Theory",
+    "sessionNum": 117
+  },
+  {
+    "scheduledDate": "2026-10-01",
+    "scheduledStart": "2026-10-01T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Physics",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 118
+  },
+  {
+    "scheduledDate": "2026-10-05",
+    "scheduledStart": "2026-10-05T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Math",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 118
+  },
+  {
+    "scheduledDate": "2026-10-06",
+    "scheduledStart": "2026-10-06T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Chemistry",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 118
+  },
+  {
+    "scheduledDate": "2026-10-07",
+    "scheduledStart": "2026-10-07T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Alternating current",
+    "subTopic": "Introduction to AC and Generation of AC Average and RMS value of a Function Simple AC circuits",
+    "sessionNum": 119
+  },
+  {
+    "scheduledDate": "2026-10-07",
+    "scheduledStart": "2026-10-07T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Circles",
+    "subTopic": "Basic geometrical results Standard Equations of a Circle",
+    "sessionNum": 119
+  },
+  {
+    "scheduledDate": "2026-10-07",
+    "scheduledStart": "2026-10-07T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Coordination Compounds",
+    "subTopic": "Crystal Field Theory Stability of Coordination Compounds in Solution Organometallic Compounds",
+    "sessionNum": 119
+  },
+  {
+    "scheduledDate": "2026-10-08",
+    "scheduledStart": "2026-10-08T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Alternating current",
+    "subTopic": "Series RLC Circuit Parallel LCR circuits Power dissipation in AC Circuits Resonance in RLC circuits",
+    "sessionNum": 120
+  },
+  {
+    "scheduledDate": "2026-10-08",
+    "scheduledStart": "2026-10-08T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Circles",
+    "subTopic": "The general form of the equation of a circle Diametric form of a circle Parametric form of a circle",
+    "sessionNum": 120
+  },
+  {
+    "scheduledDate": "2026-10-08",
+    "scheduledStart": "2026-10-08T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Coordination Compounds",
+    "subTopic": "Isomerism in Coordination Compounds Importance of Coordination Compounds",
+    "sessionNum": 120
+  },
+  {
+    "scheduledDate": "2026-10-09",
+    "scheduledStart": "2026-10-09T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Alternating current",
+    "subTopic": "Quality Factor and Bandwidth in RLC Circuit Working of Transformers and Losses in Transformers",
+    "sessionNum": 121
+  },
+  {
+    "scheduledDate": "2026-10-09",
+    "scheduledStart": "2026-10-09T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Circles",
+    "subTopic": "Intercept made by a circle Standard notations used in circle Position of a point wrt circle",
+    "sessionNum": 121
+  },
+  {
+    "scheduledDate": "2026-10-09",
+    "scheduledStart": "2026-10-09T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Alkyl And Aryl Halides",
+    "subTopic": "Structure of Alkyl Halides Classification of Alkyl Halides Nomenclature of Alkyl and Aryl Halides Isomerism in Alkyl Halides Nature of C-X Bond Introduction to Reaction Mechanism Characteristic Reactions of Alkyl Halides",
+    "sessionNum": 121
+  },
+  {
+    "scheduledDate": "2026-10-10",
+    "scheduledStart": "2026-10-10T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Electromagnetic waves",
+    "subTopic": "Displacement current Maxwell’s equations Properties of EM waves Electromagnetic Spectrum Intensity of EM waves",
+    "sessionNum": 122
+  },
+  {
+    "scheduledDate": "2026-10-10",
+    "scheduledStart": "2026-10-10T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Circles",
+    "subTopic": "Position of a line wrt circle Equation of tangents in a circle Director circle",
+    "sessionNum": 122
+  },
+  {
+    "scheduledDate": "2026-10-10",
+    "scheduledStart": "2026-10-10T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Alkyl And Aryl Halides",
+    "subTopic": "Types of Solvents Nucleophiles Leaving Group",
+    "sessionNum": 122
+  },
+  {
+    "scheduledDate": "2026-10-12",
+    "scheduledStart": "2026-10-12T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Units and measurements",
+    "subTopic": "Physical Quantities and Units Fundamental and derived units Introduction to Dimensions",
+    "sessionNum": 123
+  },
+  {
+    "scheduledDate": "2026-10-12",
+    "scheduledStart": "2026-10-12T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Circles",
+    "subTopic": "Common tangents Chords of a circle",
+    "sessionNum": 123
+  },
+  {
+    "scheduledDate": "2026-10-12",
+    "scheduledStart": "2026-10-12T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Alkyl And Aryl Halides",
+    "subTopic": "Nucleophilic Substitution Reactions",
+    "sessionNum": 123
+  },
+  {
+    "scheduledDate": "2026-10-13",
+    "scheduledStart": "2026-10-13T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Units and measurements",
+    "subTopic": "Dimensional Analysis Use and limitations of dimensional analysis",
+    "sessionNum": 124
+  },
+  {
+    "scheduledDate": "2026-10-13",
+    "scheduledStart": "2026-10-13T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Circles",
+    "subTopic": "Family of circle Orthogonality of two circles Radical axis & radical centre",
+    "sessionNum": 124
+  },
+  {
+    "scheduledDate": "2026-10-13",
+    "scheduledStart": "2026-10-13T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Alkyl And Aryl Halides",
+    "subTopic": "Elimination Reactions",
+    "sessionNum": 124
+  },
+  {
+    "scheduledDate": "2026-10-14",
+    "scheduledStart": "2026-10-14T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Units and measurements",
+    "subTopic": "Significant figures Mathematical operations using significant figures Errors and measurement",
+    "sessionNum": 125
+  },
+  {
+    "scheduledDate": "2026-10-14",
+    "scheduledStart": "2026-10-14T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Conics",
+    "subTopic": "Definition and general equation of a conic Identifying the conic",
+    "sessionNum": 125
+  },
+  {
+    "scheduledDate": "2026-10-14",
+    "scheduledStart": "2026-10-14T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Alkyl And Aryl Halides",
+    "subTopic": "Elimination Reactions Physical Properties of Alkyl Halides Chemical Reactions of Alkyl Halides",
+    "sessionNum": 125
+  },
+  {
+    "scheduledDate": "2026-10-15",
+    "scheduledStart": "2026-10-15T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Units and measurements",
+    "subTopic": "Combination of errors",
+    "sessionNum": 126
+  },
+  {
+    "scheduledDate": "2026-10-15",
+    "scheduledStart": "2026-10-15T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Conics",
+    "subTopic": "Standard parabola & their equations Parametric form of a parabola",
+    "sessionNum": 126
+  },
+  {
+    "scheduledDate": "2026-10-15",
+    "scheduledStart": "2026-10-15T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Alkyl And Aryl Halides",
+    "subTopic": "Chemical Reactions of Alkyl Halides",
+    "sessionNum": 126
+  },
+  {
+    "scheduledDate": "2026-10-16",
+    "scheduledStart": "2026-10-16T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Experimental Physics",
+    "subTopic": "Vernier calliper Micrometer screw gauge",
+    "sessionNum": 127
+  },
+  {
+    "scheduledDate": "2026-10-16",
+    "scheduledStart": "2026-10-16T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Conics",
+    "subTopic": "Position of point wrt parabola Position of line wrt parabola Equation of tangents to Parabola Director circle of a Parabola",
+    "sessionNum": 127
+  },
+  {
+    "scheduledDate": "2026-10-16",
+    "scheduledStart": "2026-10-16T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Alkyl And Aryl Halides",
+    "subTopic": "Chemical Reactions of Alkyl Halides",
+    "sessionNum": 127
+  },
+  {
+    "scheduledDate": "2026-10-17",
+    "scheduledStart": "2026-10-17T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Semiconductors and electronic devices",
+    "subTopic": "Introduction to semiconductors Band theory Intrinsic Semiconductor Extrinsic Semiconductor Various parameters in P-N Junction PN Junction as an ideal diode",
+    "sessionNum": 128
+  },
+  {
+    "scheduledDate": "2026-10-17",
+    "scheduledStart": "2026-10-17T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Conics",
+    "subTopic": "Equation of tangents to a Parabola Director circle in parabola Chords of a Parabola Focal chords of a parabola Focal distance of a parabola Equation of Normal to Parabola Conormal Points",
+    "sessionNum": 128
+  },
+  {
+    "scheduledDate": "2026-10-17",
+    "scheduledStart": "2026-10-17T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Alkyl And Aryl Halides",
+    "subTopic": "Chemical Reactions of Aryl Halides Preparation of Alkyl Halides",
+    "sessionNum": 128
+  },
+  {
+    "scheduledDate": "2026-10-21",
+    "scheduledStart": "2026-10-21T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Semiconductors and electronic devices",
+    "subTopic": "Breakdown of a junction Zener diode Ideal diode as rectifiers Solar cells LED Photodiode",
+    "sessionNum": 129
+  },
+  {
+    "scheduledDate": "2026-10-21",
+    "scheduledStart": "2026-10-21T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Conics",
+    "subTopic": "Equation of tangents to a Parabola Director circle in parabola Chords of a Parabola Focal chords of a parabola Focal distance of a parabola Equation of Normal to Parabola Conormal Points",
+    "sessionNum": 129
+  },
+  {
+    "scheduledDate": "2026-10-21",
+    "scheduledStart": "2026-10-21T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Alkyl And Aryl Halides",
+    "subTopic": "Preparation of Aryl Halides Polyhalogen Compounds",
+    "sessionNum": 129
+  },
+  {
+    "scheduledDate": "2026-10-22",
+    "scheduledStart": "2026-10-22T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Semiconductors and electronic devices",
+    "subTopic": "Logic gates Basic Boolean Algebra Types of basic gates and their elementary circuits",
+    "sessionNum": 130
+  },
+  {
+    "scheduledDate": "2026-10-22",
+    "scheduledStart": "2026-10-22T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Conics",
+    "subTopic": "Standard equation of an Ellipse Parametric form of an ellipse Focal distance of an Ellipse",
+    "sessionNum": 130
+  },
+  {
+    "scheduledDate": "2026-10-22",
+    "scheduledStart": "2026-10-22T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Alcohol Phenol And Ether",
+    "subTopic": "Introduction of Alcohols Preparation of Alcohols Preparation of Alcohols Physical Properties of Alcohols",
+    "sessionNum": 130
+  },
+  {
+    "scheduledDate": "2026-10-23",
+    "scheduledStart": "2026-10-23T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "subTopic": "Photons and its properties Radiation pressure and force",
+    "sessionNum": 131
+  },
+  {
+    "scheduledDate": "2026-10-23",
+    "scheduledStart": "2026-10-23T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Conics",
+    "subTopic": "Position of a point wrt an Ellipse Position of a line wrt an Ellipse Equation of tangents to an Ellipse Director circle",
+    "sessionNum": 131
+  },
+  {
+    "scheduledDate": "2026-10-23",
+    "scheduledStart": "2026-10-23T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Alcohol Phenol And Ether",
+    "subTopic": "Chemical Properties of Alcohols",
+    "sessionNum": 131
+  },
+  {
+    "scheduledDate": "2026-10-24",
+    "scheduledStart": "2026-10-24T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "subTopic": "Matter waves Atomic structure and its history Bohr's atomic model",
+    "sessionNum": 132
+  },
+  {
+    "scheduledDate": "2026-10-24",
+    "scheduledStart": "2026-10-24T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Conics",
+    "subTopic": "Equation of Normal to an Ellipse Chords of an Ellipse Focal chords of an ellipse Properties of Ellipse",
+    "sessionNum": 132
+  },
+  {
+    "scheduledDate": "2026-10-24",
+    "scheduledStart": "2026-10-24T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Alcohol Phenol And Ether",
+    "subTopic": "Preparation of Phenol Physical Properties of Phenol Chemical Properties of Phenol",
+    "sessionNum": 132
+  },
+  {
+    "scheduledDate": "2026-10-26",
+    "scheduledStart": "2026-10-26T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "subTopic": "Energy, radius and speed of electron in Hydrogen like elements Atomic collisions",
+    "sessionNum": 133
+  },
+  {
+    "scheduledDate": "2026-10-26",
+    "scheduledStart": "2026-10-26T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Conics",
+    "subTopic": "Standard equation of Hyperbola Conjugate hyperbolas Rectangular hyperbola Parametric form of a hyperbola",
+    "sessionNum": 133
+  },
+  {
+    "scheduledDate": "2026-10-26",
+    "scheduledStart": "2026-10-26T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Alcohol Phenol And Ether",
+    "subTopic": "Chemical Properties of Phenol",
+    "sessionNum": 133
+  },
+  {
+    "scheduledDate": "2026-10-27",
+    "scheduledStart": "2026-10-27T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "subTopic": "Photoelectric effect and Einstein's photoelectric equation Graphs in Photoelectric effect Threshold frequency and wavelength Stopping potential and saturation current",
+    "sessionNum": 134
+  },
+  {
+    "scheduledDate": "2026-10-27",
+    "scheduledStart": "2026-10-27T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Conics",
+    "subTopic": "Position of a point wrt a Hyperbola Position of a line wrt a Hyperbola Equation of tangents to a Hyperbola Director circle Equation of Normal to Hyperbola Focal chords of a hyperbola Focal distance of a hyperbola",
+    "sessionNum": 134
+  },
+  {
+    "scheduledDate": "2026-10-27",
+    "scheduledStart": "2026-10-27T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Alcohol Phenol And Ether",
+    "subTopic": "Chemical Properties of Phenol Uses of Alcohols and Phenols Introduction of Ethers Preparation of Ethers Physical Properties of Ethers",
+    "sessionNum": 134
+  },
+  {
+    "scheduledDate": "2026-10-28",
+    "scheduledStart": "2026-10-28T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "subTopic": "X-rays and its production Continuous and characteristic spectrum",
+    "sessionNum": 135
+  },
+  {
+    "scheduledDate": "2026-10-28",
+    "scheduledStart": "2026-10-28T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Coordinate Geometry- Conics",
+    "subTopic": "Chords of Hyperbola Properties of Hyperbola",
+    "sessionNum": 135
+  },
+  {
+    "scheduledDate": "2026-10-28",
+    "scheduledStart": "2026-10-28T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Alcohol Phenol And Ether",
+    "subTopic": "Chemical Properties of Ethers Test of Alcohols and Phenol Uses of Alcohol, Phenol and Ethers",
+    "sessionNum": 135
+  },
+  {
+    "scheduledDate": "2026-10-29",
+    "scheduledStart": "2026-10-29T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "subTopic": "Moseley's law Miscellaneous examples",
+    "sessionNum": 136
+  },
+  {
+    "scheduledDate": "2026-10-29",
+    "scheduledStart": "2026-10-29T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Vector",
+    "subTopic": "Basics of vectors Collinearity and Coplanarity of Vectors",
+    "sessionNum": 136
+  },
+  {
+    "scheduledDate": "2026-10-29",
+    "scheduledStart": "2026-10-29T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Aldehydes and Ketones",
+    "subTopic": "Introduction to Carbonyl Compounds Preparation of Carbonyl Compounds",
+    "sessionNum": 136
+  },
+  {
+    "scheduledDate": "2026-10-30",
+    "scheduledStart": "2026-10-30T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "subTopic": "Atomic nuclei and its properties Nuclear force and its properties Mass defect Binding Energy and Binding energy per nucleon Standard nuclear reaction",
+    "sessionNum": 137
+  },
+  {
+    "scheduledDate": "2026-10-30",
+    "scheduledStart": "2026-10-30T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Vector",
+    "subTopic": "Dot product of two vectors Cross product of two vectors",
+    "sessionNum": 137
+  },
+  {
+    "scheduledDate": "2026-10-30",
+    "scheduledStart": "2026-10-30T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Aldehydes and Ketones",
+    "subTopic": "Preparation of Carbonyl Compounds",
+    "sessionNum": 137
+  },
+  {
+    "scheduledDate": "2026-10-31",
+    "scheduledStart": "2026-10-31T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "subTopic": "Law of Radioactivity Activity of decay process Parallel and series decay",
+    "sessionNum": 138
+  },
+  {
+    "scheduledDate": "2026-10-31",
+    "scheduledStart": "2026-10-31T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Vector",
+    "subTopic": "Scalar Triple product Vector Triple product",
+    "sessionNum": 138
+  },
+  {
+    "scheduledDate": "2026-10-31",
+    "scheduledStart": "2026-10-31T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Aldehydes and Ketones",
+    "subTopic": "Preparation of Carbonyl Compounds Physical Properties of Carbonyl Compounds Chemical Properties of Carbonyl Compounds",
+    "sessionNum": 138
+  },
+  {
+    "scheduledDate": "2026-11-02",
+    "scheduledStart": "2026-11-02T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Physics",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 139
+  },
+  {
+    "scheduledDate": "2026-11-03",
+    "scheduledStart": "2026-11-03T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Math",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 139
+  },
+  {
+    "scheduledDate": "2026-11-04",
+    "scheduledStart": "2026-11-04T11:00:00+05:30",
+    "durationMin": 480,
+    "subject": "Chemistry",
+    "topic": "One-Shot Revision",
+    "subTopic": "Monthly Revision & Concept Summary",
+    "sessionNum": 139
+  },
+  {
+    "scheduledDate": "2026-11-05",
+    "scheduledStart": "2026-11-05T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Ray Optics",
+    "subTopic": "Basic terminology in ray optics Plane Mirrors and Image Formation of Point Object Deviation in Case of Reflection Concept of field of view Plane mirrors and image formation of Extended Object",
+    "sessionNum": 140
+  },
+  {
+    "scheduledDate": "2026-11-05",
+    "scheduledStart": "2026-11-05T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Vector",
+    "subTopic": "Scalar Triple product Vector Triple product Vector equations",
+    "sessionNum": 140
+  },
+  {
+    "scheduledDate": "2026-11-05",
+    "scheduledStart": "2026-11-05T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Aldehydes and Ketones",
+    "subTopic": "Chemical Properties of Carbonyl Compounds",
+    "sessionNum": 140
+  },
+  {
+    "scheduledDate": "2026-11-06",
+    "scheduledStart": "2026-11-06T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Ray Optics",
+    "subTopic": "Number of Images Formed by the parallel Plane Mirrors Number of Images Formed by the Plane Mirrors kept at an angle Velocity of image in the plane mirror Introduction to spherical mirrors Sign convention in spherical mirrors",
+    "sessionNum": 141
+  },
+  {
+    "scheduledDate": "2026-11-06",
+    "scheduledStart": "2026-11-06T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "3D Geometry",
+    "subTopic": "Concept of DC and DR Equation of lines in 3D and vector form",
+    "sessionNum": 141
+  },
+  {
+    "scheduledDate": "2026-11-06",
+    "scheduledStart": "2026-11-06T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Aldehydes and Ketones",
+    "subTopic": "Chemical Properties of Carbonyl Compounds",
+    "sessionNum": 141
+  },
+  {
+    "scheduledDate": "2026-11-10",
+    "scheduledStart": "2026-11-10T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Ray Optics",
+    "subTopic": "Mirror formula Power of mirror Lateral Magnification Longitudinal Magnification Properties of images formed by a mirror Velocity of image",
+    "sessionNum": 142
+  },
+  {
+    "scheduledDate": "2026-11-10",
+    "scheduledStart": "2026-11-10T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "3D Geometry",
+    "subTopic": "Equation of lines in 3D and vector form Shortest distance between two lines Planes in 3D",
+    "sessionNum": 142
+  },
+  {
+    "scheduledDate": "2026-11-10",
+    "scheduledStart": "2026-11-10T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Aldehydes and Ketones",
+    "subTopic": "Chemical Properties of Carbonyl Compounds Tests of Carbonyl Compounds Uses of Carbonyl Compounds",
+    "sessionNum": 142
+  },
+  {
+    "scheduledDate": "2026-11-11",
+    "scheduledStart": "2026-11-11T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Ray Optics",
+    "subTopic": "Introduction to Refraction and Snell’s Law Critical Angle and TIR Lateral displacement due to a glass slab Refraction at plane surface",
+    "sessionNum": 143
+  },
+  {
+    "scheduledDate": "2026-11-11",
+    "scheduledStart": "2026-11-11T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "3D Geometry",
+    "subTopic": "Planes in 3D Family of planes Formulae related to planes Nature of planes and asymmetrical form of plane",
+    "sessionNum": 143
+  },
+  {
+    "scheduledDate": "2026-11-11",
+    "scheduledStart": "2026-11-11T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Carboxylic Acid and Its Derivatives",
+    "subTopic": "Introduction to Carboxylic Acids and Their Derivatives Preparation of Carboxylic Acids Physical Properties of Carboxylic Acids",
+    "sessionNum": 143
+  },
+  {
+    "scheduledDate": "2026-11-12",
+    "scheduledStart": "2026-11-12T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Ray Optics",
+    "subTopic": "Shift due to glass slab Introduction to Prisms Deviation in prism Condition of minimum deviation Condition of maximum deviation COndition of no emergence",
+    "sessionNum": 144
+  },
+  {
+    "scheduledDate": "2026-11-12",
+    "scheduledStart": "2026-11-12T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "3D Geometry",
+    "subTopic": "Nature of planes and asymmetrical form of plane Miscellaneous examples",
+    "sessionNum": 144
+  },
+  {
+    "scheduledDate": "2026-11-12",
+    "scheduledStart": "2026-11-12T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Carboxylic Acid and Its Derivatives",
+    "subTopic": "Preparation of Carboxylic Acid Derivatives",
+    "sessionNum": 144
+  },
+  {
+    "scheduledDate": "2026-11-13",
+    "scheduledStart": "2026-11-13T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Ray Optics",
+    "subTopic": "Dispersion due to a thin prism Dispersive power Dispersion without deviation Deviation without dispersion Refraction at curved spherical surface",
+    "sessionNum": 145
+  },
+  {
+    "scheduledDate": "2026-11-13",
+    "scheduledStart": "2026-11-13T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "3D Geometry",
+    "subTopic": "Nature of planes and asymmetrical form of plane Miscellaneous examples",
+    "sessionNum": 145
+  },
+  {
+    "scheduledDate": "2026-11-13",
+    "scheduledStart": "2026-11-13T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Carboxylic Acid and Its Derivatives",
+    "subTopic": "Chemical Properties of Carboxylic Acid Derivatives",
+    "sessionNum": 145
+  },
+  {
+    "scheduledDate": "2026-11-14",
+    "scheduledStart": "2026-11-14T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Ray Optics",
+    "subTopic": "Introduction of lenses Lens maker formula Power of a lens",
+    "sessionNum": 146
+  },
+  {
+    "scheduledDate": "2026-11-14",
+    "scheduledStart": "2026-11-14T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Statistics",
+    "subTopic": "Central Tendency",
+    "sessionNum": 146
+  },
+  {
+    "scheduledDate": "2026-11-14",
+    "scheduledStart": "2026-11-14T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Amines",
+    "subTopic": "Introduction to Amines Preparation of Amines Physical Properties of Amines Chemical Properties of Amines Chemical Properties of Amines Introduction to Aniline",
+    "sessionNum": 146
+  },
+  {
+    "scheduledDate": "2026-11-16",
+    "scheduledStart": "2026-11-16T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Ray Optics",
+    "subTopic": "Magnification due to lens Velocity of image in lens Properties of images formed by a lens Displacement method Cutting of lens",
+    "sessionNum": 147
+  },
+  {
+    "scheduledDate": "2026-11-16",
+    "scheduledStart": "2026-11-16T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Statistics",
+    "subTopic": "Dispersion",
+    "sessionNum": 147
+  },
+  {
+    "scheduledDate": "2026-11-16",
+    "scheduledStart": "2026-11-16T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Amines",
+    "subTopic": "Preparation and Properties of Aniline Test of Amines Uses of Amines",
+    "sessionNum": 147
+  },
+  {
+    "scheduledDate": "2026-11-17",
+    "scheduledStart": "2026-11-17T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Ray Optics",
+    "subTopic": "Combination of lenses Silvering of lens Rainbow formation Chromatic aberration Achromatic aberration",
+    "sessionNum": 148
+  },
+  {
+    "scheduledDate": "2026-11-17",
+    "scheduledStart": "2026-11-17T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Probability",
+    "subTopic": "Classical probability",
+    "sessionNum": 148
+  },
+  {
+    "scheduledDate": "2026-11-17",
+    "scheduledStart": "2026-11-17T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Biomolecules",
+    "subTopic": "Introduction to Biomolecules Carbohydrates",
+    "sessionNum": 148
+  },
+  {
+    "scheduledDate": "2026-11-18",
+    "scheduledStart": "2026-11-18T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Human eye and optical instruments",
+    "subTopic": "Basic structure of human eye Defects of human eye Simple microscope",
+    "sessionNum": 149
+  },
+  {
+    "scheduledDate": "2026-11-18",
+    "scheduledStart": "2026-11-18T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Probability",
+    "subTopic": "Conditional probability Multiplication theorem dependent and independent events",
+    "sessionNum": 149
+  },
+  {
+    "scheduledDate": "2026-11-18",
+    "scheduledStart": "2026-11-18T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Biomolecules",
+    "subTopic": "Carbohydrates Amino Acids",
+    "sessionNum": 149
+  },
+  {
+    "scheduledDate": "2026-11-19",
+    "scheduledStart": "2026-11-19T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Human eye and optical instruments",
+    "subTopic": "Compound microscope Refracting Telescope Reflecting telescope",
+    "sessionNum": 150
+  },
+  {
+    "scheduledDate": "2026-11-19",
+    "scheduledStart": "2026-11-19T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Probability",
+    "subTopic": "Multiplication theorem dependent and independent events",
+    "sessionNum": 150
+  },
+  {
+    "scheduledDate": "2026-11-19",
+    "scheduledStart": "2026-11-19T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Biomolecules",
+    "subTopic": "Nucleic Acids Enzymes Vitamins Hormones",
+    "sessionNum": 150
+  },
+  {
+    "scheduledDate": "2026-11-20",
+    "scheduledStart": "2026-11-20T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Revision",
+    "subTopic": "Course Complete",
+    "sessionNum": 151
+  },
+  {
+    "scheduledDate": "2026-11-20",
+    "scheduledStart": "2026-11-20T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Probability",
+    "subTopic": "Total probability law and bayes' theorem",
+    "sessionNum": 151
+  },
+  {
+    "scheduledDate": "2026-11-20",
+    "scheduledStart": "2026-11-20T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Polymers",
+    "subTopic": "General Introduction and Classification of Polymers Types of Polymerisation Reactions Polymers and Their Properties Polymers and Their Properties Molecular Mass of Polymers Biodegradable Polymers Polymers of Commercial Importance STEREOCHEMISTRY OF POLYMERS",
+    "sessionNum": 151
+  },
+  {
+    "scheduledDate": "2026-11-21",
+    "scheduledStart": "2026-11-21T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Revision",
+    "subTopic": "Course Complete",
+    "sessionNum": 152
+  },
+  {
+    "scheduledDate": "2026-11-21",
+    "scheduledStart": "2026-11-21T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Probability",
+    "subTopic": "Total probability law and bayes' theorem Random variable and its probability distribution Bernoulli trials and binomial distribution",
+    "sessionNum": 152
+  },
+  {
+    "scheduledDate": "2026-11-21",
+    "scheduledStart": "2026-11-21T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Chemistry in Everyday Life",
+    "subTopic": "Drugs and Their Classification Drug-target Interaction Therapeutic Action of Different Classes of Drugs Chemicals in Food Cleansing Agents",
+    "sessionNum": 152
+  },
+  {
+    "scheduledDate": "2026-11-23",
+    "scheduledStart": "2026-11-23T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Revision",
+    "subTopic": "Course Complete",
+    "sessionNum": 153
+  },
+  {
+    "scheduledDate": "2026-11-23",
+    "scheduledStart": "2026-11-23T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Probability",
+    "subTopic": "Total probability law and bayes' theorem Random variable and its probability distribution Bernoulli trials and binomial distribution",
+    "sessionNum": 153
+  },
+  {
+    "scheduledDate": "2026-11-23",
+    "scheduledStart": "2026-11-23T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Practical Chemistry",
+    "subTopic": "Qualitative analysis of elements",
+    "sessionNum": 153
+  },
+  {
+    "scheduledDate": "2026-11-24",
+    "scheduledStart": "2026-11-24T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Revision",
+    "subTopic": "Course Complete",
+    "sessionNum": 154
+  },
+  {
+    "scheduledDate": "2026-11-24",
+    "scheduledStart": "2026-11-24T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Revision",
+    "subTopic": "Course Complete",
+    "sessionNum": 154
+  },
+  {
+    "scheduledDate": "2026-11-24",
+    "scheduledStart": "2026-11-24T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Practical Chemistry",
+    "subTopic": "Quantitative analysis of elements",
+    "sessionNum": 154
+  },
+  {
+    "scheduledDate": "2026-11-25",
+    "scheduledStart": "2026-11-25T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Revision",
+    "subTopic": "Course Complete",
+    "sessionNum": 155
+  },
+  {
+    "scheduledDate": "2026-11-25",
+    "scheduledStart": "2026-11-25T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Revision",
+    "subTopic": "Course Complete",
+    "sessionNum": 155
+  },
+  {
+    "scheduledDate": "2026-11-25",
+    "scheduledStart": "2026-11-25T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Practical Chemistry",
+    "subTopic": "Purification techniques",
+    "sessionNum": 155
+  },
+  {
+    "scheduledDate": "2026-11-26",
+    "scheduledStart": "2026-11-26T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Revision",
+    "subTopic": "Course Complete",
+    "sessionNum": 156
+  },
+  {
+    "scheduledDate": "2026-11-26",
+    "scheduledStart": "2026-11-26T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Revision",
+    "subTopic": "Course Complete",
+    "sessionNum": 156
+  },
+  {
+    "scheduledDate": "2026-11-26",
+    "scheduledStart": "2026-11-26T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Practical Chemistry",
+    "subTopic": "Detection of functional groups",
+    "sessionNum": 156
+  },
+  {
+    "scheduledDate": "2026-11-27",
+    "scheduledStart": "2026-11-27T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Revision",
+    "subTopic": "Course Complete",
+    "sessionNum": 157
+  },
+  {
+    "scheduledDate": "2026-11-27",
+    "scheduledStart": "2026-11-27T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Revision",
+    "subTopic": "Course Complete",
+    "sessionNum": 157
+  },
+  {
+    "scheduledDate": "2026-11-27",
+    "scheduledStart": "2026-11-27T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Practical Chemistry",
+    "subTopic": "Salt analysis",
+    "sessionNum": 157
+  },
+  {
+    "scheduledDate": "2026-11-28",
+    "scheduledStart": "2026-11-28T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Revision",
+    "subTopic": "Course Complete",
+    "sessionNum": 158
+  },
+  {
+    "scheduledDate": "2026-11-28",
+    "scheduledStart": "2026-11-28T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Revision",
+    "subTopic": "Course Complete",
+    "sessionNum": 158
+  },
+  {
+    "scheduledDate": "2026-11-28",
+    "scheduledStart": "2026-11-28T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Revision",
+    "subTopic": "Course Complete",
+    "sessionNum": 158
+  },
+  {
+    "scheduledDate": "2026-11-30",
+    "scheduledStart": "2026-11-30T16:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Physics",
+    "topic": "Revision",
+    "subTopic": "Course Complete",
+    "sessionNum": 159
+  },
+  {
+    "scheduledDate": "2026-11-30",
+    "scheduledStart": "2026-11-30T18:30:00+05:30",
+    "durationMin": 120,
+    "subject": "Math",
+    "topic": "Revision",
+    "subTopic": "Course Complete",
+    "sessionNum": 159
+  },
+  {
+    "scheduledDate": "2026-11-30",
+    "scheduledStart": "2026-11-30T21:00:00+05:30",
+    "durationMin": 120,
+    "subject": "Chemistry",
+    "topic": "Revision",
+    "subTopic": "Course Complete",
+    "sessionNum": 159
+  }
+]

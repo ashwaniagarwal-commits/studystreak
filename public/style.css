@@ -221,6 +221,12 @@ button.ghost{width:100%;padding:11px;border-radius:11px;background:rgba(255,255,
 .sec-h .ttl{font-size:13px;font-weight:700;letter-spacing:-.005em}
 .sec-h .more{font-size:11px;color:var(--muted);font-weight:600}
 
+.lecture-empty{padding:28px 20px;text-align:center;background:linear-gradient(135deg,rgba(124,92,255,.10),rgba(34,211,238,.06)),var(--card);border:1px dashed rgba(124,92,255,.32);border-radius:16px}
+.lecture-empty .le-emoji{font-size:38px;margin-bottom:10px}
+.lecture-empty .le-h{font-size:15px;font-weight:800;letter-spacing:-.005em}
+.lecture-empty .le-meta{font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.5}
+.lecture-empty .le-meta b{color:var(--accent2)}
+
 /* --- v0.6: invite, squad, cheers --- */
 .invite-banner{padding:12px 14px;border-radius:12px;background:linear-gradient(135deg,rgba(124,92,255,.18),rgba(34,211,238,.1));border:1px solid rgba(124,92,255,.4);font-size:13px;color:#dcd4ff;margin-bottom:14px;line-height:1.45}
 

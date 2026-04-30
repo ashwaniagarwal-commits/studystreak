@@ -193,7 +193,7 @@ async function loadToday() {
   const total = data.summary.total;
   const done = data.summary.done;
   if (total === 0) {
-    $('lecMeta').textContent = 'No sessions today';
+    $('lecMeta').textContent = '';
   } else if (done === total) {
     $('lecMeta').textContent = `${total}/${total} done ✓`;
   } else {
@@ -202,6 +202,32 @@ async function loadToday() {
 
   const list = $('lectureList');
   list.innerHTML = '';
+
+  // Empty state: no lectures today
+  if (total === 0) {
+    const next = data.nextLectureDate;
+    const empty = document.createElement('div');
+    empty.className = 'lecture-empty';
+    if (next) {
+      const nextDate = new Date(next + 'T00:00:00');
+      const friendly = nextDate.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
+      empty.innerHTML = `
+        <div class="le-emoji">📅</div>
+        <div class="le-h">Your sessions start ${friendly}</div>
+        <div class="le-meta">Until then, head to <b>Topics</b> to plan ahead and mark anything you've already covered.</div>
+      `;
+    } else {
+      empty.innerHTML = `
+        <div class="le-emoji">🎉</div>
+        <div class="le-h">No sessions today</div>
+        <div class="le-meta">You're past the planned schedule. Use <b>Topics</b> to revise.</div>
+      `;
+    }
+    list.appendChild(empty);
+    await loadCatchup();
+    return;
+  }
+
   for (const l of data.lectures) {
     const order = statusOrder(l);
     const div = document.createElement('div');

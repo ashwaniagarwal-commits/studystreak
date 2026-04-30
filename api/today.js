@@ -18,10 +18,23 @@ export default async function handler(req, res) {
   const total = lectures.length;
   const done = lectures.filter(l => l.status === 'Done' || l.status === 'Revised').length;
 
+  // If no lectures today, look up the next future lecture date for messaging
+  let nextLectureDate = null;
+  if (lectures.length === 0) {
+    const rows = await import('../lib/db.js').then(m => m.sql`
+      SELECT MIN(scheduled_date) AS next_date
+      FROM lectures
+      WHERE user_id = ${userId} AND scheduled_date > ${today}
+    `);
+    const nd = rows[0]?.next_date;
+    nextLectureDate = nd instanceof Date ? nd.toISOString().slice(0, 10) : nd;
+  }
+
   return send(res, 200, {
     user: { id: userId, displayName: user?.display_name },
     today,
     lectures: lectures.map(normalizeLecture),
+    nextLectureDate,
     summary: {
       total, done,
       progress: total ? done / total : 0,
