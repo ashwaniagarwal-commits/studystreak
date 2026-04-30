@@ -173,6 +173,31 @@ button.ghost{width:100%;padding:11px;border-radius:11px;background:rgba(255,255,
 /* Sub text */
 .muted{color:var(--muted)}
 
+/* --- v0.7: chapter-completion home screen --- */
+.cov-pill{display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border-radius:99px;background:rgba(62,224,143,.14);border:1px solid rgba(62,224,143,.35);color:#bff6da;font-weight:800;font-size:13px;cursor:pointer;font-family:inherit}
+.cov-pill:hover{background:rgba(62,224,143,.22)}
+
+.sub-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:0}
+.sub-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 11px;cursor:pointer;transition:transform .15s, border-color .2s}
+.sub-card:hover{border-color:rgba(124,92,255,.35)}
+.sub-card:active{transform:scale(.98)}
+.sub-card.P{background:linear-gradient(135deg,rgba(124,92,255,.18),transparent),var(--card)}
+.sub-card.M{background:linear-gradient(135deg,rgba(34,211,238,.18),transparent),var(--card)}
+.sub-card.C{background:linear-gradient(135deg,rgba(255,181,71,.18),transparent),var(--card)}
+.sub-card .nm{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.sub-card .frac{font-size:22px;font-weight:800;letter-spacing:-.02em;margin-top:4px;line-height:1.05}
+.sub-card .frac .denom{color:var(--muted);font-weight:500;font-size:14px}
+.sub-card .bar{height:5px;background:rgba(255,255,255,.07);border-radius:99px;margin-top:8px;overflow:hidden}
+.sub-card .bar > i{display:block;height:100%;border-radius:99px}
+.sub-card.P .bar > i{background:linear-gradient(90deg,#7c5cff,#5a3fff)}
+.sub-card.M .bar > i{background:linear-gradient(90deg,#22d3ee,#0ea5e9)}
+.sub-card.C .bar > i{background:linear-gradient(90deg,#ffb547,#f59e0b)}
+.sub-card .meta{font-size:9.5px;color:var(--muted);margin-top:5px}
+
+.sec-h{display:flex;justify-content:space-between;align-items:baseline;margin:18px 0 8px}
+.sec-h .ttl{font-size:13px;font-weight:700;letter-spacing:-.005em}
+.sec-h .more{font-size:11px;color:var(--muted);font-weight:600}
+
 /* --- v0.6: invite, squad, cheers --- */
 .invite-banner{padding:12px 14px;border-radius:12px;background:linear-gradient(135deg,rgba(124,92,255,.18),rgba(34,211,238,.1));border:1px solid rgba(124,92,255,.4);font-size:13px;color:#dcd4ff;margin-bottom:14px;line-height:1.45}
 

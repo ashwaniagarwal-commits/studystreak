@@ -45,8 +45,9 @@ async function handler(req, res) {
     isSelf: true,
   };
 
+  // Sort by chapters completed (primary), then sessions (tiebreak)
   const all = [self, ...enriched]
-    .sort((a, b) => (b.currentStreak - a.currentStreak) || (b.totalXp - a.totalXp));
+    .sort((a, b) => (b.chaptersCompleted - a.chaptersCompleted) || (b.sessionsCompleted - a.sessionsCompleted));
 
   // Find current user's rank
   const myRank = all.findIndex(r => r.isSelf) + 1;

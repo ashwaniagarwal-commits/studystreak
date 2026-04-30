@@ -65,22 +65,15 @@
         <div class="greet" id="dateLabel">Today</div>
         <h1 class="hi">Hey <span id="userName">there</span> 👋</h1>
       </div>
-      <div class="streak-pill" id="streakPill">🔥 <span id="streakNum">—</span></div>
+      <button class="cov-pill" id="covPill" title="Total chapters completed">📚 <span id="covTotal">0/36</span></button>
     </header>
 
-    <section class="hero">
-      <div class="hero-lbl">Today's mission</div>
-      <div class="hero-t" id="missionText">Loading…</div>
-      <div class="prog"><i id="progBar"></i></div>
-      <div class="prog-meta"><span id="progDone">0 of 0</span><span id="progXp">+250 XP if you close it</span></div>
-    </section>
+    <section class="sub-cards" id="subCards"></section>
 
-    <section class="stats3">
-      <div class="stat"><div class="n" id="statXp">0</div><div class="l">Total XP</div></div>
-      <div class="stat"><div class="n" id="statStreak">—</div><div class="l">Streak</div></div>
-      <div class="stat"><div class="n" id="statLongest">—</div><div class="l">Best</div></div>
+    <section class="sec-h">
+      <div class="ttl">Today's lectures</div>
+      <div class="more" id="lecMeta">—</div>
     </section>
-
     <section class="lectures" id="lectureList"></section>
 
     <section class="catchup" id="catchupBox" style="display:none">

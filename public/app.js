@@ -118,6 +118,9 @@ document.querySelectorAll('.nav-btn[data-screen]').forEach(b => {
   });
 });
 
+// Coverage pill jumps to Chapters
+$('covPill')?.addEventListener('click', async () => { await loadChapters(); show('chapters'); });
+
 // ---------- TODAY ----------
 
 function fmtTime(iso) {
@@ -143,31 +146,58 @@ function statusOrder(lec) {
 }
 
 async function loadToday() {
-  const data = await api('GET', '/api/today');
+  // Fetch in parallel: today's lectures + chapter coverage
+  const [data, chaps] = await Promise.all([
+    api('GET', '/api/today'),
+    api('GET', '/api/chapters'),
+  ]);
   state.today = data;
+  state.chapters = chaps;
 
   $('userName').textContent = data.user.displayName || 'there';
-  $('streakNum').textContent = data.summary.streak;
-  $('statXp').textContent = data.summary.totalXp;
-  $('statStreak').textContent = data.summary.streak;
-  $('statLongest').textContent = data.summary.longestStreak;
+
+  // Total chapters covered, across all subjects
+  let totalChapters = 0, completedChapters = 0;
+  for (const t of Object.values(chaps.totals)) {
+    totalChapters += t.total;
+    completedChapters += t.completed;
+  }
+  $('covTotal').textContent = `${completedChapters}/${totalChapters}`;
+
+  // Subject cards (Physics, Math, Chemistry — fixed order)
+  const order = ['Physics', 'Math', 'Chemistry'];
+  const labels = { Physics: 'Physics', Math: 'Math', Chemistry: 'Chem' };
+  const cls = { Physics: 'P', Math: 'M', Chemistry: 'C' };
+  const cards = $('subCards');
+  cards.innerHTML = '';
+  for (const sub of order) {
+    const t = chaps.totals[sub] || { total: 12, completed: 0, inProgress: 0 };
+    const pct = t.total ? Math.round(t.completed / t.total * 100) : 0;
+    const div = document.createElement('div');
+    div.className = `sub-card ${cls[sub]}`;
+    div.innerHTML = `
+      <div class="nm">${labels[sub]}</div>
+      <div class="frac">${t.completed}<span class="denom">/${t.total}</span></div>
+      <div class="bar"><i style="width:${pct}%"></i></div>
+      <div class="meta">${t.inProgress} in progress</div>
+    `;
+    div.addEventListener('click', async () => { await loadChapters(); show('chapters'); });
+    cards.appendChild(div);
+  }
 
   const today = new Date(data.today + 'T00:00:00');
   const dayName = today.toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'short' });
   $('dateLabel').textContent = dayName;
 
+  // Lectures section header — describe today's load
   const total = data.summary.total;
   const done = data.summary.done;
-  $('progDone').textContent = `${done} of ${total} done`;
-  $('progBar').style.width = `${total ? Math.round(done / total * 100) : 0}%`;
   if (total === 0) {
-    $('missionText').textContent = 'No lectures today — use Chapters to track your progress.';
+    $('lecMeta').textContent = 'No lectures today';
   } else if (done === total) {
-    $('missionText').textContent = 'Mission complete · streak protected ✨';
-  } else if (done > 0) {
-    $('missionText').textContent = `${total - done} ${total - done === 1 ? 'lecture' : 'lectures'} left to seal today's streak`;
+    $('lecMeta').textContent = `${total}/${total} done ✓`;
   } else {
-    $('missionText').textContent = `Finish ${total} ${total === 1 ? 'lecture' : 'lectures'} to keep the streak alive`;
+    $('lecMeta').textContent = `${done}/${total} done`;
   }
 
   const list = $('lectureList');
@@ -407,7 +437,7 @@ async function loadSquad() {
       <div class="lb-av">${initial}</div>
       <div class="lb-info">
         <div class="lb-name">${m.displayName || m.studentId}${m.isSelf ? ' <span class="muted">(you)</span>' : ''}</div>
-        <div class="lb-meta">${m.currentStreak}🔥 · ${m.totalXp} XP · ${m.chaptersCompleted}/${data.totalChapters} ch · ${m.sessionsCompleted} sessions</div>
+        <div class="lb-meta">📚 ${m.chaptersCompleted}/${data.totalChapters} chapters · ${m.sessionsCompleted} sessions${m.batch ? ' · ' + m.batch : ''}</div>
       </div>
       ${m.isSelf ? '' : `<button class="cheer-btn" data-id="${m.studentId}" data-name="${m.displayName || m.studentId}">👋</button>`}
     `;
