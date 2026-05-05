@@ -1,7 +1,7 @@
 // GET /api/admin/students?admin=<password> → list of all students with summary stats
 import { init, send, methodNotAllowed } from '../../lib/api.js';
 import { withAdmin } from '../../lib/auth.js';
-import { listAllUsers, getSessionProgress } from '../../lib/db.js';
+import { listAllUsers, getSessionProgress, sql } from '../../lib/db.js';
 import { totalSessionCount } from '../../lib/chapters.js';
 
 async function handler(req, res) {
@@ -28,7 +28,15 @@ async function handler(req, res) {
     };
   }));
 
-  return send(res, 200, { students: enriched, totalChapters });
+  // Squad attach %: users with ≥1 squad link / total users
+  let squadAttachPct = 0;
+  if (enriched.length > 0) {
+    const r = await sql`SELECT COUNT(DISTINCT user_id)::int AS c FROM squad_links`;
+    const linked = r[0]?.c || 0;
+    squadAttachPct = Math.round((linked / enriched.length) * 100);
+  }
+
+  return send(res, 200, { students: enriched, totalChapters, squadAttachPct });
 }
 
 export default withAdmin(handler);

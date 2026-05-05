@@ -60,6 +60,12 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-sys
 
 .empty{text-align:center;color:var(--muted);padding:40px;font-size:13px}
 .back{color:var(--accent);font-size:12px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-bottom:8px}
+
+/* Segmented control for window switcher */
+.seg{display:inline-flex;gap:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:2px}
+.seg-btn{background:transparent;border:0;padding:5px 11px;font-size:12px;font-weight:600;color:var(--muted);border-radius:6px;cursor:pointer;font-family:inherit}
+.seg-btn.active{background:var(--accent-l);color:var(--accent)}
+.seg-btn:hover:not(.active){color:var(--text)}
 </style>
 </head>
 <body>
@@ -85,11 +91,37 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-sys
   <!-- List view -->
   <div id="listView" style="display:none">
     <div class="kpi">
-      <div class="card"><div class="lbl">Students</div><div class="val" id="kpiStudents">—</div></div>
-      <div class="card"><div class="lbl">Avg streak</div><div class="val" id="kpiStreak">—</div></div>
-      <div class="card"><div class="lbl">Avg chapter completion</div><div class="val" id="kpiChapters">—</div></div>
-      <div class="card"><div class="lbl">Sessions logged</div><div class="val" id="kpiSessions">—</div></div>
+      <div class="card"><div class="lbl">Total students</div><div class="val" id="kpiStudents">—</div></div>
+      <div class="card"><div class="lbl">DAU · last 24h</div><div class="val" id="kpiDau">—</div></div>
+      <div class="card"><div class="lbl">WAU · last 7d</div><div class="val" id="kpiWau">—</div></div>
+      <div class="card"><div class="lbl">MAU · last 30d</div><div class="val" id="kpiMau">—</div></div>
     </div>
+
+    <div class="kpi">
+      <div class="card"><div class="lbl">Avg streak</div><div class="val" id="kpiStreak">—</div></div>
+      <div class="card"><div class="lbl">Avg topic coverage</div><div class="val" id="kpiChapters">—</div></div>
+      <div class="card"><div class="lbl">Sessions logged</div><div class="val" id="kpiSessions">—</div></div>
+      <div class="card"><div class="lbl">Squad attach rate</div><div class="val" id="kpiSquad">—</div></div>
+    </div>
+
+    <div class="section-h">
+      <h2>Active users</h2>
+      <span class="meta">based on authenticated requests · auto-touched per session</span>
+      <div class="right">
+        <div class="seg">
+          <button class="seg-btn active" data-win="24h">24h</button>
+          <button class="seg-btn" data-win="7d">7d</button>
+          <button class="seg-btn" data-win="30d">30d</button>
+        </div>
+      </div>
+    </div>
+
+    <table class="tbl" style="margin-bottom:18px">
+      <thead>
+        <tr><th>Student ID</th><th>Name</th><th>Batch</th><th>Last active</th><th>Streak</th><th>XP</th><th>Sessions</th></tr>
+      </thead>
+      <tbody id="activeRows"></tbody>
+    </table>
 
     <div class="section-h">
       <h2>Students</h2>
@@ -210,8 +242,10 @@ async function loadList() {
   const data = await api('/api/admin/students');
   $('kpiStudents').textContent = data.students.length;
   if (data.students.length === 0) {
-    $('kpiStreak').textContent = '0'; $('kpiChapters').textContent = '0%'; $('kpiSessions').textContent = '0';
+    $('kpiStreak').textContent = '0'; $('kpiChapters').textContent = '0%'; $('kpiSessions').textContent = '0'; $('kpiSquad').textContent = '0%';
+    $('kpiDau').textContent = '0'; $('kpiWau').textContent = '0'; $('kpiMau').textContent = '0';
     $('rows').innerHTML = '<tr><td colspan="8" style="text-align:center;color:var(--muted);padding:30px">No students yet — share the signup URL with your testers.</td></tr>';
+    $('activeRows').innerHTML = '<tr><td colspan="7" style="text-align:center;color:var(--muted);padding:24px">No active users yet.</td></tr>';
     return;
   }
   const totalChap = data.totalChapters;
@@ -221,6 +255,10 @@ async function loadList() {
   $('kpiStreak').textContent = avgStreak + ' 🔥';
   $('kpiChapters').textContent = avgChap + '%';
   $('kpiSessions').textContent = totalSess;
+  $('kpiSquad').textContent = (data.squadAttachPct != null ? data.squadAttachPct + '%' : '—');
+
+  // Load activity data in parallel — DAU/WAU/MAU + active users for current window
+  loadActivity(currentActivityWindow);
 
   const rows = data.students.map(u => {
     const pct = totalChap ? Math.round(u.chapters.completed / totalChap * 100) : 0;
@@ -238,6 +276,57 @@ async function loadList() {
   $('rows').innerHTML = rows;
   document.querySelectorAll('#rows tr.clickable').forEach(r => r.addEventListener('click', () => showDetail(r.dataset.id)));
 }
+
+// ----- Activity (DAU/WAU/MAU) -----
+let currentActivityWindow = '24h';
+
+async function loadActivity(win) {
+  currentActivityWindow = win;
+  document.querySelectorAll('.seg-btn').forEach(b => b.classList.toggle('active', b.dataset.win === win));
+
+  const data = await api('/api/admin/activity?window=' + win);
+  $('kpiDau').textContent = data.counts.dau;
+  $('kpiWau').textContent = data.counts.wau;
+  $('kpiMau').textContent = data.counts.mau;
+
+  if (data.users.length === 0) {
+    $('activeRows').innerHTML = '<tr><td colspan="7" style="text-align:center;color:var(--muted);padding:24px">No users active in this window.</td></tr>';
+    return;
+  }
+  $('activeRows').innerHTML = data.users.map(u => {
+    const ago = relTime(u.lastActiveAt);
+    return `<tr class="clickable" data-id="${u.studentId}">
+      <td><b>${u.studentId}</b></td>
+      <td>${u.displayName || '—'}</td>
+      <td>${u.batch || '—'}</td>
+      <td>${ago}</td>
+      <td>${u.currentStreak || 0} 🔥</td>
+      <td>${u.totalXp || 0}</td>
+      <td>${u.sessionsCompleted || 0}</td>
+    </tr>`;
+  }).join('');
+  document.querySelectorAll('#activeRows tr.clickable').forEach(r => r.addEventListener('click', () => showDetail(r.dataset.id)));
+}
+
+function relTime(iso) {
+  if (!iso) return '—';
+  const d = new Date(iso);
+  const diffMs = Date.now() - d.getTime();
+  const min = Math.round(diffMs / 60000);
+  if (min < 1) return 'just now';
+  if (min < 60) return `${min} min ago`;
+  const hr = Math.round(min / 60);
+  if (hr < 24) return `${hr}h ago`;
+  const days = Math.round(hr / 24);
+  if (days < 7) return `${days}d ago`;
+  return d.toLocaleDateString('en-IN');
+}
+
+// Wire window switcher buttons (event delegation since they may not exist at script load)
+document.addEventListener('click', (e) => {
+  const t = e.target.closest('.seg-btn');
+  if (t && t.dataset.win) loadActivity(t.dataset.win);
+});
 
 async function showDetail(id) {
   $('listView').style.display = 'none';
