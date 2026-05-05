@@ -11,10 +11,23 @@ async function handler(req, res) {
   const users = await listAllUsers();
   const totalChapters = totalSessionCount();
 
+  // Pre-fetch all squad links once + invite chain — much faster than per-user round-trips
+  const allLinks = await sql`
+    SELECT sl.user_id, sl.squadmate_id, u.display_name AS squadmate_name
+    FROM squad_links sl
+    JOIN users u ON u.id = sl.squadmate_id
+  `;
+  const squadByUser = new Map();
+  for (const r of allLinks) {
+    if (!squadByUser.has(r.user_id)) squadByUser.set(r.user_id, []);
+    squadByUser.get(r.user_id).push({ id: r.squadmate_id, name: r.squadmate_name });
+  }
+
   const enriched = await Promise.all(users.map(async (u) => {
     const progress = await getSessionProgress(u.id);
     const completed = progress.filter(p => p.status === 'Completed').length;
     const inProgress = progress.filter(p => p.status === 'In Progress').length;
+    const squad = squadByUser.get(u.id) || [];
     return {
       studentId: u.id,
       displayName: u.display_name,
@@ -25,6 +38,8 @@ async function handler(req, res) {
       totalXp: u.total_xp || 0,
       sessionsCompleted: u.sessions_completed || 0,
       chapters: { total: totalChapters, completed, inProgress },
+      squad,                           // [{ id, name }, ...]
+      invitedBy: u.invited_by || null,
     };
   }));
 

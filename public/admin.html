@@ -66,6 +66,11 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-sys
 .seg-btn{background:transparent;border:0;padding:5px 11px;font-size:12px;font-weight:600;color:var(--muted);border-radius:6px;cursor:pointer;font-family:inherit}
 .seg-btn.active{background:var(--accent-l);color:var(--accent)}
 .seg-btn:hover:not(.active){color:var(--text)}
+
+/* Squad column */
+.squad-chip{display:inline-block;min-width:20px;padding:1px 6px;border-radius:99px;background:var(--accent-l);color:var(--accent);font-weight:700;font-size:11px;text-align:center;margin-right:4px}
+.squad-names{font-size:11.5px;color:var(--muted);font-family:inherit;cursor:help}
+.invite-tag{display:inline-block;padding:2px 8px;border-radius:4px;background:#f3f4f6;color:#475569;font-size:11px;font-weight:600;font-family:'SF Mono','Courier New',monospace}
 </style>
 </head>
 <body>
@@ -139,9 +144,9 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-sys
           <th>Name</th>
           <th>Batch</th>
           <th>Streak</th>
-          <th>XP</th>
-          <th>Sessions</th>
-          <th>Chapters done</th>
+          <th>Topics done</th>
+          <th>Squad</th>
+          <th>Invited by</th>
           <th>Joined</th>
         </tr>
       </thead>
@@ -262,14 +267,21 @@ async function loadList() {
 
   const rows = data.students.map(u => {
     const pct = totalChap ? Math.round(u.chapters.completed / totalChap * 100) : 0;
+    const squad = u.squad || [];
+    const squadCell = squad.length === 0
+      ? '<span style="color:var(--muted);font-size:11.5px">—</span>'
+      : `<span class="squad-chip">${squad.length}</span> <span class="squad-names" title="${squad.map(s => s.name + ' · ' + s.id).join('\n')}">${squad.map(s => s.id).slice(0, 3).join(', ')}${squad.length > 3 ? ` +${squad.length - 3}` : ''}</span>`;
+    const inviteCell = u.invitedBy
+      ? `<span class="invite-tag">${u.invitedBy}</span>`
+      : '<span style="color:var(--muted);font-size:11.5px">direct</span>';
     return `<tr class="clickable" data-id="${u.studentId}">
       <td><b>${u.studentId}</b></td>
       <td>${u.displayName || '—'}</td>
       <td>${u.batch || '—'}</td>
       <td>${u.currentStreak || 0} 🔥</td>
-      <td>${u.totalXp || 0}</td>
-      <td>${u.sessionsCompleted || 0}</td>
       <td>${u.chapters.completed} / ${totalChap} <span class="bar"><i style="width:${pct}%"></i></span></td>
+      <td>${squadCell}</td>
+      <td>${inviteCell}</td>
       <td>${u.createdAt ? new Date(u.createdAt).toLocaleDateString('en-IN') : '—'}</td>
     </tr>`;
   }).join('');
