@@ -189,62 +189,8 @@ async function loadToday() {
   const dayName = today.toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'short' });
   $('dateLabel').textContent = dayName;
 
-  // Lectures section header — describe today's load
-  const total = data.summary.total;
-  const done = data.summary.done;
-  if (total === 0) {
-    $('lecMeta').textContent = '';
-  } else if (done === total) {
-    $('lecMeta').textContent = `${total}/${total} done ✓`;
-  } else {
-    $('lecMeta').textContent = `${done}/${total} done`;
-  }
-
-  const list = $('lectureList');
-  list.innerHTML = '';
-
-  // Empty state: no lectures today
-  if (total === 0) {
-    const next = data.nextLectureDate;
-    const empty = document.createElement('div');
-    empty.className = 'lecture-empty';
-    if (next) {
-      const nextDate = new Date(next + 'T00:00:00');
-      const friendly = nextDate.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
-      empty.innerHTML = `
-        <div class="le-emoji">📅</div>
-        <div class="le-h">Your sessions start ${friendly}</div>
-        <div class="le-meta">Until then, head to <b>Topics</b> to plan ahead and mark anything you've already covered.</div>
-      `;
-    } else {
-      empty.innerHTML = `
-        <div class="le-emoji">🎉</div>
-        <div class="le-h">No sessions today</div>
-        <div class="le-meta">You're past the planned schedule. Use <b>Topics</b> to revise.</div>
-      `;
-    }
-    list.appendChild(empty);
-    await loadCatchup();
-    return;
-  }
-
-  for (const l of data.lectures) {
-    const order = statusOrder(l);
-    const div = document.createElement('div');
-    div.className = `lect ${order === 'done' ? 'done' : order === 'live' ? 'live' : ''}`;
-    div.innerHTML = `
-      <div class="ico ${l.subject}">${l.subject[0]}</div>
-      <div class="t">
-        <div class="tt">${l.topic}</div>
-        <div class="ts">${fmtTime(l.scheduled_start)} · ${l.sub_topic || ''}</div>
-      </div>
-      <span class="chip ${l.status || (order === 'live' ? 'Live' : 'Soon')}">${l.status || (order === 'live' ? 'Live' : 'Soon')}</span>
-    `;
-    div.addEventListener('click', () => openSession(l));
-    list.appendChild(div);
-  }
-
-  await loadCatchup();
+  // Lectures UI removed in v0.7.6 — Today screen is now subject-cards-only.
+  // The lecture data is still loaded for future use but not rendered here.
 }
 
 async function loadCatchup() {
