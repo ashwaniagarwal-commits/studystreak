@@ -155,6 +155,7 @@ async function loadToday() {
   state.chapters = chaps;
 
   $('userName').textContent = data.user.displayName || 'there';
+  $('studentIdLabel').textContent = data.user.id ? `@${data.user.id}` : '';
 
   // Total chapters covered, across all subjects
   let totalChapters = 0, completedChapters = 0;

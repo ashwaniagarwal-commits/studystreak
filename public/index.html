@@ -58,12 +58,13 @@
     </form>
   </div>
 
-  <!-- TODAY (existing daily-loop screen) -->
+  <!-- HOME -->
   <div class="screen" id="screen-today" style="display:none">
     <header class="hd">
       <div>
         <div class="greet" id="dateLabel">Today</div>
         <h1 class="hi">Hey <span id="userName">there</span> 👋</h1>
+        <div class="student-id" id="studentIdLabel">—</div>
       </div>
       <button class="cov-pill" id="covPill" title="Total topics completed">📚 <span id="covTotal">0/0</span></button>
     </header>
@@ -226,7 +227,7 @@
   <!-- Bottom nav (visible only when logged in) -->
   <nav class="bottom-nav" id="bottomNav" style="display:none">
     <button class="nav-btn active" data-screen="today">
-      <div class="nav-ic">🏠</div>Today
+      <div class="nav-ic">🏠</div>Home
     </button>
     <button class="nav-btn" data-screen="chapters">
       <div class="nav-ic">📚</div>Topics
